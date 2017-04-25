@@ -66,15 +66,15 @@ return [
      *
      * 当 enable_mock 为 true 则会启用模拟微信授权，用于开发时使用，开发完成请删除或者改为 false 即可
      */
-     'enable_mock' => env('WECHAT_ENABLE_MOCK', false),
-     'mock_user' => [
-         "openid" =>"oE9sjwYunl6rc1SHaJA-0dCTfFuM",
-         // 以下字段为 scope 为 snsapi_userinfo 时需要
-         "nickname" => "im",
-         "sex" =>"1",
-         "province" =>"广东",
-         "city" =>"深圳",
-         "country" =>"中国",
-         "headimgurl" => "http://wx.qlogo.cn/mmopen/ZibwoBM9icldvXG8VqGkTBHTILZ938qRrUzxuFK84TQqVP8kc4EqChefXyMfPBrdXtLjMnoXeg2qXAhsw1AxibGR5fVzIGCJPEf/0",
+     // 'enable_mock' => env('WECHAT_ENABLE_MOCK', false),
+     // 'mock_user' => [
+     //     "openid" =>"oE9sjwYunl6rc1SHaJA-0dCTfFuM",
+     //     // 以下字段为 scope 为 snsapi_userinfo 时需要
+     //     "nickname" => "im",
+     //     "sex" =>"1",
+     //     "province" =>"广东",
+     //     "city" =>"深圳",
+     //     "country" =>"中国",
+     //     "headimgurl" => "http://wx.qlogo.cn/mmopen/ZibwoBM9icldvXG8VqGkTBHTILZ938qRrUzxuFK84TQqVP8kc4EqChefXyMfPBrdXtLjMnoXeg2qXAhsw1AxibGR5fVzIGCJPEf/0",
      ],
 ];
