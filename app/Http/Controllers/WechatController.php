@@ -99,12 +99,34 @@ class WechatController extends Controller
 
         $menu = $wechat->menu;
        
-        $button = [
+        $buttons = [
+            [
+                "type" => "click",
+                "name" => "测试",
+                "key"  => "V1001_TODAY_MUSIC"
+            ],
+            [
+                "name"       => "商场",
+                "sub_button" => [
+                    [
                         "type" => "view",
-                        "name" => "chatek_shop",
-                        "url"  => "https://goodgoto.com/mall"
-                    ];
-        $menu->add($button);
+                        "name" => "商场",
+                        "url"  => "https://www.goodgoto.com/mall"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "商场",
+                        "url"  => "https://www.goodgoto.com/mall"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "商场",
+                        "url"  => "https://www.goodgoto.com/mall"
+                    ],
+                ],
+            ],
+        ];
+        $menu->add($buttons);
 
         Log::info('return response.');
         return $server->serve();
