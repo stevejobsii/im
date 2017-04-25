@@ -45,10 +45,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 Route::get('/wechat/debug', 'WechatController@debug');
 
 // Wechat http main route
-Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
-    Route::any('/wechat', 'WechatController@serve');
-});
-
+Route::any('/wechat', 'WechatController@serve');
 
 // 微信商城
 Route::group(['prefix' => 'mall', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Mall'], function () {
