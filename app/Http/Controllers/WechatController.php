@@ -36,64 +36,65 @@ class WechatController extends Controller
         $server = $wechat->server;
         $userApi = $wechat->user;
         
-        // $server->setMessageHandler(function($message){
-        // return "你好，欢迎关注";
-        //  });
+        // 测试
+        $server->setMessageHandler(function($message){
+        return "你好，欢迎关注";
+         });
 
-        $server->setMessageHandler(function ($message) use ($userApi) {
-            // 获取当前粉丝openIdfs
-            $openid = $message->FromUserName;
+        // $server->setMessageHandler(function ($message) use ($userApi) {
+        //     // 获取当前粉丝openIdfs
+        //     $openid = $message->FromUserName;
 
-            if ($message->MsgType == 'event') {
-                switch ($message->Event) {
-                    case'subscribe':
-                        // 获取当前粉丝基本信息
-                        $user = $userApi->get($openid);
-                        // 判断当前粉丝是否以前关注过
-                        $oldFollow = WechatFollow::where('openid', '=', $openid)->first();
-                        if ($oldFollow) {
-                            $follow['nickname'] = $user->nickname;
-                            $follow['sex'] = ($user->sex + 1);
-                            $follow['language'] = $user->language;
-                            $follow['city'] = $user->city;
-                            $follow['country'] = $user->country;
-                            $follow['province'] = $user->province;
-                            $follow['headimgurl'] = $user->headimgurl;
-                            $follow['remark'] = $user->remark;
-                            $follow['groupid'] = $user->groupid;
-                            $follow['is_subscribed'] = 2;
-                            WechatFollow::where('openid', '=', $openid)->update($follow);
-                            return '欢迎回来，' . $user->nickname . '。';
-                        } else {
-                            // 录入数据库
-                            $follow = new WechatFollow();
-                            $follow->openid = $openid;
-                            $follow->nickname = $user->nickname;
-                            $follow->sex = ($user->sex + 1);
-                            $follow->language = $user->language;
-                            $follow->city = $user->city;
-                            $follow->country = $user->country;
-                            $follow->province = $user->province;
-                            $follow->headimgurl = $user->headimgurl;
-                            $follow->remark = $user->remark;
-                            $follow->groupid = $user->groupid;
-                            $follow->is_subscribed = 2;
-                            $follow->save();
-                            return '欢迎，' . $user->nickname . '。';
-                        }
-                        break;
-                    case 'unsubscribe':
-                        WechatFollow::where('openid', '=', $openid)->update(['is_subscribed' => 1]);
-                        break;
-                    default:
-                        return '';
-                        break;
-                }
-            } else {
-                $user = $userApi->get($openid);
-                return 'Hi,' . $user->nickname . ', iMall还在开发中.';
-            }
-        });
+        //     if ($message->MsgType == 'event') {
+        //         switch ($message->Event) {
+        //             case'subscribe':
+        //                 // 获取当前粉丝基本信息
+        //                 $user = $userApi->get($openid);
+        //                 // 判断当前粉丝是否以前关注过
+        //                 $oldFollow = WechatFollow::where('openid', '=', $openid)->first();
+        //                 if ($oldFollow) {
+        //                     $follow['nickname'] = $user->nickname;
+        //                     $follow['sex'] = ($user->sex + 1);
+        //                     $follow['language'] = $user->language;
+        //                     $follow['city'] = $user->city;
+        //                     $follow['country'] = $user->country;
+        //                     $follow['province'] = $user->province;
+        //                     $follow['headimgurl'] = $user->headimgurl;
+        //                     $follow['remark'] = $user->remark;
+        //                     $follow['groupid'] = $user->groupid;
+        //                     $follow['is_subscribed'] = 2;
+        //                     WechatFollow::where('openid', '=', $openid)->update($follow);
+        //                     return '欢迎回来，' . $user->nickname . '。';
+        //                 } else {
+        //                     // 录入数据库
+        //                     $follow = new WechatFollow();
+        //                     $follow->openid = $openid;
+        //                     $follow->nickname = $user->nickname;
+        //                     $follow->sex = ($user->sex + 1);
+        //                     $follow->language = $user->language;
+        //                     $follow->city = $user->city;
+        //                     $follow->country = $user->country;
+        //                     $follow->province = $user->province;
+        //                     $follow->headimgurl = $user->headimgurl;
+        //                     $follow->remark = $user->remark;
+        //                     $follow->groupid = $user->groupid;
+        //                     $follow->is_subscribed = 2;
+        //                     $follow->save();
+        //                     return '欢迎，' . $user->nickname . '。';
+        //                 }
+        //                 break;
+        //             case 'unsubscribe':
+        //                 WechatFollow::where('openid', '=', $openid)->update(['is_subscribed' => 1]);
+        //                 break;
+        //             default:
+        //                 return '';
+        //                 break;
+        //         }
+        //     } else {
+        //         $user = $userApi->get($openid);
+        //         return 'Hi,' . $user->nickname . ', iMall还在开发中.';
+        //     }
+        // });
         Log::info('return response.');
         return $server->serve();
     }
