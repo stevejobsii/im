@@ -144,7 +144,7 @@
                                 </td>
                                 <td class="project-people">
                                     <a href="#">
-                                        <img alt="image" class="img-circle" src="http://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
+                                        <img alt="image" class="img-circle" src="https://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
                                     </a>
                                 </td>
                             </tr>
@@ -158,7 +158,7 @@
                                 </td>
                                 <td class="project-people">
                                     <a href="#">
-                                        <img alt="image" class="img-circle" src="http://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
+                                        <img alt="image" class="img-circle" src="https://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
                                     </a>
                                 </td>
                             </tr>
@@ -172,7 +172,7 @@
                                 </td>
                                 <td class="project-people">
                                     <a href="#">
-                                        <img alt="image" class="img-circle" src="http://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
+                                        <img alt="image" class="img-circle" src="https://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
                                     </a>
                                 </td>
                             </tr>
@@ -186,7 +186,7 @@
                                 </td>
                                 <td class="project-people">
                                     <a href="#">
-                                        <img alt="image" class="img-circle" src="http://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
+                                        <img alt="image" class="img-circle" src="https://wx.qlogo.cn/mmopen/rySLVBqriaia7P42IobUZ4bqbjpGJ1PXvs1SRtF8mAGkLNGsKAmCxp9XoSgm1A1QPX7IWp8oTD83D0iaDeicKbv91QibvskIBXOtK/0">
                                     </a>
                                 </td>
                             </tr>
