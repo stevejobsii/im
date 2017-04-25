@@ -34,7 +34,7 @@ class WechatController extends Controller
         $wechat = app('wechat');
         $server = $wechat->server;
         $userApi = $wechat->user;
-return 'sdsgsgg';
+
         $server->setMessageHandler(function ($message) use ($userApi) {
             // 获取当前粉丝openId
             $openid = $message->FromUserName;
