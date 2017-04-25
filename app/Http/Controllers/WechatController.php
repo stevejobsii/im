@@ -97,7 +97,8 @@ class WechatController extends Controller
             }
         });
 
-        $menu = $app->menu;
+        $menu = $wechat->menu;
+       
         $button = [
                         "type" => "view",
                         "name" => "chatek_shop",
