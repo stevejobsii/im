@@ -97,11 +97,13 @@ class WechatController extends Controller
             }
         });
 
-        // $buttons = [
-        //                 "type" => "view",
-        //                 "name" => "买精油(维护)",
-        //                 "url"  => "https://goodgoto.com/weixin/oauth"
-        //             ］
+        $menu = $app->menu;
+        $buttons = [
+                        "type" => "view",
+                        "name" => "chatek shop",
+                        "url"  => "https://goodgoto.com/mall"
+                    ],
+        $menu->add($buttons);
 
         Log::info('return response.');
         return $server->serve();
