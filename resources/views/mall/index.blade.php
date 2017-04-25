@@ -36,7 +36,7 @@
 <script src="{{ asset('js/lib/distpicker/distpicker.min.js') }}"></script>
 <script src="//cdn.bootcss.com/Swiper/3.4.0/js/swiper.min.js"></script>
 <script src="{{ asset('js/mall/app.js') }}"></script>
-<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
     <?php if($js){ ?>
         wx.config(<?php echo $js->config([], FALSE) ?>);

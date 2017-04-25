@@ -97,6 +97,12 @@ class WechatController extends Controller
             }
         });
 
+        // $buttons = [
+        //                 "type" => "view",
+        //                 "name" => "买精油(维护)",
+        //                 "url"  => "https://goodgoto.com/weixin/oauth"
+        //             ］
+
         Log::info('return response.');
         return $server->serve();
     }
