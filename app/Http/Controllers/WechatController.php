@@ -36,7 +36,7 @@ class WechatController extends Controller
         $server = $wechat->server;
         $userApi = $wechat->user;
         
-        $wechat->server->setMessageHandler(function($message){
+        $server->etMessageHandler(function($message){
         return "你好，欢迎关注";
          });
 
