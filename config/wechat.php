@@ -16,11 +16,14 @@ return [
     /*
      * 账号基本信息，请从微信公众平台/开放平台获取
      */
-    'app_id'  => env('WECHAT_APPID', 'wxe0c8630c5b3761ef'),         // AppID
-    'secret'  => env('WECHAT_SECRET', 'e93abbe556a4aede7ceb0e3b310e5eaf'),     // AppSecret
-    'token'   => env('WECHAT_TOKEN', 'iMall'),          // Token
+    // 'app_id'  => env('WECHAT_APPID', 'wxe0c8630c5b3761ef'),         // AppID
+    // 'secret'  => env('WECHAT_SECRET', 'e93abbe556a4aede7ceb0e3b310e5eaf'),     // AppSecret
+    // 'token'   => env('WECHAT_TOKEN', 'iMall'),          // Token
+    // 'aes_key' => env('WECHAT_AES_KEY', ''),                    // EncodingAESKey
+    'app_id'  => env('WECHAT_APPID', ''),         // AppID
+    'secret'  => env('WECHAT_SECRET', ''),     // AppSecret
+    'token'   => env('WECHAT_TOKEN', ''),          // Token
     'aes_key' => env('WECHAT_AES_KEY', ''),                    // EncodingAESKey
-
     /*
      * 日志配置
      *
@@ -67,7 +70,7 @@ return [
      'mock_user' => [
          "openid" =>"oE9sjwYunl6rc1SHaJA-0dCTfFuM",
          // 以下字段为 scope 为 snsapi_userinfo 时需要
-         "nickname" => "iMall",
+         "nickname" => "im",
          "sex" =>"1",
          "province" =>"广东",
          "city" =>"深圳",
