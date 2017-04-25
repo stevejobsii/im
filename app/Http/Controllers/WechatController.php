@@ -111,17 +111,17 @@ class WechatController extends Controller
                     [
                         "type" => "view",
                         "name" => "商场",
-                        "url"  => "https://www.goodgoto.com/mall"
+                        "url"  => "https://goodgoto.com/mall#!/usercenter"
                     ],
                     [
                         "type" => "view",
                         "name" => "商场",
-                        "url"  => "https://www.goodgoto.com/mall"
+                        "url"  => "https://goodgoto.com/mall#!/usercenter"
                     ],
                     [
                         "type" => "view",
                         "name" => "商场",
-                        "url"  => "https://www.goodgoto.com/mall"
+                        "url"  => "https://goodgoto.com/mall#!/usercenter"
                     ],
                 ],
             ],
