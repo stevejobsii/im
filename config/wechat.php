@@ -14,7 +14,7 @@ return [
     'use_laravel_cache' => true,
 
     /*
-     * 账号基本信息，请从微信公众平台/开放平台获取
+     * 账号基本信息，请从微信公众平台/开放平台获取1
      */
     // 'app_id'  => env('WECHAT_APPID', 'wxe0c8630c5b3761ef'),         // AppID
     // 'secret'  => env('WECHAT_SECRET', 'e93abbe556a4aede7ceb0e3b310e5eaf'),     // AppSecret
