@@ -36,12 +36,12 @@ class WechatController extends Controller
         $server = $wechat->server;
         $userApi = $wechat->user;
         
-        $server->etMessageHandler(function($message){
+        $server->setMessageHandler(function($message){
         return "你好，欢迎关注";
          });
 
         // $server->setMessageHandler(function ($message) use ($userApi) {
-        //     // 获取当前粉丝openId
+        //     // 获取当前粉丝openIdfs
         //     $openid = $message->FromUserName;
 
         //     if ($message->MsgType == 'event') {
