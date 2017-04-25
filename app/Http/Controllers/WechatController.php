@@ -18,7 +18,7 @@ class WechatController extends Controller
 {
 
     /**
-     * 处理微信请求
+     * 处理微信请求1
      *
      * @param Application $wechat
      * @return mixed
