@@ -21,7 +21,7 @@
     <link href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
     <link href="{{asset('js/lib/mint-ui/mint-ui.css')}}" rel="stylesheet">
     <link href="//cdn.bootcss.com/Swiper/3.4.0/css/swiper.min.css" rel="stylesheet">
-    <link href="{{asset('css/mall.css')}}" rel="stylesheet">
+    <link href="{{asset('css/malltest.css')}}" rel="stylesheet">
     <style>
         input,i, select, textarea, button:focus {
             outline: 0 none !important;

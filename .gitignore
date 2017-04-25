@@ -25,3 +25,5 @@ nbproject/
 /public/storage
 .gitignore
 
+
+npm-debug.log
