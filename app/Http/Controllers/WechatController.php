@@ -98,12 +98,12 @@ class WechatController extends Controller
         });
 
         $menu = $app->menu;
-        $buttons = [
+        $button = [
                         "type" => "view",
-                        "name" => "chatek shop",
+                        "name" => "chatek_shop",
                         "url"  => "https://goodgoto.com/mall"
-                    ],
-        $menu->add($buttons);
+                    ];
+        $menu->add($button);
 
         Log::info('return response.');
         return $server->serve();
