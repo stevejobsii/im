@@ -120,8 +120,8 @@ class WechatController extends Controller
                     ],
                     [
                         "type" => "view",
-                        "name" => "商场",
-                        "url"  => "https://goodgoto.com/mall#!/usercenter"
+                        "name" => "百度",
+                        "url"  => "https://baidu.com"
                     ],
                 ],
             ],
