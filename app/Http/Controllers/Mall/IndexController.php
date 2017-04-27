@@ -17,13 +17,15 @@ class IndexController extends Controller
 
     public function index()
     {
-        $app_env = env('APP_ENV');
-        if($app_env != 'beta'){
-            $wechat = app('wechat');
-            $js = $wechat->js;
-        }else{
-            $js = FALSE;
-        }
+        // $app_env = env('APP_ENV');
+        // if($app_env != 'beta'){
+        //     $wechat = app('wechat');
+        //     $js = $wechat->js;
+        // }else{
+        //     $js = FALSE;
+        // }
+        $wechat = app('wechat');
+        $js = $wechat->js;
         return view('mall.index')->with(['js'=>$js]);
     }
 }
