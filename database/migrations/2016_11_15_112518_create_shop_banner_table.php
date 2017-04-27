@@ -23,7 +23,8 @@ class CreateShopBannerTable extends Migration
             // 排序
             $table->integer('sort')->default(0);
             // 是否显示
-            $table->enum('disabled', ['1', '2']);
+            $table->enum('disabled', ['显示', '隐藏']);
+            //pgsql: $table->enum('disabled', ['1', '2']);
             $table->timestamps();
         });
     }
