@@ -97,36 +97,36 @@ class WechatController extends Controller
             }
         });
 
-        $menu = $wechat->menu;
-       
-        $buttons = [
-            [
-                "type" => "click",
-                "name" => "测试",
-                "key"  => "V1001_TODAY_MUSIC"
-            ],
-            [
-                "name"       => "商场",
-                "sub_button" => [
-                    [
-                        "type" => "view",
-                        "name" => "商场",
-                        "url"  => "https://goodgoto.com/mall#!/usercenter"
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "商场",
-                        "url"  => "https://goodgoto.com/mall#!/usercenter"
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "百度",
-                        "url"  => "https://baidu.com"
-                    ],
-                ],
-            ],
-        ];
-        $menu->add($buttons);
+        //暴力微信菜单 
+        //$menu = $wechat->menu;      
+        // $buttons = [
+        //     [
+        //         "type" => "click",
+        //         "name" => "测试",
+        //         "key"  => "V1001_TODAY_MUSIC"
+        //     ],
+        //     [
+        //         "name"       => "商场",
+        //         "sub_button" => [
+        //             [
+        //                 "type" => "view",
+        //                 "name" => "商场",
+        //                 "url"  => "https://goodgoto.com/mall#!/usercenter"
+        //             ],
+        //             [
+        //                 "type" => "view",
+        //                 "name" => "商场",
+        //                 "url"  => "https://goodgoto.com/mall#!/usercenter"
+        //             ],
+        //             [
+        //                 "type" => "view",
+        //                 "name" => "百度",
+        //                 "url"  => "https://baidu.com"
+        //             ],
+        //         ],
+        //     ],
+        // ];
+        // $menu->add($buttons);
 
         Log::info('return response.');
         return $server->serve();
