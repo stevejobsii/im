@@ -17,7 +17,7 @@ class ShopController extends Controller
 {
     public function getBanners()
     {
-        $banners = ShopBanner::where('disabled', '=', '显示')
+        $banners = ShopBanner::where('disabled', '=', '1')
             ->orderBy('sort', 'asc')
             ->orderBy('id', 'asc')
             ->get();
@@ -26,7 +26,7 @@ class ShopController extends Controller
 
     public function getTopics()
     {
-        $topics = ProductTopic::where('disabled', '=', '显示')
+        $topics = ProductTopic::where('disabled', '=', '1')
             ->orderBy('topic_sort', 'asc')
             ->orderBy('id', 'asc')
             ->get();
@@ -35,7 +35,7 @@ class ShopController extends Controller
 
     public function getPlates()
     {
-        $topics = ProductPlate::where('disabled', '=', '显示')
+        $topics = ProductPlate::where('disabled', '=', '1')
             ->orderBy('plate_sort', 'asc')
             ->orderBy('id', 'asc')
             ->get();
