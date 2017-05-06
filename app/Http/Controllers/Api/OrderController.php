@@ -196,9 +196,9 @@ class OrderController extends Controller
             'notify_url'       => route('frontend.wechat.HandlePay'), // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'openid'           => $WechatOrder->openid,
         ];
-return $attributes;
+
         //创建订单
-     return    $order = new Order($attributes);
+        $order = new Order($attributes);
 
         //统一下单
         $payment = app('wechat')->payment;
