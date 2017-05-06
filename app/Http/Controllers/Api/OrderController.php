@@ -198,7 +198,7 @@ class OrderController extends Controller
         ];
 
         //创建订单
-        $order = new Order($attributes);
+        return $order = new Order($attributes);
 
         //统一下单
         $payment = app('wechat')->payment;
