@@ -55,7 +55,7 @@ Route::group(['prefix' => 'mall', 'middleware' => ['web', 'wechat.oauth'], 'name
     Route::get('/', 'IndexController@index');
 });
 
-Route::group(['prefix' => 'api', 'middleware' => 'web', 'namespace' => 'Api'], function () {
+Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Api'], function () {
     // 获取用户信息
     Route::get('userinfo', 'UserController@userinfo');
     // 商铺配置
