@@ -173,56 +173,116 @@ class OrderController extends Controller
     //订单下单
     public function SetAttributes($id, Request $request) {
         //查找event
-        Log::info('request(SetAttributes) arrived.'); 
+        Log::info('request(SetAttributes)arrived.'); 
         $WechatOrderId = $id;
         $WechatOrder = WechatOrder::find($WechatOrderId);
 
         //判断是否存在
         if(isNullOrEmpty($WechatOrder)) {
-            //return redirect()->route('frontend.event.eventList');
             return "no such order";
         }
 
-        return $WechatOrder;
-        // //查找用户
-        // $customer = User::find($request->session()->get('customerId'));
-
-        // //获取活动报名记录
-        // $map[] = ['customer_id', '=', $request->session()->get('customerId')];
-        // $map[] = ['event_id', '=', $eventId];
-
-        // //寻找活动报名记录
-        // $eventJoin = EventJoinRepository::getByWhere($map)->first();
-
-        // //判断是否已经报名活动
-        // if($eventJoin['status'] != config('enumerations.EVENT_JOIN_STATUS.WAITING_PAY')) {
-        //     return redirect()->route('frontend.event.eventList');
-        // }
-
-        // //获取支付记录
-        // $pay = PayRepository::find($eventJoin["pay_id"]);
-
-        // //判断支付记录是否为空
-        // if(isNullOrEmpty($pay)) {
-        //     $payData['pay_type'] = config('enumerations.PAY_TYPE.WECHAT');
-        //     $payData['money'] = $event['price'];
-        //     $payData['status'] = config('enumerations.PAY_STATUS.WAITING_PAY');
-        //     $payData['out_trade_no'] = time().rand(0, 999);
-
-        //     $pay = PayRepository::create($payData);
-
-        //     $eventJoinMap[] = ['join_id','=',$eventJoin['join_id']];
-        //     $eventJoinData['pay_id'] = $pay['pay_id'];
-
-        //     EventJoinRepository::setByWhere($eventJoinMap,$eventJoinData);
-        // }
-
+        if($WechatOrder->pay_status == '已支付') {
+            return "已支付";
+        }
         //商品属性
+        $attributes = [
+            'trade_type'       => 'JSAPI', // JSAPI，NATIVE，APP...
+            'body'             => $WechatOrder->id,
+            'detail'           => md5(uniqid().microtime()),
+            'out_trade_no'     => $pay['out_trade_no'],
+            'total_fee'        => $event['price']*100,
+            'notify_url'       => route('frontend.wechat.HandlePay'), // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'openid'           => $customer['openid'],
+        ];
+
+
+        //创建订单
+        $order = new Order($attributes);
+
+        //统一下单
+        $result = $this->wechat->payment->prepare($order);
+
+        if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
+            $prepayId = $result->prepay_id;
+            return $config = $this->wechat->payment->configForJSSDKPayment($prepayId); // 返回数组
+        } else {
+            return 'pay fail';
+        }
          
     }
-    /**
-     * 判断是否为空
-     */
+
+
+    
+
+
+
+
+
+
+
+
+
+    //处理订单-event
+    public function eventHandlePay() {
+        $response = $this->wechat->payment->handleNotify(function($notify, $successful){
+
+            $payMap[] = ['out_trade_no','=',$notify->out_trade_no];
+            $pay = PayRepository::getByWhere($payMap)->first();
+
+            //判断订单是否存在
+            if(isNullOrEmpty($pay)) {
+                return 'Order not exist.';
+            }
+
+            //判断订单是否已经支付过了
+            if($pay['status'] == config('enumerations.PAY_STATUS.END_PAY')) {
+                return true;
+            }
+
+            if($successful) {
+                //修改支付记录状态
+                $payData['status'] = config('enumerations.PAY_STATUS.END_PAY');
+                $payData['pay_trade_no'] = $notify->transaction_id;
+
+                PayRepository::setByWhere($payMap,$payData);
+
+                //修改活动报名记录状态
+                $eventJoinMap[] = ['pay_id','=',$pay->pay_id];
+                $eventJoinData['status'] = config('enumerations.EVENT_JOIN_STATUS.END_PAY');
+
+                EventJoinRepository::setByWhere($eventJoinMap,$eventJoinData);
+
+                //获取报名记录
+                $eventJoin = EventJoinRepository::getByWhere($eventJoinMap)->first();
+
+                //查找活动
+                $event = EventRepository::find($eventJoin['event_id']);
+
+                //获取报名总人数
+                $totalJoinMap[] = ['event_id', '=', $eventJoin['event_id']];
+                $totalJoinMap[] = ['status', '=', config('enumerations.EVENT_JOIN_STATUS.END_PAY')];
+
+                $totalJoinCount = EventJoinRepository::getByWhere($totalJoinMap)->count();
+
+
+                //更新报名人数
+                $eventData["join_number"] = $event["join_number"] + 1;
+                EventRepository::saveById($event['event_id'],$eventData);
+
+                //判断并修改活动状态
+                if($totalJoinCount == $event['upper_limit']) {
+                    $eventData['status'] = config('enumerations.EVENT_STATUS.FULL');
+                    EventRepository::saveById($event['event_id'],$eventData);
+                }
+            }
+
+            return true; // 或者错误消息
+
+        });
+
+        return $response; // Laravel 里请使用：return $response;
+    }
  
 }
 

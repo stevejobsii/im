@@ -108,6 +108,12 @@ Route::group(['prefix' => 'api', 'middleware' => 'web', 'namespace' => 'Api'], f
     Route::get('pay/{id}', [
         'as'   => 'frontend.wechat.pay',
         'uses' => 'OrderController@pay',
-]);
-
+    ]);
+    /**
+     * 微信支付回调--event
+     */
+    Route::post('HandlePay/',[
+        'as'   => 'frontend.wechat.HandlePay',
+        'uses' => 'OrderController@HandlePay',
+    ]);
 });
