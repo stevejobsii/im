@@ -53,8 +53,12 @@
                 });
             },
             wechatPay: function(){
-                Toast({
-                    message: '支付fffg成功'
+                let vm = this;
+                let itemId = vm.$route.params.hashid;
+                vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
+                    Toast({
+                        message: response.data.message
+                    });
                 });
             }
         }
