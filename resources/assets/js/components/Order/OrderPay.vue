@@ -57,7 +57,7 @@
                 let itemId = vm.$route.params.hashid;
                 vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
                     Toast({
-                        message: response.data.message.id
+                        message: response.data.id
                     });
                 });
             }
