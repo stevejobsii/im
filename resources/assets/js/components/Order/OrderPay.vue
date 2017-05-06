@@ -40,10 +40,7 @@
                         setTimeout(function(){
                             vm.wechatPay();
                             Indicator.close();
-                            Toast({
-                              message: '支付成功'
-                            });
-                            // TODO 跳转至其他路由...
+
                         },3000);
                     }else{
                         Toast({
@@ -53,7 +50,12 @@
                 });
             },
             wechatPay: function(){
-               vm.$http.get('/api/SetAttributes/'+itemId).console.log();
+                vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{ 
+                Toast({
+                              message: '支付成功'
+                            });
+
+               });
             }
         }
     }
