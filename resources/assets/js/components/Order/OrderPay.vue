@@ -8,7 +8,7 @@
             <p>商品总价：<span class="amount">&yen;{{order.commodity_amount | transformPrice}}</span></p>
             <p>订单总价：<span class="amount">&yen;{{order.order_amount | transformPrice}}</span></p>
         </div>
-        <div class="order-pay-btn" :class="{'disabled' : !visible}">
+        <div class="order-pay-btn" :class="{'disabled' : visible}">
             微信支付
         </div>
     </div>
@@ -41,19 +41,18 @@
                             vm.wechatPay();
                             Indicator.close();
                             Toast({
-                              message: '支gsgsd付成功'
+                              message: '支付成功'
                             });
-                            // TODO 跳转至其他路由.
+                            // TODO 跳转至其他路由...
                         },3000);
                     }else{
                         Toast({
                             message: response.data.message
                         });
-                    };
+                    }
                 });
             },
             wechatPay: function(){
-               vm.$http.get('/api/SetAttributes/'+itemId);
             }
         }
     }
