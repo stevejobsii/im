@@ -20,6 +20,7 @@ class IndexController extends Controller
 
     public function index()
     {
+        Log::info('request(callback) arrived.'); 
         $app_env = env('APP_ENV');
         if($app_env != 'beta'){
             $wechat = app('wechat');
