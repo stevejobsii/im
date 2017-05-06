@@ -14,6 +14,7 @@ use App\ShopConfig;
 use App\WechatCart;
 use Validator;
 use Log;
+use EasyWeChat\Payment\Order;
 //use App\Helpers\Helper;
 
 class OrderController extends Controller
