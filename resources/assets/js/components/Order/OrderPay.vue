@@ -41,7 +41,7 @@
                             vm.wechatPay();
                             Indicator.close();
                             Toast({
-                              message: '支付成功'
+                              message: '支q成功'
                             });
                             // TODO 跳转至其他路由...
                         },3000);
@@ -53,7 +53,11 @@
                 });
             },
             wechatPay: function(){
+                Toast({
+                    message: '支付fffg成功'
+                });
             }
         }
     }
+
 </script>
