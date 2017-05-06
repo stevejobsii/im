@@ -204,7 +204,7 @@ class OrderController extends Controller
         $result = app('wechat')->payment->prepare($order);
 
         if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
-            return $prepayId = $result->prepay_id;
+            $prepayId = $result->prepay_id;
             //不需要再修改configForJSSDKPayment了
             $config = app('wechat')->payment->configForJSSDKPayment($prepayId);
                  $config['timeStamp'] = $config['timestamp'];
