@@ -13,6 +13,7 @@ use App\WechatOrderDetail;
 use App\ShopConfig;
 use App\WechatCart;
 use Validator;
+use Log;
 
 class OrderController extends Controller
 {
@@ -171,6 +172,7 @@ class OrderController extends Controller
     //订单下单
     public function SetAttributes($id, Request $request) {
         //查找event
+        Log::info('request(SetAttributes) arrived.'); 
         $WechatOrderId = $id;
         $WechatOrder = WechatOrder::find($WechatOrderId);
 
