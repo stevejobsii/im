@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <meta name="app-mobile-web-app-capable" content="yes">
     <meta id="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="微信商城：iMall,基于Laravel5.2和vue.js">
-    <meta name="keywords" content="微信商城,laravel5.2,vue.js,vuex,vue-router,vue-resource">
     <!-- Favicon -->
     <link rel="icon" href="{{asset('favicon.png')}}" mce_href="{{asset('favicon.png')}}" type="image/png">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" mce_href="{{asset('favicon.ico')}}" type=”image/x-icon”>
-
+<meta http-equiv="pragma" content="no-cache" /> 
+<meta http-equiv="Cache-Control" content="no-cache,must-revalidate" /> 
     <!--[if lte IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
     <![endif]-->
