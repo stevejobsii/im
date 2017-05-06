@@ -53,7 +53,7 @@
                 });
             },
             wechatPay: function(){
-               vm.$http.get('/api/SetAttributes/'+itemId);
+               vm.$http.get('/api/SetAttributes/'+itemId).console.log();
             }
         }
     }
