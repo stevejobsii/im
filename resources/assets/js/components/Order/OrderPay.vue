@@ -56,6 +56,9 @@
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
                 vm.$http.post('/api/SetAttributes/'+itemId).then(response=>{
+                    Toast({
+                            message: response.data
+                        });
                     let json = response.data;
                     WeixinJSBridge.invoke(
                         'getBrandWCPayRequest',json,
