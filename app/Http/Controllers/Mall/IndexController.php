@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Mall;
 
 use Illuminate\Http\Request;
-
+use Log;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use EasyWeChat\Foundation\Application;
