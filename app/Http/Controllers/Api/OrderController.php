@@ -223,13 +223,7 @@ class OrderController extends Controller
     /**
      * 判断是否为空
      */
-    public function isNullOrEmpty($obj) {
-        if(!$obj instanceof Illuminate\Database\Eloquent\Collection) {
-            return (!isset($obj) || empty($obj) || $obj == null);
-        } else {
-            return $obj->isEmpty();
-        }
-    }
+ 
 }
 
 
