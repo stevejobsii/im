@@ -193,7 +193,7 @@ class OrderController extends Controller
             'out_trade_no'     => md5(uniqid().microtime()),
             'total_fee'        => $WechatOrder->order_amount*100,
             'notify_url'       => route('frontend.wechat.HandlePay'), // 支付结果通知网址，如果不设置则会使用配置里的默认地址
-            'openid'           => $customer['openid'],
+            'openid'           => $WechatOrder->openid,
         ];
 
         //创建订单
