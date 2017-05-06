@@ -13,6 +13,7 @@ use Validator;
 
 class UserController extends Controller
 {
+    //当前用户的基本信息
     public function userinfo()
     {
         $user = session('wechat.oauth_user')->toArray();

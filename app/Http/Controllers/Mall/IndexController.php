@@ -12,15 +12,16 @@ class IndexController extends Controller
 {
     public function oauth()
     {
-        $app = app('wechat');
-        return $response = $app->oauth->scopes(['snsapi_userinfo'])->redirect()->to('mall');
-        // session('wechat.oauth_user');
-        // return redirect()->to('mall');
+        Log::info('request(index.user.callback) arrived.'); 
+        // $app = app('wechat');
+        // return $response = $app->oauth->scopes(['snsapi_userinfo'])->redirect()->to('mall');
+        session('wechat.oauth_user');
+        return redirect()->to('mall');
     }
 
     public function index()
     {
-        Log::info('request(callback) arrived.'); 
+        Log::info('request(index.callback) arrived.'); 
         $app_env = env('APP_ENV');
         if($app_env != 'beta'){
             $wechat = app('wechat');
