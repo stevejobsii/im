@@ -51,8 +51,8 @@
             },
             wechatPay: function(){
                 vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{ 
-                Toast({
-                              message: '支付成功'
+                        Toast({
+                              message: response.data.message
                             });
 
                });
