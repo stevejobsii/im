@@ -95,10 +95,19 @@ Route::group(['prefix' => 'api', 'middleware' => 'web', 'namespace' => 'Api'], f
     Route::put('address/{address}', 'UserController@updateAddress');
     Route::get('default/address', 'UserController@defaultAddress');
     Route::delete('address/{address}', 'UserController@deleteAddress');
-});
+    /**
+     * 微信支付--event 设定订单内容SetAttributes
+     */
+    Route::get('SetAttributes/{id}', [
+        //'as'   => 'frontend.wechat.eventPay',
+        'uses' => 'OrderController@SetAttributes',
+    ]);
+    /**
+     * 微信支付
+     */
+    Route::get('pay/{id}', [
+        'as'   => 'frontend.wechat.pay',
+        'uses' => 'OrderController@pay',
+]);
 
-//微信payment
-Route::any('/weixin/oauth','WeixinPaymentController@oauth');//授权h5
-Route::any('/weixin/order','WeixinPaymentController@order');//回调
-Route::any('/weixin/setattributes','WeixinPaymentController@SetAttributes');//set payment attributes
-Route::any('/weixin/paymentnotify','WeixinPaymentController@paymentnotify');//支付结果通知
+});

@@ -168,4 +168,60 @@ class OrderController extends Controller
         }
     }
 
+    //订单下单
+    public function SetAttributes($id, Request $request) {
+        //查找event
+        $WechatOrderId = $id;
+        $WechatOrder = WechatOrder::find($WechatOrderId);
+
+        //判断是否存在
+        if(isNullOrEmpty($WechatOrder)) {
+            //return redirect()->route('frontend.event.eventList');
+            return "no such order";
+        }
+
+        return $WechatOrder;
+        // //查找用户
+        // $customer = User::find($request->session()->get('customerId'));
+
+        // //获取活动报名记录
+        // $map[] = ['customer_id', '=', $request->session()->get('customerId')];
+        // $map[] = ['event_id', '=', $eventId];
+
+        // //寻找活动报名记录
+        // $eventJoin = EventJoinRepository::getByWhere($map)->first();
+
+        // //判断是否已经报名活动
+        // if($eventJoin['status'] != config('enumerations.EVENT_JOIN_STATUS.WAITING_PAY')) {
+        //     return redirect()->route('frontend.event.eventList');
+        // }
+
+        // //获取支付记录
+        // $pay = PayRepository::find($eventJoin["pay_id"]);
+
+        // //判断支付记录是否为空
+        // if(isNullOrEmpty($pay)) {
+        //     $payData['pay_type'] = config('enumerations.PAY_TYPE.WECHAT');
+        //     $payData['money'] = $event['price'];
+        //     $payData['status'] = config('enumerations.PAY_STATUS.WAITING_PAY');
+        //     $payData['out_trade_no'] = time().rand(0, 999);
+
+        //     $pay = PayRepository::create($payData);
+
+        //     $eventJoinMap[] = ['join_id','=',$eventJoin['join_id']];
+        //     $eventJoinData['pay_id'] = $pay['pay_id'];
+
+        //     EventJoinRepository::setByWhere($eventJoinMap,$eventJoinData);
+        // }
+
+        //商品属性
+         
+    }
+
+
+
+
+
 }
+
+

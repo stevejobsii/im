@@ -53,7 +53,7 @@
                 });
             },
             wechatPay: function(){
-                // TODO 发起支付请求
+               vm.$http.get('/api/SetAttributes/'+itemId);
             }
         }
     }
