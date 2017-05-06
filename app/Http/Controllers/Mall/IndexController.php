@@ -10,9 +10,12 @@ use EasyWeChat\Foundation\Application;
 
 class IndexController extends Controller
 {
-    public function oauth(){
-        session('wechat.oauth_user');
-        return redirect()->to('mall');
+    public function oauth()
+    {
+        $app = app('wechat');
+        return $response = $app->oauth->scopes(['snsapi_userinfo'])->redirect()->to('mall');
+        // session('wechat.oauth_user');
+        // return redirect()->to('mall');
     }
 
     public function index()
@@ -24,8 +27,6 @@ class IndexController extends Controller
         }else{
             $js = FALSE;
         }
-        // $wechat = app('wechat');
-        // $js = $wechat->js;
         return view('mall.index')->with(['js'=>$js]);
     }
 }

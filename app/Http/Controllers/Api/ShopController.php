@@ -15,6 +15,7 @@ use App\ShopConfig;
 
 class ShopController extends Controller
 {
+    //显示商铺轮转图
     public function getBanners()
     {
         $banners = ShopBanner::where('disabled', '=', '显示')
@@ -25,6 +26,7 @@ class ShopController extends Controller
         return response()->json($banners);
     }
 
+    //获得3大分类之专题
     public function getTopics()
     {
         $topics = ProductTopic::where('disabled', '=', '显示')
@@ -34,6 +36,7 @@ class ShopController extends Controller
         return response()->json($topics);
     }
 
+    //获得3大分类之板块
     public function getPlates()
     {
         $topics = ProductPlate::where('disabled', '=', '显示')
@@ -43,6 +46,7 @@ class ShopController extends Controller
         return response()->json($topics);
     }
 
+    //获得3大分类之分类
     public function getCategories()
     {
         $parentCategories = ProductCategory::where('parent_id', '=', '0')

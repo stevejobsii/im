@@ -96,3 +96,9 @@ Route::group(['prefix' => 'api', 'middleware' => 'web', 'namespace' => 'Api'], f
     Route::get('default/address', 'UserController@defaultAddress');
     Route::delete('address/{address}', 'UserController@deleteAddress');
 });
+
+//微信payment
+Route::any('/weixin/oauth','WeixinPaymentController@oauth');//授权h5
+Route::any('/weixin/order','WeixinPaymentController@order');//回调
+Route::any('/weixin/setattributes','WeixinPaymentController@SetAttributes');//set payment attributes
+Route::any('/weixin/paymentnotify','WeixinPaymentController@paymentnotify');//支付结果通知

@@ -13,6 +13,7 @@ use App\WechatOrderDetail;
 class OrderController extends Controller
 {
 
+    //管理台de订单管理
     public function index(Request $request)
     {
         // unpay unship shiped received ''closed''
@@ -48,6 +49,7 @@ class OrderController extends Controller
         ]);
     }
 
+    //在管理台查看每一张订单
     public function show($id)
     {
         $orderInfo = WechatOrder:: where('id', '=', $id)

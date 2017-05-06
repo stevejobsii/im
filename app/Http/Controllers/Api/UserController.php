@@ -18,7 +18,8 @@ class UserController extends Controller
         $user = session('wechat.oauth_user')->toArray();
         return response()->json($user);
     }
-
+ 
+    //post建议suggestion
     public function suggestion(Request $request)
     {
         $follow = session()->get('wechat.oauth_user');
@@ -33,6 +34,7 @@ class UserController extends Controller
         }
     }
 
+    //地址列表
     public function indexAddress()
     {
         $wechat = session()->get('wechat.oauth_user');
@@ -52,6 +54,7 @@ class UserController extends Controller
         }
     }
 
+    //post 保存用户地址
     public function storeAddress(Request $request)
     {
         $rules = [
@@ -113,7 +116,8 @@ class UserController extends Controller
             }
         }
     }
-
+ 
+    //显示用户地址
     public function showAddress($id)
     {
         $address = WechatAddress::find($id);
@@ -130,6 +134,7 @@ class UserController extends Controller
         }
     }
 
+    //更新用户地址
     public function updateAddress(Request $request, $id)
     {
         $wechat = session()->get('wechat.oauth_user');
@@ -199,6 +204,7 @@ class UserController extends Controller
         }
     }
 
+    //删除地址
     public function deleteAddress($id)
     {
         $address = WechatAddress::find($id);
@@ -222,6 +228,7 @@ class UserController extends Controller
         }
     }
 
+    //默认地址
     public function defaultAddress(){
         $follow = session()->get('wechat.oauth_user');
         $openid = $follow->id;
