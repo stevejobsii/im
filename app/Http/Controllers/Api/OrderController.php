@@ -202,7 +202,7 @@ class OrderController extends Controller
 
         //统一下单
         $payment = app('wechat')->payment;
-        $result = $payment->prepare($order);
+        return $result = $payment->prepare($order);
 
         if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
             $prepayId = $result->prepay_id;

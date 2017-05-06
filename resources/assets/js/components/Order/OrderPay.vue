@@ -41,7 +41,7 @@
                             vm.wechatPay();
                             Indicator.close();
                             Toast({
-                              message: '支q成功'
+                              message: '支'
                             });
                             // TODO 跳转至其他路由...
                         },3000);
@@ -55,10 +55,27 @@
             wechatPay: function(){
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
-                vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
-                    Toast({
-                        message: response.data.id
-                    });
+                vm.$http.post('/api/SetAttributes/'+itemId).then(response=>{
+                    let json = response.data;
+                    WeixinJSBridge.invoke(
+                        'getBrandWCPayRequest',json,
+                            function(res){     
+                               switch(res.err_msg) {
+                                    case 'get_brand_wcpay_request:cancel':
+                                        alert('用户取消支付！');
+                                        break;
+                                    case 'get_brand_wcpay_request:fail':
+                                        alert('支付失败！（'+res.err_desc+'）');
+                                        break;
+                                    case 'get_brand_wcpay_request:ok':
+                                        alert('支付成功！');
+                                        break;
+                                    default:
+                                        alert(JSON.stringify(res));
+                                        break;
+                                } 
+                            }
+                    ); 
                 });
             }
         }
