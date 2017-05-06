@@ -55,7 +55,7 @@
             wechatPay: function(){
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
-                vm.$http.post('/api/SetAttributes/'+itemId).then(response=>{
+                vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
                     Toast({
                             message: response.data
                         });
