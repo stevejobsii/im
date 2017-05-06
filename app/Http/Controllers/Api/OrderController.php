@@ -189,7 +189,7 @@ class OrderController extends Controller
         $attributes = [
             'trade_type'       => 'JSAPI', // JSAPI，NATIVE，APP...
             'body'             => $WechatOrder->id,
-            'detail'           => $WechatOrder->id->details->id,
+            'detail'           => $WechatOrder->details->id,
             'out_trade_no'     => md5(uniqid().microtime()),
             'total_fee'        => $event['price']*100,
             'notify_url'       => route('frontend.wechat.HandlePay'), // 支付结果通知网址，如果不设置则会使用配置里的默认地址
