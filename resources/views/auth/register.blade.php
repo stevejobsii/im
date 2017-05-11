@@ -4,12 +4,11 @@
 <head>
 
     <meta charset="utf-8">
-    <title>iMall | 注册</title>
+    <title>微信商城 | 注册</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Zhang Lei">
-    <meta name="description" content="微信商城：iMall,基于Laravel5.2和vue.js">
-    <meta name="keywords" content="微信商城,laravel5.2,vue.js,vuex,vue-router,vue-resource">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" mce_href="favicon.png" type="image/png">
     <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type=”image/x-icon”>
@@ -73,7 +72,7 @@
             <p class="text-muted text-center"><small>已有账号？</small></p>
             <a class="btn btn-sm btn-white btn-block" href="{{ url('/login') }}">登录</a>
         </form>
-        <p class="m-t"> <small>iMall base on Laravel 5.2 & Vue.js 1.0 &copy; 2017</small> </p>
+        <p class="m-t"> <small>微信商城 &copy; 2017</small> </p>
     </div>
 </div>
 

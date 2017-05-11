@@ -5,9 +5,8 @@
     <title>iMall</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Zhang Lei">
-    <meta name="description" content="微信商城：iMall,基于Laravel5.2和vue.js">
-    <meta name="keywords" content="微信商城,laravel5.2,vue.js,vuex,vue-router,vue-resource">
+    <meta name="description" content="微信商城">
+    <meta name="keywords" content="微信商城">
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" mce_href="favicon.png" type="image/png">
     <link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type=”image/x-icon”>

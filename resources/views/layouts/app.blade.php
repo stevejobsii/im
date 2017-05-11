@@ -149,11 +149,7 @@
 
         <div class="footer">
             <div class="pull-right">
-                <strong>Copyright</strong> iMall &copy; 2016-2017
-            </div>
-            <div>
-                <i class="fa fa-github"></i> <strong>iMall</strong>
-                <a href="https://github.com/PassionZale/iMall" target="_blank">参与开发</a>
+                <strong>Copyright</strong> 商城 &copy; 2016-2017
             </div>
         </div>
 
