@@ -225,10 +225,10 @@ class OrderController extends Controller
          
     }
 
-    //处理订单
+    //处理订单,这个是微信发出的
     public function HandlePay() {
         Log::info('request(HandlePay)arrived.'); 
-        $response = $this->wechat->payment->handleNotify(function($notify, $successful){
+        $response = app('wechat')->payment->handleNotify(function($notify, $successful){
             Log::info($notify); 
             Log::info($successful);
             // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
