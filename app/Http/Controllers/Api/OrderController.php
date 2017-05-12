@@ -196,7 +196,7 @@ class OrderController extends Controller
             'detail'           => $WechatOrder->id,
             'out_trade_no'     => md5(uniqid().microtime()),
             'total_fee'        => $WechatOrder->order_amount*100,
-            'notify_url'       => "/api/HandlePay", 
+            'notify_url'       => "https://goodgoto.com//api/HandlePay", 
             // 支付结果通知网址，如果不设置则会使用配置里的默认地址 route('frontend.wechat.HandlePay')
             'openid'           => $WechatOrder->openid,
         ];
