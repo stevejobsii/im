@@ -45,6 +45,7 @@
                         <th>收货人地址</th>
                         <th>下单时间</th>
                         <th>操作</th>
+                        <th>发货</th>
                     </tr>
                     </thead>
                     <tbody>
