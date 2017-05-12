@@ -231,57 +231,6 @@ class OrderController extends Controller
         $response = app('wechat')->payment->handleNotify(function($notify, $successful){
             Log::info($notify); 
             Log::info($successful);
-            // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
-            $payMap[] = ['out_trade_no','=',$notify->out_trade_no];
-            $pay = PayRepository::getByWhere($payMap)->first();
-
-            //判断订单是否存在
-            if(isNullOrEmpty($pay)) {
-                return 'Order not exist.';
-            }
-
-            //判断订单是否已经支付过了
-            if($pay['status'] == config('enumerations.PAY_STATUS.END_PAY')) {
-                return true;
-            }
-
-            if($successful) {
-                //修改支付记录状态
-                $payData['status'] = config('enumerations.PAY_STATUS.END_PAY');
-                $payData['pay_trade_no'] = $notify->transaction_id;
-
-                PayRepository::setByWhere($payMap,$payData);
-
-                //修改活动报名记录状态
-                $eventJoinMap[] = ['pay_id','=',$pay->pay_id];
-                $eventJoinData['status'] = config('enumerations.EVENT_JOIN_STATUS.END_PAY');
-
-                EventJoinRepository::setByWhere($eventJoinMap,$eventJoinData);
-
-                //获取报名记录
-                $eventJoin = EventJoinRepository::getByWhere($eventJoinMap)->first();
-
-                //查找活动
-                $event = EventRepository::find($eventJoin['event_id']);
-
-                //获取报名总人数
-                $totalJoinMap[] = ['event_id', '=', $eventJoin['event_id']];
-                $totalJoinMap[] = ['status', '=', config('enumerations.EVENT_JOIN_STATUS.END_PAY')];
-
-                $totalJoinCount = EventJoinRepository::getByWhere($totalJoinMap)->count();
-
-
-                //更新报名人数
-                $eventData["join_number"] = $event["join_number"] + 1;
-                EventRepository::saveById($event['event_id'],$eventData);
-
-                //判断并修改活动状态
-                if($totalJoinCount == $event['upper_limit']) {
-                    $eventData['status'] = config('enumerations.EVENT_STATUS.FULL');
-                    EventRepository::saveById($event['event_id'],$eventData);
-                }
-            }
-
             return true; // 或者错误消息
 
         });
