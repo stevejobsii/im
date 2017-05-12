@@ -106,6 +106,25 @@ class OrderController extends Controller
 EOF;
     }
 
+    public function DeliverGoods($orderId)
+    {
+        
+        $orderInfo = WechatOrder:: where('id', '=', $orderId)->first();
+
+        if(isNullOrEmpty($orderInfo)) {
+            return 'Order not exist.';
+        }
+        
+        //判断是否已经发货
+        if($orderInfo['ship_status'] == '已发货') {
+            return 'Order has already delivered.';
+        }
+
+        $WechatOrder['ship_status'] = '已发货';
+        $WechatOrder->save(); 
+
+        return "1";
+    }
     /**
      * Update the specified resource in storage.
      *
