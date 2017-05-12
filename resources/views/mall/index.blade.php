@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <meta name="app-mobile-web-app-capable" content="yes">
-    <meta id="csrf-token" content="{{ csrf_token() }}">
+    <meta id="csrf-token" content="{{  csrf_field() }}">
     <!-- Favicon -->
     <link rel="icon" href="{{asset('favicon.png')}}" mce_href="{{asset('favicon.png')}}" type="image/png">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" mce_href="{{asset('favicon.ico')}}" type=”image/x-icon”>
