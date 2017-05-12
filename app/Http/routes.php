@@ -98,9 +98,8 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::put('address/{address}', 'UserController@updateAddress');
     Route::get('default/address', 'UserController@defaultAddress');
     Route::delete('address/{address}', 'UserController@deleteAddress');
-});
     /**
-     * 微信支付--event 设定订单内容SetAttributes
+     * 微信支付 设定订单内容SetAttributes
      */
     Route::get('SetAttributes/{id}', [
         'uses' => 'OrderController@SetAttributes',
@@ -112,10 +111,11 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
         'as'   => 'frontend.wechat.pay',
         'uses' => 'OrderController@pay',
     ]);
+});
     /**
-     * 微信支付回调--处理支付后
+     * 微信支付回调--处理支付后,这是微信来发送信息给服务器
      */
-    Route::post('HandlePay',[
+    Route::post('api/HandlePay',[
         'as'   => 'frontend.wechat.HandlePay',
         'uses' => 'OrderController@HandlePay',
     ]);
