@@ -240,11 +240,17 @@ class OrderController extends Controller
                 return 'Order not exist.';
             }
             
-            if($WechatOrder['pay_status'] == '未支付') {
-                return true;
+            if($WechatOrder['pay_status'] == '已支付') {
+                return 'Order has already paid.';
             }
 
-            return $WechatOrder; // 或者错误消息
+            if($successful) {
+                //修改支付记录状态
+                $WechatOrder['pay_status'] = '已支付';
+                $WechatOrder->save(); 
+            ｝
+            
+            return true; // 或者错误消息
 
         });
 
