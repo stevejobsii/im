@@ -117,6 +117,6 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::post('HandlePay/',[
         'as'   => 'frontend.wechat.HandlePay',
         'uses' => function(Illuminate\Http\Request $request){
-    dd($request);,
+    dd($request);
     ]);
 });
