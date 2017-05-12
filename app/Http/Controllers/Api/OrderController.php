@@ -236,7 +236,7 @@ class OrderController extends Controller
             
             //查找对应的order
             $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no)->first();
-            Log::info($WechatOrder);
+            //Log::info($WechatOrder);
 
             if(isNullOrEmpty($WechatOrder)) {
                 return 'Order not exist.';

@@ -36,7 +36,7 @@
                         Indicator.open('发起支付中...');
                         vm.wechatPay();
                         Indicator.close();
-                        // TODO 跳转至其他路由...
+                        window.location.href = "https://goodgoto.com/mall#!/usercenter";
                     }else{
                         Toast({
                             message: response.data.message
@@ -52,7 +52,7 @@
                     WeixinJSBridge.invoke(
                         'getBrandWCPayRequest',json,
                             function(res){     
-                               switch(res.err_msg) {
+                                switch(res.err_msg) {
                                     case 'get_brand_wcpay_request:cancel':
                                         alert('用户取消支付！');
                                         break;
