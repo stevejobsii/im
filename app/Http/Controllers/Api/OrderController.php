@@ -226,7 +226,7 @@ class OrderController extends Controller
          
     }
 
-    //处理订单,这个是微信发出的
+    //处理订单信息,这个是微信发出的
     public function HandlePay() {
         Log::info('request(HandlePay)arrived.'); 
         $response = app('wechat')->payment->handleNotify(function($notify, $successful){
@@ -253,8 +253,6 @@ class OrderController extends Controller
                 $WechatOrder['pay_status'] = '已支付';
                 $WechatOrder->save(); 
             ｝
-            
-            return true; // 或者错误消息
         });
 
         return $response; // Laravel 里请使用：return $response;
