@@ -117,5 +117,5 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
      */
     Route::post('HandlePay',[
         'as'   => 'frontend.wechat.HandlePay',
-        'uses' => 'OrderController@HandlePay',
+        'uses' => 'Api/OrderController@HandlePay',
     ]);
