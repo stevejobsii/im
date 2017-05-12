@@ -234,10 +234,11 @@ class OrderController extends Controller
             Log::info($successful);
 
             $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no);
-
-
-
-
+            Log::info($WechatOrder);
+            // if(isNullOrEmpty($pay)) {
+            //     return 'Order not exist.';
+            // }
+            
             return $WechatOrder; // 或者错误消息
 
         });
