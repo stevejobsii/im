@@ -115,7 +115,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     /**
      * 微信支付回调--处理支付后,这是微信来发送信息给服务器
      */
-    Route::post('api/HandlePay',[
+    Route::post('HandlePay',[
         'as'   => 'frontend.wechat.HandlePay',
         'uses' => 'OrderController@HandlePay',
     ]);
