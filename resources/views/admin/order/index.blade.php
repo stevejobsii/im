@@ -64,7 +64,7 @@
                                 <td>
                                     <a href="javascript:;" data-order="{{$order->id}}" class="info-btn">查看</a>
                                 </td>
-                                </td>
+                                <td>
                                     <button type="button" class="btn btn-info" id="deliver_goods" data-order="{{$order->id}}">已经发货</button>
                                 </td>
                             </tr>
