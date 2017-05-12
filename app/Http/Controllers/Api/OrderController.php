@@ -253,6 +253,7 @@ class OrderController extends Controller
                 $WechatOrder['pay_status'] = '已支付';
                 $WechatOrder->save(); 
             }
+            return true; 
         });
 
         return $response; // Laravel 里请使用：return $response;
