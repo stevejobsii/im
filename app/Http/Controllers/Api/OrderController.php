@@ -233,7 +233,7 @@ class OrderController extends Controller
             Log::info($notify); 
             Log::info($successful);
 
-            $WechatOrder = WechatOrder::find('order_number','=',$notify->out_trade_no);
+            $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no);
 
 
 
