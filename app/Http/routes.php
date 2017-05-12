@@ -98,6 +98,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::put('address/{address}', 'UserController@updateAddress');
     Route::get('default/address', 'UserController@defaultAddress');
     Route::delete('address/{address}', 'UserController@deleteAddress');
+});
     /**
      * 微信支付--event 设定订单内容SetAttributes
      */
@@ -118,4 +119,3 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
         'as'   => 'frontend.wechat.HandlePay',
         'uses' => 'OrderController@HandlePay',
     ]);
-});

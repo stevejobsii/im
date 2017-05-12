@@ -214,7 +214,7 @@ class OrderController extends Controller
             $config = app('wechat')->payment->configForJSSDKPayment($prepayId);
                  $config['timeStamp'] = $config['timestamp'];
                  unset($config['timestamp']); // 返回数组
-                 $config['notify_url'] = "https://goodgoto.com/api/HandlePay";
+                 //$config['notify_url'] = "https://goodgoto.com/api/HandlePay";
         Log::info($config);
         Log::info('request(SetAttributes)out.'); 
             return $config;
