@@ -194,7 +194,8 @@ class OrderController extends Controller
             'trade_type'       => 'JSAPI', // JSAPI，NATIVE，APP...
             'body'             => $WechatOrder->id,
             'detail'           => $WechatOrder->id,
-            'out_trade_no'     => md5(uniqid().microtime()),
+            //订单的标签order_number
+            'out_trade_no'     => $WechatOrder->order_number,
             'total_fee'        => $WechatOrder->order_amount*100,
             'notify_url'       => "https://goodgoto.com/HandlePay", 
             // 支付结果通知网址，如果不设置则会使用配置里的默认地址 route('frontend.wechat.HandlePay')
@@ -231,7 +232,13 @@ class OrderController extends Controller
         $response = app('wechat')->payment->handleNotify(function($notify, $successful){
             Log::info($notify); 
             Log::info($successful);
-            return true; // 或者错误消息
+
+            $WechatOrder = WechatOrder::find('order_number','=',$notify->out_trade_no);
+
+
+
+
+            return $WechatOrder; // 或者错误消息
 
         });
 
