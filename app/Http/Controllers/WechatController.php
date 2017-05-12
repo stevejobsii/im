@@ -93,7 +93,7 @@ class WechatController extends Controller
                 }
             } else {
                 $user = $userApi->get($openid);
-                return 'Hi,' . $user->nickname . ', iMall还在开发中.';
+                return 'Hi,' . $user->nickname . ', 微信商城还在开发中.';
             }
         });
 

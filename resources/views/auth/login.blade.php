@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>iMall | 登录</title>
+    <title>微信商城 | 登录</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to iMall</h2>
+            <h2 class="font-bold">Welcome to 微信商城</h2>
 
             <p>
                 Login in. To see it in action.
@@ -43,11 +43,11 @@
             </p>
 
             <p>
-                please commit your issue @ <a href="https://github.com/PassionZale/iMall/issues" target="_blank">iMall Issues</a>.
+                please commit your issue @ <a href="https://github.com/PassionZale/iMall/issues" target="_blank">微信商城 Issues</a>.
             </p>
 
             <p>
-                iMall is still developing ,
+                微信商城 is still developing ,
             </p>
 
             <p>
@@ -55,7 +55,7 @@
             </p>
 
             <p>
-                The current version of iMall is basic ,
+                The current version of 微信商城 is basic ,
             </p>
 
             <p>

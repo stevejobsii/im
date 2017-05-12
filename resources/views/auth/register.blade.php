@@ -30,7 +30,7 @@
 
 <div class="middle-box text-center loginscreen animated fadeInDown">
     <div>
-        <h3>Register to iMall</h3>
+        <h3>Register to 微信商城</h3>
         <p>Create account to see it in action.</p>
         <form class="m-t" role="form" method="POST" action="{{ url('/register') }}">
             {{ csrf_field() }}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>iMall</title>
+    <title>微信商城</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <meta name="app-mobile-web-app-capable" content="yes">

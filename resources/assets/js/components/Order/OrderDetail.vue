@@ -2,7 +2,7 @@
     <div id="order-detail-part">
         <div class="order-detail-wrapper">
             <div class="detail-container underline">
-                <p class="info">感谢您在iMall购物，欢迎您再次光临！</p>
+                <p class="info">感谢您在微信商城购物，欢迎您再次光临！</p>
             </div>
             <div class="detail-container">
                 <p v-show="order.pay_status === '未支付'"><span class="title">状态：</span>{{order.pay_status}}</p>
