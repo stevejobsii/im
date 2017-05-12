@@ -8,9 +8,6 @@
             <p>商品总价：<span class="amount">&yen;{{order.commodity_amount | transformPrice}}</span></p>
             <p>订单总价：<span class="amount">&yen;{{order.order_amount | transformPrice}}</span></p>
         </div>
-        <div class="order-pay-btn" :class="{'disabled' : visible}">
-            微信支付
-        </div>
     </div>
 </template>
 
@@ -37,14 +34,9 @@
                     if(response.data.code == 0){
                         vm.$set('order',response.data.message);
                         Indicator.open('发起支付中...');
-                        setTimeout(function(){
-                            vm.wechatPay();
-                            Indicator.close();
-                            Toast({
-                              message: '支'
-                            });
-                            // TODO 跳转至其他路由...
-                        },3000);
+                        vm.wechatPay();
+                        Indicator.close();
+                        // TODO 跳转至其他路由...
                     }else{
                         Toast({
                             message: response.data.message
@@ -56,9 +48,6 @@
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
                 vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
-                    Toast({
-                            message: response.data
-                        });
                     let json = response.data;
                     WeixinJSBridge.invoke(
                         'getBrandWCPayRequest',json,
