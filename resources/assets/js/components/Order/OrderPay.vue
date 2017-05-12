@@ -54,20 +54,24 @@
                                 switch(res.err_msg) {
                                     case 'get_brand_wcpay_request:cancel':
                                         alert('用户取消支付！');
+                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
                                         break;
                                     case 'get_brand_wcpay_request:fail':
                                         alert('支付失败！（'+res.err_desc+'）');
+                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
                                         break;
                                     case 'get_brand_wcpay_request:ok':
                                         alert('支付成功!good');
+                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
                                         break;
                                     default:
                                         alert(JSON.stringify(res));
+                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
                                         break;
                                 } 
                             }
                     );
-                    window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
+
                 });
             }
         }
