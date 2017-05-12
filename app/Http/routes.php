@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
     //确认已经发货
     Route::post('order-deliver-goods/{orderId}','OrderController@DeliverGoods');
 
+});
 // DEBUG
 Route::get('/wechat/debug', 'WechatController@debug');
 

@@ -109,7 +109,7 @@ EOF;
     public function DeliverGoods($orderId)
     {
         
-        $orderInfo = WechatOrder:: where('id', '=', $orderId)->first();
+        $orderInfo = WechatOrder::where('id', '=', $orderId)->first();
 
         if(isNullOrEmpty($orderInfo)) {
             return 'Order not exist.';
