@@ -36,7 +36,6 @@
                         Indicator.open('发起支付中...');
                         vm.wechatPay();
                         Indicator.close();
-                        window.location.href = "https://goodgoto.com/mall#!/usercenter";
                     }else{
                         Toast({
                             message: response.data.message
@@ -67,7 +66,8 @@
                                         break;
                                 } 
                             }
-                    ); 
+                    );
+                    window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
                 });
             }
         }
