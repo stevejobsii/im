@@ -63,6 +63,9 @@
                                 <td>
                                     <a href="javascript:;" data-order="{{$order->id}}" class="info-btn">查看</a>
                                 </td>
+                                </td>
+                                    <button type="button" class="btn btn-info" id="deliver_goods" data-order="{{$order->id}}">已经发货</button>
+                                </td>
                             </tr>
                         @endforeach
                     @endif
@@ -91,7 +94,6 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" id="deliver_goods" data-order="{{$order->id}}">已经发货</button>
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">确定</button>
                 </div>
