@@ -52,7 +52,10 @@ Route::group(['prefix' => 'mall', 'middleware' => ['web', 'wechat.oauth'], 'name
     // Wechat OAuth2.0 (type=snsapi_userinfo)
     Route::get('/user', 'IndexController@oauth');
     // 首页
-    Route::get('/', 'IndexController@index');
+    Route::get('/', [
+        'as'   => 'frontend.wechat.index',
+        'uses' => 'IndexController@index',
+    ]);
 });
 
 Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Api'], function () {
@@ -99,7 +102,6 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
      * 微信支付--event 设定订单内容SetAttributes
      */
     Route::get('SetAttributes/{id}', [
-        //'as'   => 'frontend.wechat.eventPay',
         'uses' => 'OrderController@SetAttributes',
     ]);
     /**
@@ -110,7 +112,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
         'uses' => 'OrderController@pay',
     ]);
     /**
-     * 微信支付回调--event
+     * 微信支付回调--处理支付后
      */
     Route::post('HandlePay/',[
         'as'   => 'frontend.wechat.HandlePay',

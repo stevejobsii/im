@@ -173,19 +173,22 @@ class OrderController extends Controller
 
     //订单下单
     public function SetAttributes($id, Request $request) {
-        //查找event
+        
+        //查找商品
         Log::info('request(SetAttributes)arrived.'); 
         $WechatOrderId = $id;
         $WechatOrder = WechatOrder::find($WechatOrderId);
 
         //判断是否存在
         if(isNullOrEmpty($WechatOrder)) {
-            return "no such order";
+            return redirect()->route('frontend.wechat.index');
         }
 
+        //判断是否已经支付
         if($WechatOrder->pay_status == '已支付') {
             return "已支付";
         }
+
         //商品属性
         $attributes = [
             'trade_type'       => 'JSAPI', // JSAPI，NATIVE，APP...
@@ -218,21 +221,11 @@ class OrderController extends Controller
          
     }
 
-
-    
-
-
-
-
-
-
-
-
-
-    //处理订单-event
+    //处理订单
     public function HandlePay() {
         $response = $this->wechat->payment->handleNotify(function($notify, $successful){
-
+            return $notify;
+            // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
             $payMap[] = ['out_trade_no','=',$notify->out_trade_no];
             $pay = PayRepository::getByWhere($payMap)->first();
 
