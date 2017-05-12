@@ -60,6 +60,10 @@
             <div class="detail-container">
                 <p class="result-amount">实付金额：<span class="price">&yen;{{order.order_amount | transformPrice}}</span></p>
             </div>
+
+           <div class="order-pay-btn" v-show="order.pay_status === '未支付'" @click="payOrder">
+                微信支付
+           </div>
         </div>
     </div>
 </template>
@@ -94,7 +98,14 @@
                         vm.$set('order',response.data.message);
                     }
                 });
-            }
+            },
+            payOrder: function(){
+                Indicator.open({
+                  text: '订单创建中...'
+                });
+                let itemId = this.$route.params.hashid;
+                window.location.href = "https://goodgoto.com/mall#!/itemId/orderpay"; 
+            },
         }
     }
 </script>

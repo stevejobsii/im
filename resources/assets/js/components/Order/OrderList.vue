@@ -1,3 +1,4 @@
+
 <template>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
         <mt-tab-item id="all" v-link="{name:'order-list',params:{'type':'all'}}">全部订单</mt-tab-item>
