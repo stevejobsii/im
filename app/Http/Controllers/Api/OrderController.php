@@ -230,9 +230,11 @@ class OrderController extends Controller
     public function HandlePay() {
         Log::info('request(HandlePay)arrived.'); 
         $response = app('wechat')->payment->handleNotify(function($notify, $successful){
-            Log::info($notify); 
-            Log::info($successful);
-
+            // LOG debug
+            // Log::info($notify); 
+            // Log::info($successful);
+            
+            //查找对应的order
             $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no)->first();
             Log::info($WechatOrder);
 
@@ -240,10 +242,12 @@ class OrderController extends Controller
                 return 'Order not exist.';
             }
             
+            //判断是否已经支付
             if($WechatOrder['pay_status'] == '已支付') {
                 return 'Order has already paid.';
             }
 
+            //录入已经支付
             if($successful) {
                 //修改支付记录状态
                 $WechatOrder['pay_status'] = '已支付';
@@ -251,7 +255,6 @@ class OrderController extends Controller
             ｝
             
             return true; // 或者错误消息
-
         });
 
         return $response; // Laravel 里请使用：return $response;
