@@ -212,19 +212,21 @@ class OrderController extends Controller
             $config = app('wechat')->payment->configForJSSDKPayment($prepayId);
                  $config['timeStamp'] = $config['timestamp'];
                  unset($config['timestamp']); // 返回数组
+        Log::info('request(SetAttributes)out.'); 
             return $config;
         } else {
+        Log::info('request(SetAttributesfail)out.'); 
             return 'pay fail';
         }
-
-        Log::info('request(SetAttributes)out.'); 
          
     }
 
     //处理订单
     public function HandlePay() {
+        Log::info('request(HandlePay)arrived.'); 
         $response = $this->wechat->payment->handleNotify(function($notify, $successful){
-            return $notify;
+            Log::info($notify); 
+            Log::info($successful);
             // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
             $payMap[] = ['out_trade_no','=',$notify->out_trade_no];
             $pay = PayRepository::getByWhere($payMap)->first();
