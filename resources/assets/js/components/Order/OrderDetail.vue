@@ -104,7 +104,7 @@
                   text: '订单创建中...'
                 });
                 let itemId = this.$route.params.hashid;
-                window.location.href = 'https://goodgoto.com/mall#!/'.itemId.'/orderpay'; 
+                window.location.href = 'https://goodgoto.com/mall#!/'+itemId+'orderpay'; 
             },
         }
     }
