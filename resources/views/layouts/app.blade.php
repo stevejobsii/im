@@ -70,7 +70,7 @@
                 </li>
 
                 <!-- 商品管理部分 -->
-                <!-- <li class="{{request()->is('admin/product/*') ? 'active' : ''}}">
+                <li class="{{request()->is('admin/product/*') ? 'active' : ''}}">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i>
                         <span class="nav-label">商品管理</span>
@@ -90,7 +90,7 @@
                             <a href="{{url('admin/product/category')}}">分类</a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
 
                 <!-- 活动管理部分 -->
                 <li class="{{request()->is('admin/event/*') ? 'active' : ''}}">
