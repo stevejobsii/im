@@ -37,6 +37,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         // 富文本编辑器上传图片
         Route::post('editorUpload', 'ProductCommodityController@editorUpload');
     });
+    // 活动管理（复制商品管理）
+    Route::group(['prefix' => 'event'], function () {
+        Route::resource('topic', 'ProductTopicController');
+        Route::resource('plate', 'ProductPlateController');
+        Route::resource('category', 'ProductCategoryController');
+        Route::resource('commodity', 'ProductCommodityController');
+        // Ajax Get Tree & Table Data
+        Route::get('getTreeData', 'ProductCategoryController@treeData');
+        Route::get('getTableData', 'ProductCommodityController@tableData');
+        // 富文本编辑器上传图片
+        Route::post('editorUpload', 'ProductCommodityController@editorUpload');
+    });
     // 订单管理
     Route::resource('order', 'OrderController', ['except' => ['create']]);
     //确认已经发货

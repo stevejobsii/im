@@ -234,7 +234,7 @@ class OrderController extends Controller
             // Log::info($notify); 
             // Log::info($successful);
             
-            //查找对应的order
+            // 查找对应的order
             $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no)->first();
             //Log::info($WechatOrder);
 
@@ -242,17 +242,24 @@ class OrderController extends Controller
                 return 'Order not exist.';
             }
             
-            //判断是否已经支付
+            // 判断是否已经支付
             if($WechatOrder['pay_status'] == '已支付') {
                 return 'Order has already paid.';
             }
 
-            //录入已经支付
+            // order录入已经支付
             if($successful) {
                 //修改支付记录状态
                 $WechatOrder['pay_status'] = '已支付';
                 $WechatOrder->save(); 
             }
+
+            // TODO 库存减相应件数
+            if($successful) {
+                //Log::info($WechatOrder->detail);
+                //$WechatOrder->save(); 
+            }
+
             return true; 
         });
 

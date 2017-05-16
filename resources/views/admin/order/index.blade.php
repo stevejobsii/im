@@ -45,7 +45,7 @@
                         <th>收货人地址</th>
                         <th>下单时间</th>
                         <th>操作</th>
-                        <th>发货</th>
+                        <!-- <th>发货</th> -->
                     </tr>
                     </thead>
                     <tbody>
@@ -64,9 +64,9 @@
                                 <td>
                                     <a href="javascript:;" data-order="{{$order->id}}" class="info-btn">查看</a>
                                 </td>
-                                <td>
-                                    <button type="button" class="btn btn-info" id="deliver_goods" data-order="{{$order->id}}">已经发货</button>
-                                </td>
+                                <!-- <td>
+                                    <button type="button" class="btn btn-info deliver_goods"  data-order="{{$order->id}}">已经发货</button>
+                                </td> -->
                             </tr>
                         @endforeach
                     @endif

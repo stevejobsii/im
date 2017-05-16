@@ -9,7 +9,7 @@ $(function () {
         });
     });
 
-    $('#deliver_goods').on('click', function (e) {
+    $('.deliver_goods').on('click', function (e) {
         e.preventDefault();
         var orderId = $(this).attr('data-order');
         $.post('deliver_goods/' + orderId, function (response) {

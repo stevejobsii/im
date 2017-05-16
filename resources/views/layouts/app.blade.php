@@ -69,7 +69,8 @@
                     </a>
                 </li>
 
-                <li class="{{request()->is('admin/product/*') ? 'active' : ''}}">
+                <!-- 商品管理部分 -->
+                <!-- <li class="{{request()->is('admin/product/*') ? 'active' : ''}}">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i>
                         <span class="nav-label">商品管理</span>
@@ -87,6 +88,26 @@
                         </li>
                         <li class="{{request()->is('admin/product/category*') ? 'active' : ''}}">
                             <a href="{{url('admin/product/category')}}">分类</a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <!-- 活动管理部分 -->
+                <li class="{{request()->is('admin/event/*') ? 'active' : ''}}">
+                    <a href="#">
+                        <i class="fa fa-product-hunt"></i>
+                        <span class="nav-label">活动管理</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="{{request()->is('admin/event/commodity*') ? 'active' : ''}}">
+                            <a href="{{url('admin/event/commodity')}}">活动</a>
+                        </li>
+                        <li class="{{request()->is('admin/event/topic*') ? 'active' : ''}}">
+                            <a href="{{url('admin/event/topic')}}">活动标签</a>
+                        </li>
+                        <li class="{{request()->is('admin/event/category*') ? 'active' : ''}}">
+                            <a href="{{url('admin/event/category')}}">分类</a>
                         </li>
                     </ul>
                 </li>
