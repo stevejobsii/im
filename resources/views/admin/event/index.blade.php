@@ -3,13 +3,13 @@
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>商品管理</h2>
+            <h2>管理</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="#">商品管理</a>
+                    <a href="#">活动管理</a>
                 </li>
                 <li class="active">
-                    <strong>商品</strong>
+                    <strong>活动</strong>
                 </li>
             </ol>
         </div>
@@ -18,13 +18,13 @@
     <div class="wrapper wrapper-content">
         <div class="ibox">
             <div class="ibox-title">
-                <h5>商品设置</h5>
+                <h5>活动设置</h5>
             </div>
             <div class="ibox-content">
                 <a href="{{url('admin/product/commodity/create')}}" class="btn btn-primary">
                     <i class="fa fa-btn fa-plus"></i>新增
                 </a>
-                <a href="{{url('admin/product/commodity')}}" class="btn btn-warning">全部商品</a>
+                <a href="{{url('admin/product/commodity')}}" class="btn btn-warning">全部活动</a>
                 <div class="row tree-container">
                     <!-- <div class="col-md-2">
                         <div id="tree"></div>

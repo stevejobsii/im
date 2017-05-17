@@ -3,13 +3,13 @@
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-            <h2>商品管理</h2>
+            <h2>活动管理</h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="#">商品管理</a>
+                    <a href="#">活动管理</a>
                 </li>
                 <li class="active">
-                    <strong>商品</strong>
+                    <strong>活动</strong>
                 </li>
             </ol>
         </div>
@@ -18,7 +18,7 @@
     <div class="wrapper wrapper-content">
         <div class="ibox">
             <div class="ibox-title">
-                <h5>商品修改</h5>
+                <h5>活动修改</h5>
             </div>
             <div class="ibox-content">
                 <form class="form-small-text" action="{{url('admin/product/commodity/'.$commodity->id)}}" method="post"
@@ -77,11 +77,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>商品简介：</label>
+                        <label>活动简介：</label>
                         <textarea rows="4" cols="80" name="commodity_base_info" class="form-control">{{$commodity->commodity_base_info}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>商品详情：</label>
+                        <label>活动详情：</label>
                         <textarea id="editor" name="commodity_detail_info" class="form-control">{{$commodity->commodity_detail_info}}</textarea>
                     </div>
                     <div class="form-group">
