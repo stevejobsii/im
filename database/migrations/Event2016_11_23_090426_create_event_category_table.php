@@ -30,6 +30,6 @@ class CreateProductCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::drop('product_category');
+        Schema::drop('event_category');
     }
 }

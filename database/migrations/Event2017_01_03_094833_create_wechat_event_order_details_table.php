@@ -42,6 +42,6 @@ class CreateWechatOrderDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wechat_order_details');
+        Schema::drop('event_order_details');
     }
 }

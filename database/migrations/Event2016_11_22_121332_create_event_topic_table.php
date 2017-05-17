@@ -29,6 +29,6 @@ class CreateProductTopicTable extends Migration
      */
     public function down()
     {
-        Schema::drop('product_topic');
+        Schema::drop('event_topic');
     }
 }

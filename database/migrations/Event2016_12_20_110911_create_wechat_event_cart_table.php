@@ -28,6 +28,6 @@ class CreateWechatCartTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wechat_cart');
+        Schema::drop('event_cart');
     }
 }
