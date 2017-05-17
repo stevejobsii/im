@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventCartTable extends Migration
+class CreateWechatEventCartTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateEventCartTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_cart', function (Blueprint $table) {
+        Schema::create('wechat_event_cart', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid');
             $table->integer('commodity_id');
