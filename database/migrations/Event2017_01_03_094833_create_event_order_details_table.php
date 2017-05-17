@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWechatEventOrderDetailsTable extends Migration
+class CreateEventOrderDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateWechatEventOrderDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wechat_event_order_details', function (Blueprint $table) {
+        Schema::create('event_order_details', function (Blueprint $table) {
             $table->increments('id');
             $table->string('openid');
             // 订单ID
@@ -42,6 +42,6 @@ class CreateWechatEventOrderDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('wechat_event_order_details');
+        Schema::drop('event_order_details');
     }
 }
