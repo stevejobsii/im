@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\ProductCategory;
 use App\ProductPlate;
 use App\ProductTopic;
-use App\Eventfacades\EventCommodity;
+use app\Eventfacades\EventCommodity;
 use Image;
 
 class EventCommodityController extends Controller
