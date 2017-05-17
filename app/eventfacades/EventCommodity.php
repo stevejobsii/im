@@ -1,6 +1,6 @@
 <?php
 // 注意namespace
-namespace App\Eventfacades;
+namespace App\eventfacades;
 
 use Illuminate\Database\Eloquent\Model;
 
