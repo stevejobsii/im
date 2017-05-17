@@ -56,8 +56,8 @@
                                     <td>{{$commodity->event_disabled}}</td>
                                     <td>{{$commodity->event_sort}}</td>
                                     <td>
-                                        <a href="{{url('admin/product/commodity/'.$commodity->id.'/edit')}}" class="edit-btn" title="修改">修改</a>
-                                        <form action="{{url('admin/product/commodity/'.$commodity->id)}}" method="post" class="del-form">
+                                        <a href="{{url('admin/event/commodity/'.$commodity->id.'/edit')}}" class="edit-btn" title="修改">修改</a>
+                                        <form action="{{url('admin/event/commodity/'.$commodity->id)}}" method="post" class="del-form">
                                             <input type="hidden" name="_method" value="DELETE">
                                             {{csrf_field()}}
                                             <button title="删除" type="submit" class="del-btn">删除</button>
