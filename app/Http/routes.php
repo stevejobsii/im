@@ -40,11 +40,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 
     // 活动管理（复制商品管理）
     Route::group(['prefix' => 'event'], function () {
-        Route::resource('commodity', 'EventCommodityController');
+        Route::resource('commodity', 'Event\EventCommodityController');
         // Ajax Get Tree & Table Data
-        Route::get('getTableData', 'EventCommodityController@tableData');
+        Route::get('getTableData', 'Event\EventCommodityController@tableData');
         // 富文本编辑器上传图片
-        Route::post('editorUpload', 'EventCommodityController@editorUpload');
+        Route::post('editorUpload', 'Event\EventCommodityController@editorUpload');
     });
 
     // 订单管理
