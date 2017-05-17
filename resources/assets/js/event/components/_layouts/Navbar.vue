@@ -5,8 +5,8 @@
             <i slot="icon" class="nav-index"></i>
             首页
         </mt-tab-item> -->
-        <mt-tab-item v-link="{name:'category'}" id="category">
-            <i slot="icon" class="nav-category"></i>
+        <mt-tab-item v-link="{name:'usercenter'}" id="usercenter">
+            <i slot="icon" class="nav-usercenter"></i>
             全部活动
         </mt-tab-item>
         <mt-tab-item v-link="{name:'cart'}" id="cart">
