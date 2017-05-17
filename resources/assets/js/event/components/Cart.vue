@@ -47,7 +47,7 @@
             <img src="/images/common/cart.png"/>
             <h4>购物车快饿扁了T.T</h4>
             <p>主人快给我挑点宝贝吧</p>
-            <a v-link="{name:'index'}">去逛逛</a>
+            <!-- <a v-link="{name:'index'}">去逛逛</a> -->
         </div>
     </div>
 
