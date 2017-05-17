@@ -110,8 +110,10 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::get('order/{order}', 'OrderController@show');
     // 获取订单列表（all,unpay,unreceived）
     Route::get('orderlist/{type}', 'OrderController@index');
-    // 获取订单详情
+    // 一、获取商品订单订单详情
     Route::get('orderdetail/{order}', 'OrderController@detail');
+    // 二、获取活动订单详情
+    //Route::get('orderdetail/{order}', 'OrderController@detail');
     // 意见建议
     Route::post('suggestion', 'UserController@suggestion');
     // 地址管理

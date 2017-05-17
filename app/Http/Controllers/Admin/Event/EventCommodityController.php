@@ -67,7 +67,7 @@ class EventCommodityController extends Controller
         $commodity->event_detail_info = $request->input('event_detail_info');
         $commodity->status = $request->input('status');
         $commodity->event_page_url = $request->input('event_page_url');
-        $base_info = $request->input('commodity_base_info');
+        $base_info = $request->input('event_base_info');
         $placeholder = "======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。";
         if ($base_info != $placeholder) {
             $commodity->commodity_base_info = $base_info;
@@ -118,7 +118,7 @@ class EventCommodityController extends Controller
 
     public function update(Request $request, $id)
     {
-        $commodity = ProductCommodity::findOrFail($id);
+        $commodity = EventCommodity::findOrFail($id);
         if ($request->hasFile('file') && $request->file('file')->isValid()) {
             $filePath = '/uploads/commodity/';
             $fileName = str_random(10) . '.png';
@@ -126,29 +126,28 @@ class EventCommodityController extends Controller
                 ->encode('png')
                 ->resize(600, 300)
                 ->save('.' . $filePath . $fileName);
-            $commodity->commodity_img = $filePath . $fileName;
+           $commodity->event_img = $filePath . $fileName;
         }
-        $commodity->commodity_name = $request->input('commodity_name');
-        $commodity->commodity_number = $request->input('commodity_number');
-        $commodity->commodity_original_price = $request->input('commodity_original_price');
-        $commodity->commodity_current_price = $request->input('commodity_current_price');
-        $commodity->commodity_stock_number = $request->input('commodity_stock_number');
-        $commodity->commodity_sold_number = $request->input('commodity_sold_number');
-        $commodity->commodity_detail_info = $request->input('commodity_detail_info');
-        $base_info = $request->input('commodity_base_info');
+        $commodity->event_name = $request->input('event_name');
+        $commodity->event_number = $request->input('event_number');
+        $commodity->event_original_price = $request->input('event_original_price');
+        $commodity->event_current_price = $request->input('event_current_price');
+        $commodity->event_stock_number = $request->input('event_stock_number');
+        $commodity->event_sold_number = $request->input('event_sold_number');
+        $commodity->event_detail_info = $request->input('event_detail_info');
+        $commodity->status = $request->input('status');
+        $commodity->event_page_url = $request->input('event_page_url');
+        $base_info = $request->input('event_base_info');
         $placeholder = "======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。";
         if ($base_info != $placeholder) {
             $commodity->commodity_base_info = $base_info;
         }
-        $commodity->commodity_disabled = $request->input('commodity_disabled');
-        $commodity->commodity_sort = $request->input('commodity_sort');
-        $commodity->topic_id = $request->input('topic_id');
-        $commodity->plate_id = $request->input('plate_id');
-        $commodity->category_id = $request->input('category_id');
+        $commodity->event_disabled = $request->input('event_disabled');
+        $commodity->event_sort = $request->input('event_sort');
         if ($commodity->save()) {
-            return redirect()->to('admin/product/commodity')->withSuccess('修改商品成功！');
+            return redirect()->to('admin/event/commodity')->withSuccess('修改商品成功！');
         } else {
-            return redirect()->to('admin/product/commodity')->withError('修改商品失败！');
+            return redirect()->to('admin/event/commodity')->withError('修改商品失败！');
         }
     }
 

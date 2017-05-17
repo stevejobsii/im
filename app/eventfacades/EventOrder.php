@@ -1,17 +1,17 @@
 <?php
 
-namespace App;
+namespace App\eventfacades;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WechatOrder extends Model
+class EventOrder extends Model
 {
-    protected $table = 'wechat_orders';
+    protected $table = 'event_orders';
 
     protected $guarded = [];
 
     public function details(){
-        return $this->hasMany('App\WechatOrderDetail','order_id','id');
+        return $this->hasMany('App\eventfacades\EventOrderDetail','order_id','id');
     }
 
     public function follow(){
