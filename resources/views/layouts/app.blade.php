@@ -155,7 +155,7 @@
 
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <span class="m-r-sm text-muted welcome-message">Welcome to iMall Admin Console.</span>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to 微信商城 Admin Console.</span>
                     </li>
                     <li>
                         <a href="{{url('/logout')}}">

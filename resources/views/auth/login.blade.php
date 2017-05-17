@@ -43,7 +43,7 @@
             </p>
 
             <p>
-                please commit your issue @ <a href="https://github.com/PassionZale/iMall/issues" target="_blank">微信商城 Issues</a>.
+                please commit your issue.
             </p>
 
             <p>

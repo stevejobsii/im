@@ -2,11 +2,20 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './resources/assets/js/main.js',
+    // 微信商城
+    // entry: './resources/assets/js/main.js',
+    // output: {
+    //     path: path.resolve(__dirname, './public/js/mall'),
+    //     publicPath: '/js/',
+    //     filename: 'app.js'
+    // },
+
+    // 活动订单
+    entry: './resources/assets/js/event/main.js',
     output: {
-        path: path.resolve(__dirname, './public/js/mall'),
+        path: path.resolve(__dirname, './public/js/event'),
         publicPath: '/js/',
-        filename: 'app.js'
+        filename: 'eventapp.js'
     },
     resolveLoader: {
         root: path.join(__dirname, 'node_modules'),

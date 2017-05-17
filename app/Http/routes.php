@@ -37,18 +37,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         // 富文本编辑器上传图片
         Route::post('editorUpload', 'ProductCommodityController@editorUpload');
     });
+
     // 活动管理（复制商品管理）
     Route::group(['prefix' => 'event'], function () {
-        Route::resource('topic', 'ProductTopicController');
-        Route::resource('plate', 'ProductPlateController');
-        Route::resource('category', 'ProductCategoryController');
-        Route::resource('commodity', 'ProductCommodityController');
+        Route::resource('commodity', 'EventCommodityController');
         // Ajax Get Tree & Table Data
-        Route::get('getTreeData', 'ProductCategoryController@treeData');
-        Route::get('getTableData', 'ProductCommodityController@tableData');
+        Route::get('getTableData', 'EventCommodityController@tableData');
         // 富文本编辑器上传图片
-        Route::post('editorUpload', 'ProductCommodityController@editorUpload');
+        Route::post('editorUpload', 'EventCommodityController@editorUpload');
     });
+
     // 订单管理
     Route::resource('order', 'OrderController', ['except' => ['create']]);
     //确认已经发货
@@ -61,11 +59,22 @@ Route::get('/wechat/debug', 'WechatController@debug');
 // Wechat http main route
 Route::any('/wechat', 'WechatController@serve');
 
-// 微信商城
+// 菜单->微信商城
 Route::group(['prefix' => 'mall', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Mall'], function () {
     // Wechat OAuth2.0 (type=snsapi_userinfo)
     Route::get('/user', 'IndexController@oauth');
     // 首页
+    Route::get('/', [
+        'as'   => 'frontend.wechat.index',
+        'uses' => 'IndexController@index',
+    ]);
+});
+
+// 菜单->活动订单
+Route::group(['prefix' => 'event', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Event'], function () {
+    // Wechat OAuth2.0 (type=snsapi_userinfo)
+    Route::get('/user', 'IndexController@oauth');
+    // 活动首页
     Route::get('/', [
         'as'   => 'frontend.wechat.index',
         'uses' => 'IndexController@index',
@@ -125,6 +134,8 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
         'as'   => 'frontend.wechat.pay',
         'uses' => 'OrderController@pay',
     ]);
+    // TODO活动订单API
+
 });
     /**
      * 微信支付回调--处理支付后,这是微信来发送信息给服务器
