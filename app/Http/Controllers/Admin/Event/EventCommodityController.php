@@ -103,17 +103,9 @@ class EventCommodityController extends Controller
 
     public function edit($id)
     {
-        $commodity = ProductCommodity::findOrFail($id);
-        $categories = ProductCategory::where('parent_id', '>', 0)->orderBy('id', 'desc')->get();
-        $plates = ProductPlate::where('disabled', '=', '显示')->orderBy('id', 'desc')->get();
-        $topics = ProductTopic::where('disabled', '=', '显示')->orderBy('id', 'desc')->get();
-        return view('admin.product.commodity.edit')
-            ->with([
-                'categories' => $categories,
-                'plates' => $plates,
-                'topics' => $topics,
-                'commodity' => $commodity,
-            ]);
+        $commodity = EventCommodity::findOrFail($id);
+        
+        return view('admin.product.commodity.edit');
     }
 
     public function update(Request $request, $id)
