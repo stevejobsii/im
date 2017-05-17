@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-//use App\Eventfacades\EventCommodity;
 use App\ProductCategory;
 use App\ProductPlate;
 use App\ProductTopic;
+use App\Eventfacades\EventCommodity;
 use Image;
 
 class EventCommodityController extends Controller
 {
     public function index()
     {
-        $commodities = App\Eventfacades\EventCommodity::paginate(8);
+        $commodities = EventCommodity::paginate(8);
         return view('admin.event.index')->with(['commodities' => $commodities]);
     }
 
