@@ -1,10 +1,10 @@
 <template>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
-        <mt-tab-item v-link="{name:'index'}" id="index">
+        <!-- <mt-tab-item v-link="{name:'index'}" id="index">
             <i slot="icon" class="nav-index"></i>
             首页
-        </mt-tab-item>
+        </mt-tab-item> -->
         <mt-tab-item v-link="{name:'category'}" id="category">
             <i slot="icon" class="nav-category"></i>
             全部活动
@@ -57,7 +57,7 @@ export default{
             }
         },
         routeHandler:function(val){
-            let activeRouteNames = ['index','category','usercenter'];
+            let activeRouteNames = ['index','category','usercenter'];//'category',
             if(activeRouteNames.indexOf(val) >= 0){
                 this.$set('active',true);
             }else{

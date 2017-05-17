@@ -4,14 +4,14 @@ export default function (router) {
     });
 
     router.map({
-        '/index': {
-            name: 'index',
-            component: require('./components/Index.vue')
-        },
-        '/category': {
-            name: 'category',
-            component: require('./components/Category.vue')
-        },
+        // '/index': {
+        //     name: 'index',
+        //     component: require('./components/Index.vue')
+        // },
+        // '/category': {
+        //     name: 'category',
+        //     component: require('./components/Category.vue')
+        // },
         '/:hashid/commodity': {
             name: 'commodity',
             component: require('./components/Commodity/CommodityDetail.vue')
@@ -24,24 +24,25 @@ export default function (router) {
             name: 'usercenter',
             component: require('./components/UserCenter.vue')
         },
-        '/attr': {
-            name: 'attribute',
-            component: require('./components/Attribute/Attribute.vue'),
-            subRoutes: {
-                '/:hashid/topic': {
-                    name: 'aTopic',
-                    component: require('./components/Attribute/Topic.vue')
-                },
-                '/:hashid/plate': {
-                    name: 'aPlate',
-                    component: require('./components/Attribute/Plate.vue')
-                },
-                '/:hashid/category': {
-                    name: 'aCategory',
-                    component: require('./components/Attribute/Category.vue')
-                }
-            }
-        },
+        // 暂不分类
+        // '/attr': {
+        //     name: 'attribute',
+        //     component: require('./components/Attribute/Attribute.vue'),
+        //     subRoutes: {
+        //         '/:hashid/topic': {
+        //             name: 'aTopic',
+        //             component: require('./components/Attribute/Topic.vue')
+        //         },
+        //         '/:hashid/plate': {
+        //             name: 'aPlate',
+        //             component: require('./components/Attribute/Plate.vue')
+        //         },
+        //         '/:hashid/category': {
+        //             name: 'aCategory',
+        //             component: require('./components/Attribute/Category.vue')
+        //         }
+        //     }
+        // },
         // 不要邮寄地址
         // '/address': {
         //     name: 'address',
