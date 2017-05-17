@@ -5,10 +5,10 @@
             <i slot="icon" class="nav-index"></i>
             首页
         </mt-tab-item> -->
-        <mt-tab-item v-link="{name:'usercenter'}" id="category">
+        <!-- <mt-tab-item v-link="{name:'usercenter'}" id="category">
             <i slot="icon" class="nav-category"></i>
             全部活动
-        </mt-tab-item>
+        </mt-tab-item> -->
         <mt-tab-item v-link="{name:'cart'}" id="cart">
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
@@ -57,7 +57,7 @@ export default{
             }
         },
         routeHandler:function(val){
-            let activeRouteNames = ['usercenter','usercenter'];//['index','category','usercenter']
+            let activeRouteNames = ['usercenter'];//['index','category','usercenter']
             if(activeRouteNames.indexOf(val) >= 0){
                 this.$set('active',true);
             }else{

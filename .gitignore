@@ -32,3 +32,5 @@ npm-debug.log
 public/js/mall/app.js.map
 
 *.map
+
+public/js/event/eventapp.js.map
