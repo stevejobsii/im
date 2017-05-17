@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWechatOrderDetailsTable extends Migration
+class CreateEventOrderDetailsTable extends Migration
 {
     /**
      * Run the migrations.

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductCommodityTable extends Migration
+class CreateEventCommodityTable extends Migration
 {
     /**
      * Run the migrations.
