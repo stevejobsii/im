@@ -56,23 +56,23 @@
             </div>
         </div>
     </div>
-    <address-choose
+    <!-- <address-choose
             :choosed.sync="address"
             :visible.sync="choosing">
-    </address-choose>
+    </address-choose> -->
 </template>
 
 <script>
     import { Indicator } from 'mint-ui';
     import { Toast } from 'mint-ui';
     import { MessageBox } from 'mint-ui';
-    import AddressChoose from '../Address/AddressChoose.vue';
+    //import AddressChoose from '../Address/AddressChoose.vue';
     export default{
         data(){
             return {
                 from: '',
                 goods: [],
-                address:{},
+                //address:{},
                 choosing: false,
                 totalPrice:0,
                 freight_amount:false,
@@ -80,7 +80,7 @@
             }
         },
         components:{
-            AddressChoose
+            //AddressChoose
         },
         created(){
             this.initOrder();
@@ -90,25 +90,25 @@
                 Indicator.open();
                 let vm  = this;
                 let query = vm.$route.query;
-                vm.fetchDefaultAddress();
+                //vm.fetchDefaultAddress();
                 vm.$set('from',query.from);
                 query.from == 'cart' ? vm.fetchGoodsFromCart(query.cartIds,query.commodities)
                                      : vm.fetchGoods(query.commodity);
             },
-            fetchDefaultAddress: function(){
-                let vm = this;
-                vm.$http.get('/api/default/address').then(function(response){
-                    if(response.data.code == 0){
-                        vm.$set('address',response.data.message);
-                        if(vm.address == ''){
-                            MessageBox.confirm('还未建立收货地址，马上去新建?').then(action => {
-                                vm.$router.go('/add-address');
-                            });
-                        }
-                    }
-                    Indicator.close();
-                });
-            },
+            // fetchDefaultAddress: function(){
+            //     let vm = this;
+            //     vm.$http.get('/api/default/address').then(function(response){
+            //         if(response.data.code == 0){
+            //             vm.$set('address',response.data.message);
+            //             if(vm.address == ''){
+            //                 MessageBox.confirm('还未建立收货地址，马上去新建?').then(action => {
+            //                     vm.$router.go('/add-address');
+            //                 });
+            //             }
+            //         }
+            //         Indicator.close();
+            //     });
+            // },
             fetchGoods: function(commodity){
                 let vm = this;
                 let data = commodity.split('-');
@@ -144,9 +144,9 @@
                     }
                 });
             },
-            chooseAddress: function(){
-                this.choosing = !this.choosing;
-            },
+            // chooseAddress: function(){
+            //     this.choosing = !this.choosing;
+            // },
             calculatePrice: function() {
                 let price = 0;
                 this.goods.forEach(function(value){
@@ -168,12 +168,12 @@
                 // 订单来源
                 data.from = vm.from;
                 // 地址数据
-                data.name = vm.address.name;
-                data.phone = vm.address.phone;
-                data.province = vm.address.province;
-                data.city = vm.address.city;
-                data.district = vm.address.district;
-                data.address = vm.address.address;
+                // data.name = vm.address.name;
+                // data.phone = vm.address.phone;
+                // data.province = vm.address.province;
+                // data.city = vm.address.city;
+                // data.district = vm.address.district;
+                // data.address = vm.address.address;
                 // 商品数据
                 data.commodity = this.goods;
                 // 创建订单

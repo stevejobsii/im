@@ -11,7 +11,7 @@
                 <p><span class="title">下单时间：</span>{{order.created_at}}</p>
             </div>
         </div>
-        <div class="order-detail-wrapper">
+        <!-- <div class="order-detail-wrapper">
             <div class="detail-container">
                 <p>
                     <span class="title">收货地址：</span>
@@ -24,7 +24,7 @@
                 <p><span class="title">配送方式：</span>{{order.ship_name}} {{order.ship_number}}</p>
 
             </div>
-        </div>
+        </div> -->
         <div class="order-detail-wrapper">
             <div class="detail-container">
                 <div class="commodity-list"
