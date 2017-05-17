@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Mall;
+namespace App\Http\Controllers\Event;
 
 use Illuminate\Http\Request;
 use Log;
