@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductCommodity extends Model
+class EventCommodity extends Model
 {
     protected $table = 'event_commodity';
 
