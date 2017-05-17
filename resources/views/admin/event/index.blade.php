@@ -21,10 +21,10 @@
                 <h5>活动设置</h5>
             </div>
             <div class="ibox-content">
-                <a href="{{url('admin/product/commodity/create')}}" class="btn btn-primary">
+                <a href="{{url('admin/event/commodity/create')}}" class="btn btn-primary">
                     <i class="fa fa-btn fa-plus"></i>新增
                 </a>
-                <a href="{{url('admin/product/commodity')}}" class="btn btn-warning">全部活动</a>
+                <a href="{{url('admin/event/commodity')}}" class="btn btn-warning">全部活动</a>
                 <div class="row tree-container">
                     <!-- <div class="col-md-2">
                         <div id="tree"></div>
