@@ -39,6 +39,7 @@
                                 <th>库存</th>
                                 <th>已售</th>
                                 <th>状态</th>
+                                <th>上架状态</th>
                                 <th>排序</th>
                                 <th>操作</th>
                             </tr>
@@ -54,6 +55,7 @@
                                     <td>{{$commodity->event_stock_number}}</td>
                                     <td>{{$commodity->event_sold_number}}</td>
                                     <td>{{$commodity->event_disabled}}</td>
+                                    <td>{{$commodity->status}}</td>
                                     <td>{{$commodity->event_sort}}</td>
                                     <td>
                                         <a href="{{url('admin/event/commodity/'.$commodity->id.'/edit')}}" class="edit-btn" title="修改">修改</a>

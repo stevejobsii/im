@@ -93,13 +93,15 @@
                     <div class="form-group">
                         <label>上架状态：</label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="报名中"> 报名中
+                            <input type="radio" name="status" value="报名中"
+                            @if($commodity->status == '报名中') checked @endif> 报名中
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="已报满"> 已报满
+                            <input type="radio" name="status" value="已报满"      @if($commodity->status == '已报满') checked @endif> 已报满
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="已结束"> 已结束
+                            <input type="radio" name="status" value="已结束"
+                            @if($commodity->status == '已结束') checked @endif> 已结束
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">保存</button>

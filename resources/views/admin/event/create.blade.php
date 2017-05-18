@@ -35,7 +35,7 @@
                         <label>图片：</label>
                         <input name="file" type="file" class="form-control">
                     </div>
-                   <div class="form-group">
+                    <div class="form-group">
                         <label>链接：</label>
                         <input name="event_page_url" type="text" class="form-control" placeholder="">
                     </div>
