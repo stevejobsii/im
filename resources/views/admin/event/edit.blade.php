@@ -50,6 +50,10 @@
                                class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
+                        <label>链接：</label>
+                        <input name="event_page_url" value="{{$commodity->event_page_url}}" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
                         <label>活动简介：</label>
                         <textarea rows="4" cols="80" name="event_base_info" class="form-control">{{$commodity->event_base_info}}</textarea>
                     </div>
@@ -84,6 +88,18 @@
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="event_disabled" value="2" @if($commodity->event_disabled == '已下架') checked @endif> 下架
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>上架状态：</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" value="报名中"> 报名中
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" value="已报满"> 已报满
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="status" value="已结束"> 已结束
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">保存</button>
