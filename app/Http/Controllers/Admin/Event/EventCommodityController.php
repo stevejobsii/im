@@ -105,7 +105,7 @@ class EventCommodityController extends Controller
     {
         $commodity = EventCommodity::findOrFail($id);
         
-        return view('admin.event.edit');
+        return view('admin.event.edit')->('commodity');
     }
 
     public function update(Request $request, $id)
