@@ -132,7 +132,7 @@ class EventCommodityController extends Controller
         $base_info = $request->input('event_base_info');
         $placeholder = "======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。";
         if ($base_info != $placeholder) {
-            $commodity->commodity_base_info = $base_info;
+            $commodity->event_base_info = $base_info;
         }
         $commodity->event_disabled = $request->input('event_disabled');
         $commodity->event_sort = $request->input('event_sort');
