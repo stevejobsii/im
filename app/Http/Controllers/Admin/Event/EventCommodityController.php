@@ -145,8 +145,8 @@ class EventCommodityController extends Controller
 
     public function destroy($id)
     {
-        $commodity = ProductCommodity::findOrFail($id);
+        $commodity = EventCommodity::findOrFail($id);
         $commodity->delete();
-        return redirect()->to('admin/product/commodity')->withSuccess('删除商品成功！');
+        return redirect()->to('admin/event/commodity')->withSuccess('删除商品成功！');
     }
 }

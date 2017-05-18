@@ -25,7 +25,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         Route::resource('config', 'ShopConfigController', ['except' => ['create', 'edit', 'show', 'destroy']]);
         Route::resource('banner', 'ShopBannerController');
     });
-    // 商品管理
+
+    /**
+     * 后台商品／活动管理
+     */
+    // 商品
     Route::group(['prefix' => 'product'], function () {
         Route::resource('topic', 'ProductTopicController');
         Route::resource('plate', 'ProductPlateController');
@@ -37,8 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         // 富文本编辑器上传图片
         Route::post('editorUpload', 'ProductCommodityController@editorUpload');
     });
-
-    // 活动管理（复制商品管理）
+    // 活动
     Route::group(['prefix' => 'event'], function () {
         Route::resource('commodity', 'Event\EventCommodityController');
         // Ajax Get Tree & Table Data
@@ -96,9 +99,18 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::post('commodities/topic', 'ShopController@getCommodityByTopic');
     Route::post('commodities/plate', 'ShopController@getCommodityByPlate');
     Route::post('commodities/category', 'ShopController@getCommodityByCategory');
-    // 根据商品ID查询商品详情数据
+
+    /**
+     * 根据商品ID查询商品详情数据
+     */
+    // 商品:
     Route::get('commodity/{commodity}', 'ShopController@getCommodity');
     Route::get('commodities/{commodity}', 'ShopController@getCommodities');
+    // Event:
+    Route::get('commodity/{commodity}', 'Event\ShopController@getCommodity');
+    Route::get('commodities/{commodity}', 'Event\ShopController@getCommodities');
+    
+
     // 购物车
     Route::resource('cart', 'CartController', ['except' => ['create', 'edit', 'show']]);
     // 获取购物车数据总条数
