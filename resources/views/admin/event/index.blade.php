@@ -47,7 +47,7 @@
                             @foreach($commodities as $commodity)
                                 <tr>
                                     <td>
-                                        <img class="commodity-img-url" src="{{$commodity->commodity_img}}">
+                                        <img class="commodity-img-url" src="{{$commodity->event_img}}">
                                     </td>
                                     <td>{{$commodity->event_name}}</td>
                                     <td>&yen;{{$commodity->event_current_price}}</td>

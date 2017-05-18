@@ -27,12 +27,12 @@
                     <input type="hidden" value="PUT" name="_method">
                     <div class="form-group">
                         <label>排序：</label>
-                        <input name="commodity_sort" value="{{$commodity->event_sort}}" type="number"
+                        <input name="event_sort" value="{{$commodity->event_sort}}" type="number"
                                class="form-control" placeholder="值越小越靠前显示,默认为0">
                     </div>
                     <div class="form-group">
                         <label>名称：</label>
-                        <input name="commodity_name" value="{{$commodity->event_name}}" type="text" class="form-control"
+                        <input name="event_name" value="{{$commodity->event_name}}" type="text" class="form-control"
                                placeholder="" required>
                     </div>
                     <div class="form-group">
@@ -46,44 +46,44 @@
                     </div>
                     <div class="form-group">
                         <label>编号：</label>
-                        <input name="commodity_number" value="{{$commodity->event_number}}" type="text"
+                        <input name="event_number" value="{{$commodity->event_number}}" type="text"
                                class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label>活动简介：</label>
-                        <textarea rows="4" cols="80" name="commodity_base_info" class="form-control">{{$commodity->event_base_info}}</textarea>
+                        <textarea rows="4" cols="80" name="event_base_info" class="form-control">{{$commodity->event_base_info}}</textarea>
                     </div>
                     <div class="form-group">
                         <label>活动详情：</label>
-                        <textarea id="editor" name="commodity_detail_info" class="form-control">{{$commodity->event_detail_info}}</textarea>
+                        <textarea id="editor" name="event_detail_info" class="form-control">{{$commodity->event_detail_info}}</textarea>
                     </div>
                     <div class="form-group">
                         <label>原价：</label>
-                        <input name="commodity_original_price" value="{{$commodity->event_original_price}}" type="text"
+                        <input name="event_original_price" value="{{$commodity->event_original_price}}" type="text"
                                class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label>现价：</label>
-                        <input name="commodity_current_price" value="{{$commodity->event_current_price}}" type="text"
+                        <input name="event_current_price" value="{{$commodity->event_current_price}}" type="text"
                                class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label>库存：</label>
-                        <input name="commodity_stock_number" value="{{$commodity->event_stock_number}}" type="text"
+                        <input name="event_stock_number" value="{{$commodity->event_stock_number}}" type="text"
                                class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label>销量：</label>
-                        <input name="commodity_sold_number" value="{{$commodity->event_sold_number}}" type="text"
+                        <input name="event_sold_number" value="{{$commodity->event_sold_number}}" type="text"
                                class="form-control" placeholder="可选，默认为0">
                     </div>
                     <div class="form-group">
                         <label>状态：</label>
                         <label class="radio-inline">
-                            <input type="radio" name="commodity_disabled" value="1" @if($commodity->event_disabled == '已上架') checked @endif> 上架
+                            <input type="radio" name="event_disabled" value="1" @if($commodity->event_disabled == '已上架') checked @endif> 上架
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="commodity_disabled" value="2" @if($commodity->event_disabled == '已下架') checked @endif> 下架
+                            <input type="radio" name="event_disabled" value="2" @if($commodity->event_disabled == '已下架') checked @endif> 下架
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">保存</button>
