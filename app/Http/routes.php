@@ -107,8 +107,8 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::get('commodity/{commodity}', 'ShopController@getCommodity');
     Route::get('commodities/{commodity}', 'ShopController@getCommodities');
     // Event:
-    Route::get('commodity/{commodity}', 'Event\ShopController@getCommodity');
-    Route::get('commodities/{commodity}', 'Event\ShopController@getCommodities');
+    Route::get('eventcommodity/{commodity}', 'Event\ShopController@getCommodity');
+    Route::get('eventcommodities/{commodity}', 'Event\ShopController@getCommodities');
     
 
     // 购物车
