@@ -87,7 +87,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="status" value="已结束"> 已结束
                         </label>
-                    </div>
+                    </div> 
                     <button type="submit" class="btn btn-primary">保存</button>
                 </form>
             </div>
@@ -98,5 +98,5 @@
 @section('scriptTag')
     <link href="//cdn.bootcss.com/wangeditor/2.1.20/css/wangEditor.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/wangeditor/2.1.20/js/wangEditor.min.js"></script>
-    <script src="{{asset('js/admin/product/commodityCreate.js')}}"></script>
+    <script src="{{asset('js/admin/event/components/commodityCreate.js')}}"></script>
 @endsection

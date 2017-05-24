@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Event;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\WechatAddress;
-use App\ProductCommodity;
-use App\WechatOrder;
-use App\WechatOrderDetail;
-use App\ShopConfig;
-use App\WechatCart;
+//use App\WechatAddress;
+use App\eventfacades\EventCommodity;
+use App\eventfacades\WechatOrder;
+use App\eventfacades\WechatOrderDetail;
+use App\eventfacades\ShopConfig;
+use App\eventfacades\WechatCart;
 use Validator;
 use Log;
 use EasyWeChat\Payment\Order;
@@ -155,6 +155,24 @@ class OrderController extends Controller
     }
     // 获取商品订单订单详情
     public function detail($id)
+    {
+        $order = WechatOrder::find($id);
+        if ($order) {
+            $order = WechatOrder::with('details')->find($id);
+            return response()->json([
+                'code' => 0,
+                'message' => $order
+            ]);
+        } else {
+            return response()->json([
+                'code' => -1,
+                'message' => '订单不存在'
+            ]);
+        }
+    }
+
+    // 获取活动订单订单详情
+    public function event_detail($id)
     {
         $order = WechatOrder::find($id);
         if ($order) {

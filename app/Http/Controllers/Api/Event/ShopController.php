@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\eventfacades\EventCommodity;
-use App\ShopConfig;
+use App\eventfacades\ShopConfig;
 
 class ShopController extends Controller
 {
