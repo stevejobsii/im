@@ -87,7 +87,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="status" value="已结束"> 已结束
                         </label>
-                    </div> 
+                    </div>
                     <button type="submit" class="btn btn-primary">保存</button>
                 </form>
             </div>
@@ -98,5 +98,55 @@
 @section('scriptTag')
     <link href="//cdn.bootcss.com/wangeditor/2.1.20/css/wangEditor.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/wangeditor/2.1.20/js/wangEditor.min.js"></script>
-    <script src="{{asset('js/admin/event/components/commodityCreate.js')}}"></script>
+    <script>
+        $(function () {
+        var placeholder = '======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。';
+        var $textarea = $('textarea[name="event_base_info"]');
+        if (!$textarea){
+            var $textarea = $('textarea[name="event_base_info"]');
+        };
+        $textarea.val(placeholder);
+        $textarea.focus(function () {
+            if ($(this).val() === placeholder) {
+                $(this).val('');
+            }
+        });
+        $textarea.blur(function () {
+            if ($(this).val() === '') {
+                $(this).val(placeholder);
+            }
+        });
+
+        var editor = new wangEditor('editor');
+        editor.config.menus = $.map(wangEditor.config.menus, function(item, key) {
+            if (item === 'source') {
+                return null;
+            }
+            if(item === 'bgcolor'){
+                return null;
+            }
+            if(item === '|'){
+                return null;
+            }
+            if (item === 'emotion') {
+                return null;
+            }
+            if(item === 'location'){
+                return null;
+            }
+            if(item === 'insertcode'){
+                return null;
+            }
+            return item;
+        });
+        editor.config.menuFixed = false;
+        editor.config.uploadImgUrl = '/admin/product/editorUpload';
+        editor.config.uploadParams = {
+            _token: $('input[name="_token"]').val()
+        };
+        editor.config.uploadImgFileName = 'editorFile';
+        editor.create();
+
+    });
+    </script>
 @endsection
