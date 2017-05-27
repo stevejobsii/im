@@ -159,6 +159,8 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+
+        \SocialiteProviders\Manager\ServiceProvider::class,
     ],
 
     /*
@@ -206,7 +208,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Menu' => Lavary\Menu\Facade::class,
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class
     ],
 
 ];

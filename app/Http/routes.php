@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
         Route::resource('plate', 'ProductPlateController');
         Route::resource('category', 'ProductCategoryController');
         Route::resource('commodity', 'ProductCommodityController');
-        // Ajax Get Tree & Table Data
+        // Ajax Get Tree (category) & Table Data
         Route::get('getTreeData', 'ProductCategoryController@treeData');
         Route::get('getTableData', 'ProductCommodityController@tableData');
         // 富文本编辑器上传图片
@@ -44,10 +44,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
     // 活动
     Route::group(['prefix' => 'event'], function () {
         Route::resource('commodity', 'Event\EventCommodityController');
-        // Ajax Get Tree & Table Data
-        Route::get('getTableData', 'Event\EventCommodityController@tableData');
-        // 富文本编辑器上传图片
-        Route::post('editorUpload', 'Event\EventCommodityController@editorUpload');
     });
 
     // 订单管理

@@ -20,21 +20,6 @@ class EventCommodityController extends Controller
         return view('admin.event.index')->with(['commodities' => $commodities]);
     }
 
-    public function tableData(Request $request)
-    {
-        $category = ProductCategory::where('category_name', '=', $request->input('name'))->first();
-        if ($category->parent_id == 0) {
-            $sub_categories = ProductCategory::where('parent_id', '=', $category->id)->get();
-            $sub_categories->transform(function ($item, $key) {
-                return $item->id;
-            });
-            $sub_id = $sub_categories->all();
-            $commodities = ProductCommodity::whereIn('category_id', $sub_id)->get();
-        } else {
-            $commodities = ProductCommodity::where('category_id', '=', $category->id)->get();
-        }
-        return response()->json($commodities);
-    }
 
     public function create()
     {
