@@ -114,10 +114,17 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     // 活动:
     Route::resource('eventcart', 'Event\CartController', ['except' => ['create', 'edit', 'show']]);
     
-
-    // 获取购物车数据总条数
+    /**
+     * 获取购物车数据总条数及清空
+     */
+    // 商品:
     Route::get('cart/count', 'CartController@calculateTotal');
     Route::post('cart/empty', 'CartController@emptyCart');
+    // 活动:
+    Route::get('eventcart/count', 'Event\CartController@calculateTotal');
+    Route::post('eventcart/empty', 'Event\CartController@emptyCart');
+
+
     // 创建订单
     Route::post('order', 'OrderController@store');
     // 获取订单数据
