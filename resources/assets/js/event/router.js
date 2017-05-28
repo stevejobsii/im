@@ -29,7 +29,7 @@ export default function (router) {
         '/eventlist': {
             name: 'eventlist',
             component: require('./components/Attribute/Attribute.vue'),
-            component: require('./components/Attribute/Eventlist.vue')
+            //component: require('./components/Attribute/Eventlist.vue')
         },
         // 暂不分类
         // '/attr': {
