@@ -100,8 +100,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
      * 根据不同条件获取活动数据集合,['报名中','已报满','已结束']
      */
     // ['报名中','已报满','已结束']活动
-    Route::post('geteventcommodities/status', 'Event\ShopController@getCommodityByStatus');
-    Route::get('geteventcommodities/status', 'Event\ShopController@getCommodityByStatus');
+    Route::any('geteventcommodities/status', 'Event\ShopController@getCommodityByStatus');
 
 
     /**
