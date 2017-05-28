@@ -30,7 +30,7 @@
             fetchCommodies:function(){
                 Indicator.open();
                 let vm = this;
-                vm.$http.post('/api/eventcommodities/status'
+                vm.$http.post('/api/geteventcommodities/status'
                     //,{category_id : vm.$route.params.hashid}
                     ).then(function(response){
                     vm.$set('data',response.data);
