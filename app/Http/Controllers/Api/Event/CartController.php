@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\eventfacades\EventCommodity;
-use App\eventfacades\WechatCart;
+use App\eventfacades\EventCart;
 use Validator;
 
 class CartController extends Controller
@@ -24,7 +24,7 @@ class CartController extends Controller
         $openid = $this->follow->id;
 
         // 购物车《=》商品详情 关系预载入
-        $cart = WechatCart::with('commodity')
+        $cart = EventCart::with('commodity')
             ->where('openid', '=', $openid)
             ->get();
 
@@ -37,7 +37,7 @@ class CartController extends Controller
     // 购物车数量
     public function calculateTotal()
     {
-        $cartCount = WechatCart::where('openid', '=', $this->follow->id)->count();
+        $cartCount = EventCart::where('openid', '=', $this->follow->id)->count();
         return response()->json([
             'code' => 0,
             'message' => $cartCount,
@@ -46,7 +46,7 @@ class CartController extends Controller
     
     // 清空购物车
     public function emptyCart(){
-        WechatCart::where('openid','=',$this->follow->id)->delete();
+        EventCart::where('openid','=',$this->follow->id)->delete();
         return response()->json([
             'code' => 0,
             'message' => '操作成功',
@@ -69,7 +69,7 @@ class CartController extends Controller
             ]);
         } else {
             // 查询是否已存在commodity_id的数据
-            $cart = WechatCart::where('openid', '=', $openid)
+            $cart = EventCart::where('openid', '=', $openid)
                 ->where('commodity_id', '=', $request->commodity_id)
                 ->first();
             if ($cart) {
@@ -79,7 +79,7 @@ class CartController extends Controller
             } else {
                 // 若不存在，则录入新数据
                 $extra = 'store';
-                $cart = new WechatCart();
+                $cart = new EventCart();
                 $cart->openid = $openid;
                 $cart->commodity_id = $request->commodity_id;
                 $cart->commodity_num = $request->commodity_num;
