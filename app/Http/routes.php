@@ -97,12 +97,19 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::post('commodities/category', 'ShopController@getCommodityByCategory');
 
     /**
+     * 根据不同条件获取活动数据集合,['报名中','已报满','已结束']
+     */
+    // ['报名中','已报满','已结束']活动
+    Route::post('eventcommodities/status', 'Event\ShopController@getCommodityByCategory');
+
+
+    /**
      * 根据商品ID查询商品详情数据
      */
     // 商品:
     Route::get('commodity/{commodity}', 'ShopController@getCommodity');
     Route::get('commodities/{commodity}', 'ShopController@getCommodities');
-    // Event:
+    // 活动:
     Route::get('eventcommodity/{commodity}', 'Event\ShopController@getCommodity');
     Route::get('eventcommodities/{commodity}', 'Event\ShopController@getCommodities');
     
@@ -124,17 +131,20 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::get('eventcart/count', 'Event\CartController@calculateTotal');
     Route::post('eventcart/empty', 'Event\CartController@emptyCart');
 
-
-    // 创建订单
+    /**
+     * 订单：创建订单,获取订单数据,获取订单列表（all,unpay,unreceived),获取商品订单订单详情
+     */
+    // 商品
     Route::post('order', 'OrderController@store');
-    // 获取订单数据
     Route::get('order/{order}', 'OrderController@show');
-    // 获取订单列表（all,unpay,unreceived）
     Route::get('orderlist/{type}', 'OrderController@index');
-    // 一、获取商品订单订单详情
     Route::get('orderdetail/{order}', 'OrderController@detail');
-    // 二、获取活动订单详情
-    //Route::get('orderdetail/{order}', 'OrderController@detail');
+    // 活动
+    Route::post('eventorder', 'Event\OrderController@store');
+    Route::get('eventorder/{order}', 'Event\OrderController@show');
+    Route::get('eventorderlist/{type}', 'Event\OrderController@index');
+    Route::get('eventorderdetail/{order}', 'Event\OrderController@detail');
+
     // 意见建议
     Route::post('suggestion', 'UserController@suggestion');
     // 地址管理

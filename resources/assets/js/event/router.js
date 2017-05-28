@@ -24,6 +24,13 @@ export default function (router) {
             name: 'usercenter',
             component: require('./components/UserCenter.vue')
         },
+
+        //event list
+        '/eventlist': {
+            name: 'eventlist',
+            component: require('./components/Attribute/Attribute.vue'),
+            component: require('./components/Attribute/Eventlist.vue')
+        },
         // 暂不分类
         // '/attr': {
         //     name: 'attribute',

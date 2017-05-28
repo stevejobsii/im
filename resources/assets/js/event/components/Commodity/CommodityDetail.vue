@@ -87,7 +87,7 @@
                 Indicator.open();
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
-                vm.$http.get('/api/commodity/'+itemId).then(function(response){
+                vm.$http.get('/api/eventcommodity/'+itemId).then(function(response){
                     Indicator.close();
                     if(response.data.code == 0){
                         let commodity = response.data.message;
@@ -103,7 +103,7 @@
             },
             fetchCartCount:function(){
                 let vm = this;
-                vm.$http.get('/api/cart/count').then(function(response){
+                vm.$http.get('/api/eventcart/count').then(function(response){
                     if(response.data.code == 0){
                         vm.$set('cartCount',response.data.message);
                     }
@@ -121,7 +121,7 @@
             addCart: function(){
                 Indicator.open();
                 let vm = this;
-                vm.$http.post('/api/cart',{
+                vm.$http.post('/api/eventcart',{
                         commodity_id:vm.commodity.id,
                         commodity_num:vm.commodity_num
                     }).then(function(response){

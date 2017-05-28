@@ -1,13 +1,13 @@
 <template>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
-        <!-- <mt-tab-item v-link="{name:'index'}" id="index">
+        <mt-tab-item v-link="{name:'eventlist'}" id="index">
             <i slot="icon" class="nav-index"></i>
-            首页
-        </mt-tab-item> -->
+            活动
+        </mt-tab-item> 
         <!-- <mt-tab-item v-link="{name:'usercenter'}" id="category">
             <i slot="icon" class="nav-category"></i>
-            全部活动
+            已结束活动
         </mt-tab-item> -->
         <mt-tab-item v-link="{name:'cart'}" id="cart">
             <i slot="icon" class="nav-cart">

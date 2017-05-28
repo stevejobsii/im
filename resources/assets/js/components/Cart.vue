@@ -73,7 +73,7 @@ export default {
             fetchCart: function() {
                 Indicator.open();
                 let vm = this;
-                vm.$http.get('/api/eventcart').then(function(response) {
+                vm.$http.get('/api/cart').then(function(response) {
                     Indicator.close();
                     let data = response.data.message;
                     if (data.length) {
@@ -143,7 +143,7 @@ export default {
             removeCarts: function(){
                 let vm = this;
                 Indicator.open();
-                vm.$http.post('/api/eventcart/empty').then(function(response){
+                vm.$http.post('/api/cart/empty').then(function(response){
                     Indicator.close();
                     if(response.data.code == 0){
                         vm.$set('carts','');

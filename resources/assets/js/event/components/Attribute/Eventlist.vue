@@ -15,7 +15,7 @@
             }
         },
         components:{
-            EmptyData, CommodityList
+            EmptyData,CommodityList
         },
         data(){
             return{
@@ -30,8 +30,8 @@
             fetchCommodies:function(){
                 Indicator.open();
                 let vm = this;
-                vm.$http.post('/api/commodities/topic',{
-                    topic_id : vm.$route.params.hashid
+                vm.$http.post('/api/commodities/status',{
+                    category_id : vm.$route.params.hashid
                 }).then(function(response){
                     vm.$set('data',response.data);
                     vm.$nextTick(function(){
