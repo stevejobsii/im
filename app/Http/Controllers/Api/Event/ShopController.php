@@ -63,7 +63,7 @@ class ShopController extends Controller
         $response = [];
         $all = EventCommodity::all();
         if ($all) {
-            $response = $all->commodities()->get();
+            $response = $all;//->commodities()->get();
         }
         return response()->json($response);
     }
