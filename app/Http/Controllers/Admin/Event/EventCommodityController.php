@@ -20,7 +20,6 @@ class EventCommodityController extends Controller
         return view('admin.event.index')->with(['commodities' => $commodities]);
     }
 
-
     public function create()
     {
         // 不需要

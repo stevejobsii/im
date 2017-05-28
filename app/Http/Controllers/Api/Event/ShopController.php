@@ -11,7 +11,8 @@ use App\eventfacades\ShopConfig;
 
 class ShopController extends Controller
 {
-
+    
+    // 如https://goodgoto.com/api/eventcommodity/1 API获取第一个活动信息
     public function getCommodity($id){
         $commodity = EventCommodity::find($id);
         if ($commodity && $commodity->event_disabled === '已上架') {
@@ -27,6 +28,7 @@ class ShopController extends Controller
         }
     }
 
+    // 
     public function getCommodities($ids){
         $ids = explode(',',trim($ids,','));
         if(!is_array($ids)){
@@ -41,7 +43,7 @@ class ShopController extends Controller
         foreach($ids as $item){
             $item = explode('-',$item);
             // 查询商品数据
-            $commodity = ProductCommodity::find($item[0]);
+            $commodity = EventCommodity::find($item[0]);
             // 添加购物车所选商品数量
             $commodity->cart_num = $item[1];
             $commodities[] = $commodity;
@@ -52,6 +54,18 @@ class ShopController extends Controller
                 'message'=>$commodities
             ]
         );
+    }
+ 
+    // 获得eventlist
+    public function getCommodityByStatus(Request $request)
+    {
+        //$id = $request->input('category_id');
+        $response = [];
+        $all = EventCommodity::all();
+        if ($all) {
+            $response = $all->commodities()->get();
+        }
+        return response()->json($response);
     }
 
     public function shopconfig(){

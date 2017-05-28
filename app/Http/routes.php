@@ -100,13 +100,14 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
      * 根据不同条件获取活动数据集合,['报名中','已报满','已结束']
      */
     // ['报名中','已报满','已结束']活动
-    Route::post('eventcommodities/status', 'Event\ShopController@getCommodityByCategory');
+    Route::post('eventcommodities/status', 'Event\ShopController@getCommodityByStatus');
 
 
     /**
      * 根据商品ID查询商品详情数据
      */
     // 商品:
+    // 如https://goodgoto.com/api/eventcommodity/1 API获取第一个信息
     Route::get('commodity/{commodity}', 'ShopController@getCommodity');
     Route::get('commodities/{commodity}', 'ShopController@getCommodities');
     // 活动:

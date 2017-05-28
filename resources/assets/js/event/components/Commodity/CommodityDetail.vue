@@ -82,7 +82,9 @@
         created(){
             this.fetchCommodity();
         },
+
         methods:{
+            // ok
             fetchCommodity:function(){
                 Indicator.open();
                 let vm = this;
@@ -101,6 +103,7 @@
                     }
                 });
             },
+            // 购物车数量
             fetchCartCount:function(){
                 let vm = this;
                 vm.$http.get('/api/eventcart/count').then(function(response){

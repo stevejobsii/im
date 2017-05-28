@@ -34,6 +34,7 @@ class CartController extends Controller
         ]);
     }
 
+    // 购物车数量
     public function calculateTotal()
     {
         $cartCount = WechatCart::where('openid', '=', $this->follow->id)->count();
@@ -42,7 +43,8 @@ class CartController extends Controller
             'message' => $cartCount,
         ]);
     }
-
+    
+    // 清空购物车
     public function emptyCart(){
         WechatCart::where('openid','=',$this->follow->id)->delete();
         return response()->json([
@@ -50,7 +52,8 @@ class CartController extends Controller
             'message' => '操作成功',
         ]);
     }
-
+   
+    
     public function store(Request $request)
     {
         $openid = $this->follow->id;
