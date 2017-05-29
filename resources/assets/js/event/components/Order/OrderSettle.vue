@@ -29,14 +29,14 @@
                 <i class="select-one-btn selected">
                 </i>
                 <a class="img-wrap">
-                    <img :src="good.commodity_img"/>
-                    <p class="name">{{good.commodity_name}}</p>
+                    <img :src="good.event_img"/>
+                    <p class="name">{{good.event_name}}</p>
                 </a>
                 <div class="price-wrap">
                     <span class="commodity-result">
-                            <span>&yen;{{good.commodity_current_price | transformPrice}}</span> *
+                            <span>&yen;{{good.event_current_price | transformPrice}}</span> *
                             <span class="num">{{good.cart_num}}</span> =
-                            <span class="price">&yen;{{good.commodity_current_price * good.cart_num | transformPrice}}</span>
+                            <span class="price">&yen;{{good.event_current_price * good.cart_num | transformPrice}}</span>
                     </span>
                 </div>
             </section>
@@ -114,7 +114,7 @@
                 let data = commodity.split('-');
                 let itemId = data[0];
                 let cart_num = data[1];
-                vm.$http.get('/api/commodity/'+itemId).then(response=>{
+                vm.$http.get('/api/eventcommodity/'+itemId).then(response=>{
                     if(response.data.code == 0){
                         let goods = response.data.message;
                         goods.cart_num = cart_num;
@@ -131,7 +131,7 @@
             },
             fetchGoodsFromCart: function(cartIds,commodities){
                 let vm = this;
-                vm.$http.get('/api/commodities/'+commodities).then(response=>{
+                vm.$http.get('/api/eventcommodities/'+commodities).then(response=>{
                     if(response.data.code == 0){
                         vm.$set('goods',response.data.message);
                         vm.$nextTick(function(){
@@ -150,7 +150,7 @@
             calculatePrice: function() {
                 let price = 0;
                 this.goods.forEach(function(value){
-                    price += value.commodity_current_price * value.cart_num;
+                    price += value.event_current_price * value.cart_num;
                 });
                 this.$set('totalPrice', price);
                 let shopCacheConfig = localStorage.getItem('shopConfig');
@@ -177,7 +177,7 @@
                 // 商品数据
                 data.commodity = this.goods;
                 // 创建订单
-                vm.$http.post('/api/order',data).then(response=>{
+                vm.$http.post('/api/eventorder',data).then(response=>{
                     Indicator.close();
                     if(response.data.code == 0){
                         vm.$route.router.go({name:'orderpay',params:{'hashid':response.data.message}});
