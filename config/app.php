@@ -159,7 +159,6 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
 
         \SocialiteProviders\Manager\ServiceProvider::class,
     ],
