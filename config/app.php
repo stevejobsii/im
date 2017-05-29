@@ -97,7 +97,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Logging Configuration
+    | Logging Configuratiown
     |--------------------------------------------------------------------------
     |
     | Here you may configure the log settings for your application. Out of
