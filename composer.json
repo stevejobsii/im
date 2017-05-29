@@ -11,7 +11,7 @@
         "lavary/laravel-menu": "^1.6",
         "intervention/image": "^2.3",
         "socialiteproviders/weixin": "^2.1",
-        "socialiteproviders/manager": "*"
+        "socialiteproviders/manager": "^4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
