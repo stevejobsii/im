@@ -5,7 +5,7 @@
 
 <script>
     import { Indicator } from 'mint-ui';
-    //import EmptyData from '../Commodity/CommodityEmpty.vue';
+    import EmptyData from '../Commodity/CommodityEmpty.vue';
     import CommodityCloseList from '../Commodity/CommodityCloseList.vue';
     export default{
         props:{
@@ -15,8 +15,7 @@
             }
         },
         components:{
-            //EmptyData,
-            CommodityCloseList
+            EmptyData,CommodityCloseList
         },
         data(){
             return{
