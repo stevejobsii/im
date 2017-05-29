@@ -160,7 +160,7 @@ return [
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
-        //\SocialiteProviders\Manager\ServiceProvider::class,
+        \SocialiteProviders\Manager\ServiceProvider::class,
     ],
 
     /*
@@ -210,7 +210,7 @@ return [
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
 
-        //'Socialite' => Laravel\Socialite\Facades\Socialite::class
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class
     ],
 
 ];
