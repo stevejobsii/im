@@ -7,7 +7,7 @@
                     {{item.event_name}}
                 </p>
                 <p class="price">
-                    截止日期:{{item.end_time}}
+                    截止日期:{{item.end_time}}({{item.status}})
                 </p>
             </div>
         </div>
