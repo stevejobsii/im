@@ -28,8 +28,17 @@ export default function (router) {
         //event list
         '/eventlist': {
             name: 'eventlist',
-            component: require('./components/Attribute/Attribute.vue')//,
-            //component: require('./components/Attribute/Eventlist.vue')
+            component: require('./components/Attribute/Attribute.vue'),
+            subRoutes: {                
+                '/close': {
+                    name: 'aClose',
+                    component: require('./components/Attribute/Close.vue')
+                },
+                '/open': {
+                    name: 'aOpen',
+                    component: require('./components/Attribute/Open.vue')
+                }
+            }
         },
         // 暂不分类
         // '/attr': {

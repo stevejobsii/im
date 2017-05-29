@@ -1,14 +1,14 @@
 <template>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
-        <mt-tab-item v-link="{name:'eventlist'}" id="index">
+        <mt-tab-item v-link="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
-            活动
+            报名中活动
         </mt-tab-item> 
-        <!-- <mt-tab-item v-link="{name:'usercenter'}" id="category">
+        <mt-tab-item v-link="{name:'aClose'}" id="category">
             <i slot="icon" class="nav-category"></i>
             已结束活动
-        </mt-tab-item> -->
+        </mt-tab-item>
         <mt-tab-item v-link="{name:'cart'}" id="cart">
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
