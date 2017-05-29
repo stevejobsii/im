@@ -102,7 +102,7 @@ class AuthController extends Controller
             //dd($oauthUser);
             if ($user = User::where('wechat_openid', '=', $oauthUser->id)->first()){
                 Auth::login($user,true);
-                return redirect('/admin'); 
+                return redirect('/'); 
             }else{
                 return redirect('/login'); 
             }
