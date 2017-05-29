@@ -97,6 +97,7 @@ class AuthController extends Controller
         if (Input::has('code')) {
             //return 'sff';
             $oauthUser = \Socialite::with($provider)->user();
+            dd($oauthUser);
             //判断登录的用户能否找到
             //return json_encode($oauthUser);
             $user = User::getByDriver($provider, $oauthUser->id);
