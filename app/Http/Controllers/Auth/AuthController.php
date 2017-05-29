@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Input;
 //use Flash;
-use Users;
+use User;
 
 class AuthController extends Controller
 {
@@ -100,7 +100,7 @@ class AuthController extends Controller
         if (Input::has('code')) {
             //return 'sff';
             $oauthUser = \Socialite::with($provider)->user();
-            if ($user = Users::where('wechat_openid', '=', $oauthUser->openid)->first()){
+            if ($user = User::where('wechat_openid', '=', $oauthUser->openid)->first()){
                 Auth::login($user,true);
                 return redirect('/admin'); 
             }else{
