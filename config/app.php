@@ -210,7 +210,8 @@ return [
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
 
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class
+         \SocialiteProviders\Manager\ServiceProvider::class 
+        //取代'Socialite' => Laravel\Socialite\Facades\Socialite::class
     ],
 
 ];
