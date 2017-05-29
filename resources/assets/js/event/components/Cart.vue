@@ -167,12 +167,8 @@ export default {
                     }
                 });
                 let order = {from:'cart',commodities:commodites,cartIds:cartIds};
-
-                Toast({
-                          message: order
-                    });
-
-                //vm.$route.router.go({name:'order-settle',query:order});
+                // to 'order-settle' with ? from;carIDs,commodites编号及数量
+                vm.$route.router.go({name:'order-settle',query:order});
             }
         }
 }

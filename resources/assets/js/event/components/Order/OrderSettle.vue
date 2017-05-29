@@ -94,6 +94,7 @@
                 vm.$set('from',query.from);
                 query.from == 'cart' ? vm.fetchGoodsFromCart(query.cartIds,query.commodities)
                                      : vm.fetchGoods(query.commodity);
+                Indicator.close();
             },
             // fetchDefaultAddress: function(){
             //     let vm = this;
@@ -159,6 +160,7 @@
                 price < shopConfig.config_free ? this.$set('freight_amount',shopConfig.config_freight)
                                                 : this.$set('freight_amount',false);
             },
+            // 创建订单order
             payOrder: function(){
                 Indicator.open({
                   text: '订单创建中...'
