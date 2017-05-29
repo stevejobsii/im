@@ -5,14 +5,14 @@
             <i class="select-one-btn" :class="cart.selected ? 'selected' : '' " @click="toggleSelect(cart)">
             </i>
             <a class="img-wrap" v-link="{name:'commodity',params:{hashid:cart.commodity.id}}">
-                <img :src="cart.commodity.commodity_img"/>
-                <p class="name">{{cart.commodity.commodity_name}}</p>
+                <img :src="cart.commodity.event_img"/>
+                <p class="name">{{cart.commodity.event_name}}</p>
             </a>
             <div class="price-wrap">
             <span class="commodity-result">
-                    <span>&yen;{{cart.commodity.commodity_current_price | transformPrice}}</span> *
+                    <span>&yen;{{cart.commodity.event_current_price | transformPrice}}</span> *
             <span class="num">{{cart.commodity_num}}</span> =
-            <span class="price">&yen;{{cart.commodity.commodity_current_price * cart.commodity_num | transformPrice}}</span>
+            <span class="price">&yen;{{cart.commodity.event_current_price * cart.commodity_num | transformPrice}}</span>
             </span>
                 <div class="commodity-num">
                 <span class="minus-btn" :class=" cart.commodity_num > 1 ? 'active' : '' " @click="minusClick(cart)">
@@ -135,7 +135,7 @@ export default {
                 let price = 0;
                 this.carts.forEach(function(value){
                     if (value.selected) {
-                        price += value.commodity.commodity_current_price * value.commodity_num;
+                        price += value.commodity.event_current_price * value.commodity_num;
                     }
                 });
                 this.$set('totalPrice', price);
