@@ -44,11 +44,11 @@
         <div id="pay-container">
             <div class="total-result">
                 <p class="total-price">总计：&yen;{{totalPrice | transformPrice}}</p>
-                <p v-if="freight_amount">
+                <!-- <p v-if="freight_amount">
                     （订单未满￥{{shopConfig.config_free | transformPrice}}，
                      需额外支付邮费￥{{shopConfig.config_freight | transformPrice}}）
                 </p>
-                <p v-else>（订单已满￥{{shopConfig.config_free | transformPrice}}，无需邮费）</p>
+                <p v-else>（订单已满￥{{shopConfig.config_free | transformPrice}}，无需邮费）</p> -->
             </div>
             <div class="to-pay-btn"
                  @click="payOrder">

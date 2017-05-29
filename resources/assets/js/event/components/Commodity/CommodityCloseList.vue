@@ -6,13 +6,6 @@
                 <p class="title">
                     {{item.event_name}}
                 </p>
-                <p class="price">
-                    截止日期:{{item.end_time}}
-                </p>
-                <p class="price">
-                    &yen;{{item.event_current_price}}&emsp;<del>&yen;{{item.event_original_price}}</del>
-                    <span>剩余：{{item.event_stock_number}}件</span>
-                </p>
             </div>
         </div>
     </div>

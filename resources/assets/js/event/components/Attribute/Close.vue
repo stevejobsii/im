@@ -5,8 +5,8 @@
 
 <script>
     import { Indicator } from 'mint-ui';
-    import EmptyData from '../Commodity/CommodityEmpty.vue';
-    import CommodityList from '../Commodity/CommodityList.vue';
+    //import EmptyData from '../Commodity/CommodityEmpty.vue';
+    import CommodityList from '../Commodity/CommodityCloseList.vue';
     export default{
         props:{
             sortKey:{

@@ -54,6 +54,10 @@
                         <input name="event_page_url" value="{{$commodity->event_page_url}}" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="form-group">
+                        <label>截止日期：</label>
+                        <input name="end_time" type="text" class="form-control" value="{{$commodity->end_time}}" placeholder="XXXX年XX月XX日">
+                    </div>
+                    <div class="form-group">
                         <label>活动简介：</label>
                         <textarea rows="4" cols="80" name="event_base_info" class="form-control">{{$commodity->event_base_info}}</textarea>
                     </div>

@@ -28,7 +28,7 @@ class ShopController extends Controller
         }
     }
 
-    // 
+    // 为了order settle，各种商品的信息
     public function getCommodities($ids){
         $ids = explode(',',trim($ids,','));
         if(!is_array($ids)){

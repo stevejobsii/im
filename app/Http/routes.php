@@ -109,6 +109,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     // 商品:
     // 如https://goodgoto.com/api/eventcommodity/1 API获取第一个信息
     Route::get('commodity/{commodity}', 'ShopController@getCommodity');
+    // 为了order settle，各种商品的信息
     Route::get('commodities/{commodity}', 'ShopController@getCommodities');
     // 活动:
     Route::get('eventcommodity/{commodity}', 'Event\ShopController@getCommodity');

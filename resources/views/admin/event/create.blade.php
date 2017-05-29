@@ -40,6 +40,10 @@
                         <input name="event_page_url" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="form-group">
+                        <label>截止日期：</label>
+                        <input name="end_time" type="text" class="form-control" placeholder="XXXX年XX月XX日">
+                    </div>
+                    <div class="form-group">
                         <label>编号：</label>
                         <input name="event_number" type="text" class="form-control" placeholder="">
                     </div>

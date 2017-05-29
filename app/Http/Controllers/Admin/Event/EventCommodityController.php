@@ -51,6 +51,7 @@ class EventCommodityController extends Controller
         $commodity->event_detail_info = $request->input('event_detail_info');
         $commodity->status = $request->input('status');
         $commodity->event_page_url = $request->input('event_page_url');
+        $commodity->end_time = $request->input('end_time');
         $base_info = $request->input('event_base_info');
         $placeholder = "======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。";
         if ($base_info != $placeholder) {
@@ -113,6 +114,7 @@ class EventCommodityController extends Controller
         $commodity->event_detail_info = $request->input('event_detail_info');
         $commodity->status = $request->input('status');
         $commodity->event_page_url = $request->input('event_page_url');
+        $commodity->end_time = $request->input('end_time');
         $base_info = $request->input('event_base_info');
         $placeholder = "======For Example======\n尺寸：14*14；\n颜色：白色；\n产地：中国。";
         if ($base_info != $placeholder) {
