@@ -187,6 +187,6 @@ Route::post('HandlePay',[
 Route::get('/oauth', 'Auth\AuthController@getOauth');
 
 Route::get('/auth/oauth', 'Auth\AuthController@oauth')->name('auth.oauth');
-Route::any('/auth/weixin/callback', 'Auth\AuthController@callback')->name('auth.callback');
+Route::any('/auth/{provider}/callback', 'Auth\AuthController@callback')->name('auth.callback');
 Route::get('/verification/{token}', 'Auth\AuthController@getVerification')->name('verification');
 
