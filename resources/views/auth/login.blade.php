@@ -53,6 +53,12 @@
                             @if(count($errors))
                                 <small class="text-danger">账号或密码错误！</small>
                             @endif
+
+                            <a href="{{ URL::route('auth.oauth', ['driver' => 'weixin']) }}" class="btn btn-success login-btn weichat-login-btn">
+                            <i class="fa fa-weixin"></i>
+                            微信登录
+                            </a>
+
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary block full-width m-b">登录</button>

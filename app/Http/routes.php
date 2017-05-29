@@ -172,10 +172,21 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     // TODO活动订单API
 
 });
-    /**
-     * 微信支付回调--处理支付后,这是微信来发送信息给服务器
-     */
-    Route::post('HandlePay',[
-        'as'   => 'frontend.wechat.HandlePay',
-        'uses' => 'Api\OrderController@HandlePay',
-    ]);
+
+/**
+ * 微信支付回调--处理支付后,这是微信来发送信息给服务器
+ */
+Route::post('HandlePay',[
+    'as'   => 'frontend.wechat.HandlePay',
+    'uses' => 'Api\OrderController@HandlePay',
+]);
+
+/**
+ * 第三方登录包括qq、weixin等
+ */
+Route::get('/oauth', 'Auth\AuthController@getOauth');
+
+Route::get('/auth/oauth', 'Auth\AuthController@oauth')->name('auth.oauth');
+Route::get('/auth/{provider}/callback', 'Auth\AuthController@callback')->name('auth.callback');
+Route::get('/verification/{token}', 'Auth\AuthController@getVerification')->name('verification');
+

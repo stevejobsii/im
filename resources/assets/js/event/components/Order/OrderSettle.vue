@@ -24,6 +24,8 @@
                 </ul>
             </div>
         </div> -->
+        <div class="address-wrap">
+        </div>
         <div id="cart-container">
             <section class="cart-wrap" v-for="good in goods">
                 <i class="select-one-btn selected">
