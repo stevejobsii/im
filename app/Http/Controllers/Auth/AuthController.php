@@ -10,7 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
 use Auth;
 use Input;
-use Flash;
+//use Flash;
+use Users;
 
 class AuthController extends Controller
 {
@@ -99,27 +100,11 @@ class AuthController extends Controller
         if (Input::has('code')) {
             //return 'sff';
             $oauthUser = \Socialite::with($provider)->user();
-            //dd($oauthUser);
-            //判断登录的用户能否找到
-            //return json_encode($oauthUser);
-            $user = User::getByDriver($provider, $oauthUser->id);
-
-            if (Auth::check()) {
-            //要是正在用户状态，判断能否绑定,未测试
-                if ($user && $user->id != Auth::id()) {
-                    Flash::error(lang('Sorry, this socialite account has been registed.', ['driver' => lang($provider)]));
-                } else {//绑定
-                    $this->bindSocialiteUser($oauthUser, $provider);
-                    Flash::success(lang('Bind Successfully!', ['driver' => lang($provider)]));
-                }
-                return redirect(route('users.edit_social_binding', Auth::id()));
-            } else {
-            //要是非登录状态
-                if ($user) {//登录的用户能找到，登录
-                    return $this->loginUser($user);
-                }
-                //登录的用户不能找到，注册
-                return $this->userNotFound($provider, $oauthUser);
+            if ($user = Users::where('wechat_openid', '=', $oauthUser->openid)->first()){
+                Auth::login($user,true);
+                return redirect('/admin'); 
+            }else{
+                return redirect('/login'); 
             }
         }
     }
