@@ -167,7 +167,12 @@ export default {
                     }
                 });
                 let order = {from:'cart',commodities:commodites,cartIds:cartIds};
-                vm.$route.router.go({name:'order-settle',query:order});
+
+                Toast({
+                          message: order
+                    });
+
+                //vm.$route.router.go({name:'order-settle',query:order});
             }
         }
 }

@@ -104,10 +104,10 @@
                             <a href="{{url('admin/event/commodity')}}">活动</a>
                         </li>
                         <li class="{{request()->is('admin/event/topic*') ? 'active' : ''}}">
-                            <a href="{{url('admin/event/topic')}}">活动标签</a>
+                            <a href="{{url('admin/event/topic')}}">活动标签(测试中)</a>
                         </li>
                         <li class="{{request()->is('admin/event/category*') ? 'active' : ''}}">
-                            <a href="{{url('admin/event/category')}}">分类</a>
+                            <a href="{{url('admin/event/category')}}">分类(暂不需要)</a>
                         </li>
                     </ul>
                 </li>
