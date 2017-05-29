@@ -65,6 +65,7 @@ class ShopController extends Controller
         if ($all) {
             $response = $all;//->commodities()->get();
         }
+        return $all;
         return response()->json($response);
     }
 
