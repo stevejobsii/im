@@ -32,36 +32,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to 微信商城</h2>
-
-            <p>
-                Login in. To see it in action.
-            </p>
-
-            <p>
-                If there is any bug or suggestion,
-            </p>
-
-            <p>
-                please commit your issue.
-            </p>
-
-            <p>
-                微信商城 is still developing ,
-            </p>
-
-            <p>
-                please do not delete any data after login.
-            </p>
-
-            <p>
-                The current version of 微信商城 is basic ,
-            </p>
-
-            <p>
-                more features will be developed...
-            </p>
-
+            <h2 class="font-bold">Welcome to 微信商城 & 活动商城</h2>
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
@@ -86,10 +57,10 @@
                     </div>
                     <button type="submit" class="btn btn-primary block full-width m-b">登录</button>
 
-                    <p class="text-muted text-center">
+                    <!-- <p class="text-muted text-center">
                         <small>还没有账号？</small>
                     </p>
-                    <a class="btn btn-sm btn-white btn-block" href="{{ url('/register') }}">注册账号</a>
+                    <a class="btn btn-sm btn-white btn-block" href="{{ url('/register') }}">注册账号</a> -->
                 </form>
             </div>
         </div>
@@ -97,7 +68,7 @@
     <hr/>
     <div class="row">
         <div class="col-md-6">
-            微信商城
+        微信商城 & 活动商城
         </div>
         <div class="col-md-6 text-right">
             <small>© 2016-2017</small>

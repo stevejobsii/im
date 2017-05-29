@@ -5,7 +5,7 @@
         <p class="price">
             &yen;{{commodity.event_current_price | transformPrice}}&emsp;
             <del>&yen;{{commodity.event_original_price | transformPrice}}</del>
-            <span>剩余：{{commodity.event_stock_number}}件</span>
+            <span v-show="commodity.status === '报名中'" >剩余：{{commodity.event_stock_number}}件</span>
         </p>
     </div>
     
