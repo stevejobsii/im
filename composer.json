@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "overtrue/laravel-wechat": "3.0.3",
+        "overtrue/laravel-wechat": "3.0.1",
         "lavary/laravel-menu": "^1.6",
         "intervention/image": "^2.3",
         "socialiteproviders/weixin": "^2.1",
