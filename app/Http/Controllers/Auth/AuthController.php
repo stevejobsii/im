@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 use Auth;
 use Input;
 //use Flash;
-use User;
 
 class AuthController extends Controller
 {
@@ -108,22 +107,4 @@ class AuthController extends Controller
             }
         }
     }
-
-
-    //绑定
-    public function bindSocialiteUser($oauthUser, $provider)
-    {
-        $currentUser = Auth::user();
-
-        if ($provider == 'qq') {
-            $currentUser->qq_id = $oauthUser->id;
-           //$currentUser->github_url = $oauthUser->user['url'];
-        } elseif ($provider == 'weixin') {
-            $currentUser->wechat_openid = $oauthUser->id;
-            $currentUser->wechat_unionid = $oauthUser->user['unionid'];
-        }
-
-        $currentUser->save();
-    }
-
 }
