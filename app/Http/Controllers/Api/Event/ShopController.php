@@ -61,7 +61,18 @@ class ShopController extends Controller
     {
         $status = $request->input('status');
         $response = [];
-        $all = EventCommodity::where('status', '=', $status)->get();
+        if ($status == "open"){
+            $all = EventCommodity::where('status', '=', "报名中")
+            ->orderBy('sort', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+        }
+        if ($status == "close"){
+            $all = EventCommodity::where('status', '=', "已报满")
+            ->orderBy('sort', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+        }
         if ($all) {
             $response = $all;//->commodities()->get();
         }
