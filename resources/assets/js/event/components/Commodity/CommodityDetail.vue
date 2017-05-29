@@ -9,7 +9,7 @@
         </p>
     </div>
     
-    <div  v-show="{{commodity.status}} === '报名中'" id="number-container">
+    <div  v-show="commodity.status === '报名中'" id="number-container">
         <p>数量：</p>
         <div class="num-wrap">
             <span class="minus-btn"
@@ -50,8 +50,8 @@
                 {{cartCount}}
             </mt-badge>
         </div>
-        <div  v-show="{{commodity.status}} === '报名中'" class="add-cart-btn" @click="addCart">加入购物车</div>
-        <div  v-show="{{commodity.status}} === '报名中'" class="to-pay-btn" @click="toPay">立即购买</div>
+        <div  v-show="commodity.status === '报名中'" class="add-cart-btn" @click="addCart">加入购物车</div>
+        <div  v-show="commodity.status === '报名中'" class="to-pay-btn" @click="toPay">立即购买</div>
     </div>
 </template>
 
