@@ -8,7 +8,8 @@
             <span>剩余：{{commodity.event_stock_number}}件</span>
         </p>
     </div>
-    <div id="number-container">
+    
+    <div  v-show="{{commodity.status}} === '报名中'" id="number-container">
         <p>数量：</p>
         <div class="num-wrap">
             <span class="minus-btn"
@@ -20,6 +21,7 @@
             </span>
         </div>
     </div>
+
     <div id="detail-container">
         <ul class="title-wrap">
             <li @click="detailToggle"
@@ -48,8 +50,8 @@
                 {{cartCount}}
             </mt-badge>
         </div>
-        <div class="add-cart-btn" @click="addCart">加入购物车</div>
-        <div class="to-pay-btn" @click="toPay">立即购买</div>
+        <div  v-show="{{commodity.status}} === '报名中'" class="add-cart-btn" @click="addCart">加入购物车</div>
+        <div  v-show="{{commodity.status}} === '报名中'" class="to-pay-btn" @click="toPay">立即购买</div>
     </div>
 </template>
 
