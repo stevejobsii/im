@@ -32,7 +32,7 @@
                 let vm = this;
                 vm.$http.post('/api/geteventcommodities/status'
                     //,{category_id : vm.$route.params.hashid}
-                    ,{category_id : "报名中"}
+                    ,{stataus : "报名中"}
                     ).then(function(response){
                     vm.$set('data',response.data);
                     vm.$nextTick(function(){

@@ -59,9 +59,9 @@ class ShopController extends Controller
     // 获得eventlist
     public function getCommodityByStatus(Request $request)
     {
-        //$id = $request->input('category_id');
+        $status = $request->input('status');
         $response = [];
-        $all = EventCommodity::all();
+        $all = EventCommodity::where('status', '=', $status)->get();
         if ($all) {
             $response = $all;//->commodities()->get();
         }
