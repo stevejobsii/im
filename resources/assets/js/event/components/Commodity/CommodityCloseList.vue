@@ -6,6 +6,9 @@
                 <p class="title">
                     {{item.event_name}}
                 </p>
+                <p class="price">
+                    截止日期:{{item.end_time}}
+                </p>
             </div>
         </div>
     </div>
