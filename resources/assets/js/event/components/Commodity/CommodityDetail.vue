@@ -1,11 +1,11 @@
 <template>
-    <img class="commodity-img"  :src="commodity.commodity_img"/>
+    <img class="commodity-img"  :src="commodity.event_img"/>
     <div id="commodity-container">
-        <p class="name">{{commodity.commodity_name}}</p>
+        <p class="name">{{commodity.event_name}}</p>
         <p class="price">
-            &yen;{{commodity.commodity_current_price | transformPrice}}&emsp;
-            <del>&yen;{{commodity.commodity_original_price | transformPrice}}</del>
-            <span>剩余：{{commodity.commodity_stock_number}}件</span>
+            &yen;{{commodity.event_current_price | transformPrice}}&emsp;
+            <del>&yen;{{commodity.event_original_price | transformPrice}}</del>
+            <span>剩余：{{commodity.event_stock_number}}件</span>
         </p>
     </div>
     <div id="number-container">
@@ -32,10 +32,10 @@
             </li>
         </ul>
         <div class="detail-wrap" v-show="detailVisible">
-            {{{commodity.commodity_detail_info}}}
+            {{{commodity.event_detail_info}}}
         </div>
         <div class="base-wrap" v-show="!detailVisible">
-            {{{commodity.commodity_base_info | rnTransform}}}
+            {{{commodity.event_base_info | rnTransform}}}
         </div>
     </div>
     <div style="width:100%;height:60px;"></div>
