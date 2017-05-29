@@ -67,7 +67,7 @@ class ShopController extends Controller
             ->get();
         }
         if ($status == "close"){
-            $all = EventCommodity::where('status', '=', "已报满")
+            $all = EventCommodity::where('status', '=', "已结束")
             ->orderBy('id', 'asc')
             ->get();
         }
