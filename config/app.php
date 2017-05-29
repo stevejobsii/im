@@ -159,6 +159,7 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         \SocialiteProviders\Manager\ServiceProvider::class,
     ],
@@ -209,6 +210,8 @@ return [
         'Menu' => Lavary\Menu\Facade::class,
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Flash'            => Laracasts\Flash\Flash::class,
+        'Input'     => Illuminate\Support\Facades\Input::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class
     ],
