@@ -109,7 +109,7 @@ class OrderController extends Controller
     public function show($id)
     {
         $openid = $this->follow->id;
-        $order = WechatOrder::where('id', '=', $id)
+        $order = EventOrder::where('id', '=', $id)
             ->where('openid', '=', $openid)->first();
         if ($order) {
             return response()->json([
@@ -130,20 +130,20 @@ class OrderController extends Controller
         $page_size = 5;
         switch ($type) {
             case 'all':
-                $orders = WechatOrder::with('details')
+                $orders = EventOrder::with('details')
                     ->where('openid', '=', $openid)
                     ->orderBy('id', 'desc')
                     ->paginate($page_size);
                 break;
             case 'unpay':
-                $orders = WechatOrder::with('details')
+                $orders = EventOrder::with('details')
                     ->where('openid', '=', $openid)
                     ->where('pay_status', '=', '未支付')
                     ->orderBy('id', 'desc')
                     ->paginate($page_size);
                 break;
             case 'unreceived':
-                $orders = WechatOrder::with('details')
+                $orders = EventOrder::with('details')
                     ->where('openid', '=', $openid)
                     ->where('pay_status', '=', '已支付')
                     ->whereIn('ship_status', ['未发货', '已发货'])
