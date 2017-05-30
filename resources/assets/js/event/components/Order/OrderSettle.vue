@@ -183,7 +183,7 @@
                  // Toast({
                  //          message: data
                  //        });
-                创建订单
+                //创建订单
                 vm.$http.post('/api/eventorder',data).then(response=>{
                       Toast({
                           message: response.data
