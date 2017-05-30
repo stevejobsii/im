@@ -161,9 +161,9 @@ class OrderController extends Controller
     // 获取商品订单订单详情
     public function detail($id)
     {
-        $order = WechatOrder::find($id);
+        $order = EventOrder::find($id);
         if ($order) {
-            $order = WechatOrder::with('details')->find($id);
+            $order = EventOrder::with('details')->find($id);
             return response()->json([
                 'code' => 0,
                 'message' => $order
@@ -179,9 +179,9 @@ class OrderController extends Controller
     // 获取活动订单订单详情
     public function event_detail($id)
     {
-        $order = WechatOrder::find($id);
+        $order = EventOrder::find($id);
         if ($order) {
-            $order = WechatOrder::with('details')->find($id);
+            $order = EventOrder::with('details')->find($id);
             return response()->json([
                 'code' => 0,
                 'message' => $order
@@ -200,7 +200,7 @@ class OrderController extends Controller
         //查找商品
         Log::info('request(SetAttributes)arrived.'); 
         $WechatOrderId = $id;
-        $WechatOrder = WechatOrder::find($WechatOrderId);
+        $WechatOrder = EventOrder::find($WechatOrderId);
 
         //判断是否存在
         if(isNullOrEmpty($WechatOrder)) {
@@ -258,7 +258,7 @@ class OrderController extends Controller
             // Log::info($successful);
             
             // 查找对应的order
-            $WechatOrder = WechatOrder::where('order_number','=',$notify->out_trade_no)->first();
+            $WechatOrder = EventOrder::where('order_number','=',$notify->out_trade_no)->first();
             //Log::info($WechatOrder);
 
             if(isNullOrEmpty($WechatOrder)) {
