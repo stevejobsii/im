@@ -180,23 +180,23 @@
                 // data.address = vm.address.address;
                 // 商品数据
                 data.commodity = this.goods;
-                 Toast({
-                          message: data
+                 // Toast({
+                 //          message: data
+                 //        });
+                创建订单
+                vm.$http.post('/api/eventorder',data).then(response=>{
+                      Toast({
+                          message: response.data
                         });
-                // 创建订单
-                // vm.$http.post('/api/eventorder',data).then(response=>{
-                //       Toast({
-                //           message: response.data.message
-                //         });
-                //     Indicator.close();
-                //     if(response.data.code == 0){
-                //         vm.$route.router.go({name:'orderpay',params:{'hashid':response.data.message}});
-                //     }else{
-                //         Toast({
-                //           message: response.data.message
-                //         });
-                //     }
-                // });
+                    Indicator.close();
+                    if(response.data.code == 0){
+                        vm.$route.router.go({name:'orderpay',params:{'hashid':response.data.message}});
+                    }else{
+                        Toast({
+                          message: response.data.message
+                        });
+                    }
+                });
             },
 
         }

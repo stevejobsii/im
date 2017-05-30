@@ -142,7 +142,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     Route::get('orderlist/{type}', 'OrderController@index');
     Route::get('orderdetail/{order}', 'OrderController@detail');
     // 活动
-    Route::post('eventorder', 'Event\OrderController@store');
+    Route::any('eventorder', 'Event\OrderController@store');
     Route::get('eventorder/{order}', 'Event\OrderController@show');
     Route::get('eventorderlist/{type}', 'Event\OrderController@index');
     Route::get('eventorderdetail/{order}', 'Event\OrderController@detail');

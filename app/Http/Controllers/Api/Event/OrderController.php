@@ -37,6 +37,7 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
+        return $request;
         // TODO validator
         $openid = $this->follow->id;
         $from = $request->from;
