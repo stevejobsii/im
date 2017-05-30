@@ -8,10 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 //use App\WechatAddress;
 use App\eventfacades\EventCommodity;
-use App\eventfacades\WechatOrder;
-use App\eventfacades\WechatOrderDetail;
+use App\eventfacades\EventOrder;
+use App\eventfacades\EventOrderDetail;
 use App\eventfacades\ShopConfig;
-use App\eventfacades\WechatCart;
+use App\eventfacades\EventCart;
 use Validator;
 use Log;
 use EasyWeChat\Payment\Order;
@@ -40,21 +40,21 @@ class OrderController extends Controller
         // TODO validator
         $openid = $this->follow->id;
         $from = $request->from;
-        $order = new WechatOrder;
+        $order = new EventOrder;
         $order->openid = $openid;
-        $order->name = $request->name;
-        $order->phone = $request->phone;
-        $order->province = $request->province;
-        $order->city = $request->city;
-        $order->district = $request->district;
-        $order->address = $request->address;
+        //$order->name = $request->name;
+        //$order->phone = $request->phone;
+        //$order->province = $request->province;
+        //$order->city = $request->city;
+        //$order->district = $request->district;
+        //$order->address = $request->address;
         $goods = $request->commodity;
         // 查询商品基础运费设置信息
         $shop_config = ShopConfig::first();
         // 计算商品总价
         $commodity_amount = 0.00;
         foreach ($goods as $item) {
-            $commodity_amount += $item['commodity_current_price'] * $item['cart_num'];
+            $commodity_amount += $item['event_current_price'] * $item['cart_num'];
         }
         // 若不满足包邮价格，计算所需邮费
         $freight_amount = 0.00;
@@ -71,20 +71,20 @@ class OrderController extends Controller
         // 记录订单表，并插入订单明细表
         if ($order->save()) {
             foreach ($goods as $item) {
-                $detail = new WechatOrderDetail;
+                $detail = new EventOrderDetail;
                 $detail->order_id = $order->id;
                 $detail->openid = $openid;
                 $detail->commodity_id = $item['id'];
-                $detail->commodity_name = $item['commodity_name'];
-                $detail->commodity_img = $item['commodity_img'];
-                $detail->commodity_number = $item['commodity_number'];
-                $detail->commodity_original_price = $item['commodity_original_price'];
-                $detail->commodity_current_price = $item['commodity_current_price'];
+                $detail->commodity_name = $item['event_name'];
+                $detail->commodity_img = $item['event_img'];
+                $detail->commodity_number = $item['event_number'];
+                $detail->commodity_original_price = $item['event_original_price'];
+                $detail->commodity_current_price = $item['event_current_price'];
                 $detail->buy_number = $item['cart_num'];
                 $detail->save();
                 // 若为购物车订单来源，则删除对应购物车记录
                 if ($from == 'cart') {
-                    WechatCart::where('openid', '=', $openid)
+                    EventCart::where('openid', '=', $openid)
                         ->where('commodity_id', '=', $item['id'])
                         ->delete();
                 }
