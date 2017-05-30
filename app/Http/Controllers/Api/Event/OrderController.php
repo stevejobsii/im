@@ -37,7 +37,8 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
-        return $request;
+        Log::info('1.'); 
+        //return $request;
         // TODO validator
         $openid = $this->follow->id;
         $from = $request->from;
@@ -53,6 +54,7 @@ class OrderController extends Controller
         // 查询商品基础运费设置信息
         $shop_config = ShopConfig::first();
         // 计算商品总价
+        Log::info('2.'); 
         $commodity_amount = 0.00;
         foreach ($goods as $item) {
             $commodity_amount += $item['event_current_price'] * $item['cart_num'];
@@ -69,6 +71,7 @@ class OrderController extends Controller
         $order->order_amount = $order_amount;
         $order->order_number = $this->build_order_no();
 
+        Log::info('3.'); 
         // 记录订单表，并插入订单明细表
         if ($order->save()) {
             foreach ($goods as $item) {
@@ -100,6 +103,7 @@ class OrderController extends Controller
                 'message' => '订单创建失败！'
             ]);
         }
+        Log::info('4.'); 
     }
 
     public function show($id)

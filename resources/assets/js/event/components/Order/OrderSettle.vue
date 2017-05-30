@@ -185,9 +185,9 @@
                  //        });
                 //创建订单
                 vm.$http.post('/api/eventorder',data).then(response=>{
-                      Toast({
-                          message: response.data
-                        });
+                      // Toast({
+                      //     message: response.data
+                      //   });
                     Indicator.close();
                     if(response.data.code == 0){
                         vm.$route.router.go({name:'orderpay',params:{'hashid':response.data.message}});
