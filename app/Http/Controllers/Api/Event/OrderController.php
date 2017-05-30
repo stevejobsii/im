@@ -103,7 +103,7 @@ class OrderController extends Controller
                 'message' => '订单创建失败！'
             ]);
         }
-        Log::info('4.'); 
+        //Log::info('4.'); 
     }
 
     public function show($id)

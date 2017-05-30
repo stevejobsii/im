@@ -29,7 +29,7 @@
                 Indicator.open();
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
-                vm.$http.get('/api/order/'+itemId).then(response=>{
+                vm.$http.get('/api/eventorder/'+itemId).then(response=>{
                     Indicator.close();
                     if(response.data.code == 0){
                         vm.$set('order',response.data.message);
@@ -54,19 +54,19 @@
                                 switch(res.err_msg) {
                                     case 'get_brand_wcpay_request:cancel':
                                         alert('用户取消支付！');
-                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
+                                        window.location.href = "https://goodgoto.com/event#!/usercenter"; 
                                         break;
                                     case 'get_brand_wcpay_request:fail':
                                         alert('支付失败！（'+res.err_desc+'）');
-                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
+                                        window.location.href = "https://goodgoto.com/event#!/usercenter"; 
                                         break;
                                     case 'get_brand_wcpay_request:ok':
                                         alert('支付成功!good');
-                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
+                                        window.location.href = "https://goodgoto.com/event#!/usercenter"; 
                                         break;
                                     default:
                                         alert(JSON.stringify(res));
-                                        window.location.href = "https://goodgoto.com/mall#!/usercenter"; 
+                                        window.location.href = "https://goodgoto.com/event#!/usercenter"; 
                                         break;
                                 } 
                             }
