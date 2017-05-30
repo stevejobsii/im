@@ -65,7 +65,7 @@ class OrderController extends Controller
         //     $freight_amount = $shop_config->config_freight;
         // }
         // 计算订单总价
-        $order_amount = $commodity_amount + $freight_amount;
+        //$order_amount = $commodity_amount + $freight_amount;
         $order->commodity_amount = $commodity_amount;
         //$order->freight_amount = $freight_amount;
         $order->order_amount = $order_amount;
