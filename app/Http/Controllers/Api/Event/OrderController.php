@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 use App\eventfacades\EventCommodity;
 use App\eventfacades\EventOrder;
 use App\eventfacades\EventOrderDetail;
-use App\eventfacades\ShopConfig;
+//use App\eventfacades\ShopConfig;
 use App\eventfacades\EventCart;
 use Validator;
 use Log;
@@ -52,7 +52,7 @@ class OrderController extends Controller
         //$order->address = $request->address;
         $goods = $request->commodity;
         // 查询商品基础运费设置信息
-        $shop_config = ShopConfig::first();
+        //$shop_config = ShopConfig::first();
         // 计算商品总价
         Log::info('2.'); 
         $commodity_amount = 0.00;
@@ -60,14 +60,14 @@ class OrderController extends Controller
             $commodity_amount += $item['event_current_price'] * $item['cart_num'];
         }
         // 若不满足包邮价格，计算所需邮费
-        $freight_amount = 0.00;
-        if ($shop_config && $commodity_amount < $shop_config->config_free) {
-            $freight_amount = $shop_config->config_freight;
-        }
+        // $freight_amount = 0.00;
+        // if ($shop_config && $commodity_amount < $shop_config->config_free) {
+        //     $freight_amount = $shop_config->config_freight;
+        // }
         // 计算订单总价
         $order_amount = $commodity_amount + $freight_amount;
         $order->commodity_amount = $commodity_amount;
-        $order->freight_amount = $freight_amount;
+        //$order->freight_amount = $freight_amount;
         $order->order_amount = $order_amount;
         $order->order_number = $this->build_order_no();
 
