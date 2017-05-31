@@ -36,6 +36,10 @@
                                placeholder="" required>
                     </div>
                     <div class="form-group">
+                        <label>主办方：</label>
+                        <input name="manager_id" value="{{$commodity->manager_id}}" type="text" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="form-group">
                         <label>图片：</label>
                         @if($commodity->event_img)
                             <img src="{{$commodity->event_img}}" class="img-thumbnail">

@@ -26,11 +26,11 @@
         <ul class="title-wrap">
             <li @click="detailToggle"
                 :class=" detailVisible ? 'active' : '' ">
-                商品详情
+                活动详情
             </li>
             <li @click="detailToggle"
                 :class=" detailVisible ? '' : 'active' ">
-                商品简介
+                活动简介
             </li>
         </ul>
         <div class="detail-wrap" v-show="detailVisible">
