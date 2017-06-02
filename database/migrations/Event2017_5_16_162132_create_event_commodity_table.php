@@ -50,7 +50,7 @@ class CreateEventCommodityTable extends Migration
             // 活动地点
             $table->integer('event_place');
             // 活动管理员
-            $table->integer('manager_id');
+            $table->string('manager_id');
             // 活动链接
             $table->integer('event_page_url');
             // 活动状态
