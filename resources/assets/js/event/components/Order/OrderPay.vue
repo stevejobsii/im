@@ -46,7 +46,7 @@
             wechatPay: function(){
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
-                vm.$http.get('/api/SetAttributes/'+itemId).then(response=>{
+                vm.$http.get('/api/eventSetAttributes/'+itemId).then(response=>{
                     let json = response.data;
                     WeixinJSBridge.invoke(
                         'getBrandWCPayRequest',json,

@@ -159,9 +159,15 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     /**
      * 微信支付 设定订单内容SetAttributes
      */
+    // 商品
     Route::get('SetAttributes/{id}', [
         'uses' => 'OrderController@SetAttributes',
     ]);
+    // 活动
+    Route::get('eventSetAttributes/{id}', [
+        'uses' => 'Event\OrderController@SetAttributes',
+    ]);
+
     /**
      * 微信支付
      */

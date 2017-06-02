@@ -195,7 +195,7 @@ class OrderController extends Controller
     }
 
     //订单下单
-    public function SetAttributes($id, Request $request) {
+    public function eventSetAttributes($id, Request $request) {
         
         //查找商品
         Log::info('request(SetAttributes)arrived.'); 
