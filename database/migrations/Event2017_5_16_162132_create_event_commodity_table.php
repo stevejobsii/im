@@ -37,9 +37,9 @@ class CreateEventCommodityTable extends Migration
             // 活动排序
             $table->integer('event_sort')->default(0);
             // 所属专题
-            $table->integer('topic_id')->default(0);
+            //$table->integer('topic_id')->default(0);
             // 所属板块
-            $table->integer('plate_id')->default(0);
+            //$table->integer('plate_id')->default(0);
             // 所属分类
             $table->integer('category_id')->default(0);
 
@@ -50,7 +50,7 @@ class CreateEventCommodityTable extends Migration
             // 活动地点
             $table->integer('event_place');
             // 活动管理员
-            $table->string('manager_id');
+            $table->string('manager');
             // 活动链接
             $table->integer('event_page_url');
             // 活动状态

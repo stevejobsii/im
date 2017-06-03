@@ -168,13 +168,6 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
         'uses' => 'Event\OrderController@eventSetAttributes',
     ]);
 
-    /**
-     * 微信支付
-     */
-    Route::get('pay/{id}', [
-        'as'   => 'frontend.wechat.pay',
-        'uses' => 'OrderController@pay',
-    ]);
     // TODO活动订单API
 
 });
@@ -182,9 +175,15 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
 /**
  * 微信支付回调--处理支付后,这是微信来发送信息给服务器
  */
+// 商店
 Route::post('HandlePay',[
     'as'   => 'frontend.wechat.HandlePay',
     'uses' => 'Api\OrderController@HandlePay',
+]);
+// 活动
+Route::post('eventHandlePay',[
+    'as'   => 'frontend.wechat.HandlePay',
+    'uses' => 'Api\Event\OrderController@eventHandlePay',
 ]);
 
 /**

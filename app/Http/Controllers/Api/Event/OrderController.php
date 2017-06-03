@@ -220,7 +220,7 @@ class OrderController extends Controller
             //订单的标签order_number
             'out_trade_no'     => $WechatOrder->order_number,
             'total_fee'        => $WechatOrder->order_amount*100,
-            'notify_url'       => "https://goodgoto.com/HandlePay", 
+            'notify_url'       => "https://goodgoto.com/eventHandlePay", 
             // 支付结果通知网址，如果不设置则会使用配置里的默认地址 route('frontend.wechat.HandlePay')
             'openid'           => $WechatOrder->openid,
         ];
@@ -250,7 +250,7 @@ class OrderController extends Controller
     }
 
     //处理订单信息,这个是微信发出的
-    public function HandlePay() {
+    public function eventHandlePay() {
         Log::info('request(HandlePay)arrived.'); 
         $response = app('wechat')->payment->handleNotify(function($notify, $successful){
             // LOG debug

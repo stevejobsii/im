@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label>主办方：</label>
-                        <input name="manager_id" value="{{$commodity->manager_id}}" type="text" class="form-control" placeholder="" required>
+                        <input name="manager" value="{{$commodity->manager}}" type="text" class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label>图片：</label>
