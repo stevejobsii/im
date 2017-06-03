@@ -24,13 +24,13 @@ class CreateEventOrdersTable extends Migration
             // 商品总价
             $table->float('commodity_amount')->default(0.00);
             // 运费总价
-            $table->float('freight_amount')->default(0.00);
+            //$table->float('freight_amount')->default(0.00);
             // 配送状态
-            $table->enum('ship_status', ['未发货', '已发货', '已收货']);
+            //$table->enum('ship_status', ['未发货', '已发货', '已收货']);
             // 物流公司
-            $table->string('ship_name')->nullable();
+            //$table->string('ship_name')->nullable();
             // 物流单号
-            $table->string('ship_number')->nullable();
+            //$table->string('ship_number')->nullable();
             // 收货人姓名
             $table->string('name');
             // 收货人联系电话

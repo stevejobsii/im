@@ -182,7 +182,6 @@ Route::post('HandlePay',[
 ]);
 // 活动
 Route::post('eventHandlePay',[
-    'as'   => 'frontend.wechat.HandlePay',
     'uses' => 'Api\Event\OrderController@eventHandlePay',
 ]);
 
