@@ -198,7 +198,7 @@ class OrderController extends Controller
     public function eventSetAttributes($id, Request $request) {
         
         //查找商品
-        Log::info('request(SetAttributes)arrived.'); 
+        Log::info('request(eventSetAttributes)arrived.'); 
         $WechatOrderId = $id;
         $WechatOrder = EventOrder::find($WechatOrderId);
 

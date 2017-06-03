@@ -15,8 +15,8 @@
                 <p><span class="title">总价：</span>&yen;{{order.order_amount | transformPrice}}</p>
             </div>
             <div class="order-detail" v-for="detail in order.details">
-                <img :src="detail.commodity_img" alt="{{detail.commodity_name}}"/>
-                <p>{{detail.commodity_name}}</p>
+                <img :src="detail.event_img" alt="{{detail.event_name}}"/>
+                <p>{{detail.event_name}}</p>
                 <p class="title">{{detail.buy_number}}件</p>
             </div>
         </div>
@@ -64,7 +64,7 @@
                 let vm = this;
                 let order_type = vm.$route.params.type;
                 Indicator.open();
-                vm.$http.get('/api/orderlist/'+order_type).then(response=>{
+                vm.$http.get('/api/eventorderlist/'+order_type).then(response=>{
                     Indicator.close();
                     if(response.data.message.data.length === 0){
                         Toast({
@@ -83,7 +83,7 @@
                 let distance = document.querySelector("#order-list-part").getBoundingClientRect().bottom - window.innerHeight;
                 if(!vm.isLoading && !vm.isEnd && vm.paginate.data.length && distance < triggerDistance){
                     vm.$set('isLoading',true);
-                    vm.$http.get('/api/orderlist/'+vm.order_type+'?page='+page).then(response=>{
+                    vm.$http.get('/api/eventorderlist/'+vm.order_type+'?page='+page).then(response=>{
                         if(response.data.message.data.length === 0){
                             vm.$set('isLoading',false);
                             vm.$set('isEnd',true);

@@ -2,7 +2,7 @@
     <div id="order-detail-part">
         <div class="order-detail-wrapper">
             <div class="detail-container underline">
-                <p class="info">感谢您在微信商城购物，欢迎您再次光临！</p>
+                <p class="info">感谢您在购买服务门票，欢迎您再次光临！</p>
             </div>
             <div class="detail-container">
                 <p v-show="order.pay_status === '未支付'"><span class="title">状态：</span>{{order.pay_status}}</p>
@@ -30,11 +30,11 @@
                 <div class="commodity-list"
                      v-for="detail in order.details"
                      v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}">
-                    <img :src="detail.commodity_img" alt="{{detail.commodity_name}}"/>
+                    <img :src="detail.event_img" alt="{{detail.event_name}}"/>
                     <div class="commodity-name">
-                        <p>{{detail.commodity_name}}</p>
+                        <p>{{detail.event_name}}</p>
                         <ul>
-                            <li class="price">&yen;{{detail.commodity_current_price | transformPrice}}</li>
+                            <li class="price">&yen;{{detail.event_current_price | transformPrice}}</li>
                             <li class="number">{{detail.buy_number}}件</li>
                         </ul>
                     </div>
@@ -104,7 +104,7 @@
                   text: '订单创建中...'
                 });
                 let itemId = this.$route.params.hashid;
-                window.location.href = 'https://goodgoto.com/mall#!/'+itemId+'/orderpay'; 
+                window.location.href = 'https://goodgoto.com/event#!/'+itemId+'/orderpay'; 
             },
         }
     }
