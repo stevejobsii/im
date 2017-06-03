@@ -10,8 +10,9 @@
              v-for="order in orders"
              v-link="{name:'order-detail',params:{'hashid':order.id}}">
             <div class="order-info">
-                <p v-show="order.pay_status === '未支付'"><span class="title">状态：</span>{{order.pay_status}}</p>
-                <p v-show="order.pay_status === '已支付'"><span class="title">状态：</span>{{order.ship_status}}</p>
+                <!-- <p v-show="order.pay_status === '未支付'"> --><p><span class="title">状态：</span>{{order.pay_status}}</p>
+                <!-- <p v-show="order.pay_status === '已支付'">
+                <span class="title">状态：</span>{{order.ship_status}}</p> -->
                 <p><span class="title">总价：</span>&yen;{{order.order_amount | transformPrice}}</p>
             </div>
             <div class="order-detail" v-for="detail in order.details">

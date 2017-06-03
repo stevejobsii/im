@@ -1,10 +1,11 @@
+
 <template>
     <div id="pay-order-container">
         <div class="order-title">
             <img src="/images/common/wechat_pay.png"/>
         </div>
         <div class="order-content">
-            <p>所需运费：<span class="amount">&yen;{{order.freight_amount | transformPrice}}</span></p>
+<!--             <p>所需运费：<span class="amount">&yen;{{order.freight_amount | transformPrice}}</span></p> -->
             <p>商品总价：<span class="amount">&yen;{{order.commodity_amount | transformPrice}}</span></p>
             <p>订单总价：<span class="amount">&yen;{{order.order_amount | transformPrice}}</span></p>
         </div>
