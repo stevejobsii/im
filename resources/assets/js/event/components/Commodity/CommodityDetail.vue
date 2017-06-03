@@ -4,6 +4,9 @@
         <p class="name">{{commodity.event_name}}</p>
         <p class="name">(主办方:{{commodity.manager}}、地点:{{commodity.event_place}})</p>
         <p class="price">
+            日期:{{commodity.end_time}}({{commodity.status}})
+        </p>
+        <p class="price">
             &yen;{{commodity.event_current_price | transformPrice}}&emsp;
             <del>&yen;{{commodity.event_original_price | transformPrice}}</del>
             <span v-show="commodity.status === '报名中'" >剩余：{{commodity.event_stock_number}}件</span>

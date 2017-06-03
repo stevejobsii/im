@@ -48,7 +48,7 @@
                         <input name="event_page_url" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label>截止日期：</label>
+                        <label>日期：</label>
                         <input name="end_time" type="text" class="form-control" placeholder="XXXX年XX月XX日">
                     </div>
                     <div class="form-group">
