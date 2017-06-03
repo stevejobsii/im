@@ -6,7 +6,7 @@
             </div>
             <div class="detail-container">
                 <p v-show="order.pay_status === '未支付'"><span class="title">状态：</span>{{order.pay_status}}</p>
-                <p v-show="order.pay_status === '已支付'"><span class="title">
+                <p v-show="order.pay_status === '已支付'"><!-- <span class="title"> -->
                 <!-- 状态：</span>{{order.ship_status}}</p> -->
                 <p><span class="title">订单编号：</span>{{order.order_number}}</p>
                 <p><span class="title">下单时间：</span>{{order.created_at}}</p>
@@ -49,11 +49,11 @@
                     <ul>
                         <li class="result-name">
                           <p>商品总额</p>
-                          <p>运费</p>
+                          <!-- <p>运费</p> -->
                         </li>
                         <li class="result-value">
                             <p class="price">&yen;{{order.commodity_amount | transformPrice}}</p>
-                            <p class="price">&#43;&yen;{{order.freight_amount | transformPrice}}</p>
+                            <!-- <p class="price">&#43;&yen;{{order.freight_amount | transformPrice}}</p> -->
                         </li>
                     </ul>
                 </div>
