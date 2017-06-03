@@ -2,6 +2,7 @@
     <img class="commodity-img"  :src="commodity.event_img"/>
     <div id="commodity-container">
         <p class="name">{{commodity.event_name}}</p>
+        <p class="name">(主办方:{{commodity.manager}}、地点:{{commodity.event_place}})</p>
         <p class="price">
             &yen;{{commodity.event_current_price | transformPrice}}&emsp;
             <del>&yen;{{commodity.event_original_price | transformPrice}}</del>
@@ -23,9 +24,6 @@
     </div>
 
     <div id="detail-container">
-        <p class="title">
-            {{item.event_name}}(主办方:{{item.manager}}、地点:{{item.event_place}})
-        </p>
         <ul class="title-wrap">
             <li @click="detailToggle"
                 :class=" detailVisible ? 'active' : '' ">

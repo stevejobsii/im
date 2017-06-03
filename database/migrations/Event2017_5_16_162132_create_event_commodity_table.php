@@ -48,11 +48,11 @@ class CreateEventCommodityTable extends Migration
             // 活动结束时间
             $table->string('end_time');
             // 活动地点
-            $table->integer('event_place');
+            $table->string('event_place');
             // 活动管理员
             $table->string('manager');
             // 活动链接
-            $table->integer('event_page_url');
+            $table->string('event_page_url');
             // 活动状态
             $table->enum('status', ['报名中','已报满','已结束']);
 

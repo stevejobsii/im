@@ -4,7 +4,10 @@
             <img :src="item.event_img" alt="item.event_name"/>
             <div class="data-info-wrapper">
                 <p class="title">
-                    {{item.event_name}}(主办方:{{item.manager}}、地点:{{item.event_place}})
+                    {{item.event_name}}
+                </p>
+                <p>
+                    (主办方:{{item.manager}}、地点:{{item.event_place}})
                 </p>
                 <p class="price">
                     截止日期:{{item.end_time}}({{item.status}})
