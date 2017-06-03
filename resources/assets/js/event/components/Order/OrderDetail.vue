@@ -6,7 +6,8 @@
             </div>
             <div class="detail-container">
                 <p v-show="order.pay_status === '未支付'"><span class="title">状态：</span>{{order.pay_status}}</p>
-                <p v-show="order.pay_status === '已支付'"><span class="title">状态：</span>{{order.ship_status}}</p>
+                <p v-show="order.pay_status === '已支付'"><span class="title">
+                <!-- 状态：</span>{{order.ship_status}}</p> -->
                 <p><span class="title">订单编号：</span>{{order.order_number}}</p>
                 <p><span class="title">下单时间：</span>{{order.created_at}}</p>
             </div>
@@ -30,11 +31,11 @@
                 <div class="commodity-list"
                      v-for="detail in order.details"
                      v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}">
-                    <img :src="detail.event_img" alt="{{detail.event_name}}"/>
+                    <img :src="detail.commodity_img" alt="{{detail.commodity_name}}"/>
                     <div class="commodity-name">
-                        <p>{{detail.event_name}}</p>
+                        <p>{{detail.commodity_name}}</p>
                         <ul>
-                            <li class="price">&yen;{{detail.event_current_price | transformPrice}}</li>
+                            <li class="price">&yen;{{detail.commodity_current_price | transformPrice}}</li>
                             <li class="number">{{detail.buy_number}}件</li>
                         </ul>
                     </div>
@@ -87,7 +88,7 @@
                 let vm = this;
                 let itemId = this.$route.params.hashid;
                 Indicator.open();
-                vm.$http.get('/api/orderdetail/'+itemId).then(response=>{
+                vm.$http.get('/api/eventorderdetail/'+itemId).then(response=>{
                     Indicator.close();
                     if(response.data.code == -1){
                         Toast({

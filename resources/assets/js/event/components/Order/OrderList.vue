@@ -15,8 +15,8 @@
                 <p><span class="title">总价：</span>&yen;{{order.order_amount | transformPrice}}</p>
             </div>
             <div class="order-detail" v-for="detail in order.details">
-                <img :src="detail.event_img" alt="{{detail.event_name}}"/>
-                <p>{{detail.event_name}}</p>
+                <img :src="detail.commodity_img" alt="{{detail.commodity_name}}"/>
+                <p>{{detail.commodity_name}}</p>
                 <p class="title">{{detail.buy_number}}件</p>
             </div>
         </div>

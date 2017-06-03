@@ -146,7 +146,7 @@ class OrderController extends Controller
                 $orders = EventOrder::with('details')
                     ->where('openid', '=', $openid)
                     ->where('pay_status', '=', '已支付')
-                    ->whereIn('ship_status', ['未发货', '已发货'])
+                    //  ->whereIn('ship_status', ['未发货', '已发货'])
                     ->orderBy('id', 'desc')
                     ->paginate($page_size);
                 break;
