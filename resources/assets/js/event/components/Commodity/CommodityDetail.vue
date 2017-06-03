@@ -23,6 +23,9 @@
     </div>
 
     <div id="detail-container">
+        <p class="title">
+            {{item.event_name}}(主办方:{{item.manager}}、地点:{{item.event_place}})
+        </p>
         <ul class="title-wrap">
             <li @click="detailToggle"
                 :class=" detailVisible ? 'active' : '' ">

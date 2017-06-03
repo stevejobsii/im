@@ -44,6 +44,7 @@ class EventCommodityController extends Controller
         }
         $commodity->event_name = $request->input('event_name');
         $commodity->manager = $request->input('manager');
+        $commodity->event_place = $request->input('event_place');
         $commodity->event_number = $request->input('event_number');
         $commodity->event_original_price = $request->input('event_original_price');
         $commodity->event_current_price = $request->input('event_current_price');
@@ -108,6 +109,7 @@ class EventCommodityController extends Controller
         }
         $commodity->event_name = $request->input('event_name');
         $commodity->manager = $request->input('manager');
+        $commodity->event_place = $request->input('event_place');
         $commodity->event_number = $request->input('event_number');
         $commodity->event_original_price = $request->input('event_original_price');
         $commodity->event_current_price = $request->input('event_current_price');

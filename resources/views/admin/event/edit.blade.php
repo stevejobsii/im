@@ -40,6 +40,10 @@
                         <input name="manager" value="{{$commodity->manager}}" type="text" class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
+                        <label>地点：</label>
+                        <input name="event_place" value="{{$commodity->event_place}}" type="text" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="form-group">
                         <label>图片：</label>
                         @if($commodity->event_img)
                             <img src="{{$commodity->event_img}}" class="img-thumbnail">

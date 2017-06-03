@@ -36,6 +36,10 @@
                         <input name="manager" type="text" class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group">
+                        <label>地点：</label>
+                        <input name="event_place" type="text" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="form-group">
                         <label>图片：</label>
                         <input name="file" type="file" class="form-control">
                     </div>
