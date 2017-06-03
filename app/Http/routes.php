@@ -165,7 +165,7 @@ Route::group(['prefix' => 'api', 'middleware' => ['web', 'wechat.oauth'], 'names
     ]);
     // 活动
     Route::get('eventSetAttributes/{id}', [
-        'uses' => 'Event\OrderController@SetAttributes',
+        'uses' => 'Event\OrderController@eventSetAttributes',
     ]);
 
     /**
