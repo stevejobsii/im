@@ -99,11 +99,12 @@ class AuthController extends Controller
         if (Input::has('code')) {
             //return 'sff';
             $oauthUser = \Socialite::with($provider)->user();
-            dd($oauthUser);
+            //dd($oauthUser);
             if ($user = User::where('wechat_openid', '=', $oauthUser->id)->first()){
                 Auth::login($user,true);
                 return redirect('/'); 
             }else{
+                dd($oauthUser);
                 return redirect('/login'); 
             }
         }
