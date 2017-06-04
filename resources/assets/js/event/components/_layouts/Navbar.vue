@@ -3,7 +3,7 @@
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
         <mt-tab-item v-link="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
-            {{lang('enrolling_event')}}
+            {!!lang('enrolling_event')!!}
         </mt-tab-item> 
         <mt-tab-item v-link="{name:'aClose'}" id="category">
             <i slot="icon" class="nav-category"></i>
