@@ -1,7 +1,7 @@
     <?php
 
 return [
-    'welcome' => '欢迎使用imall的app'
+    'welcome' => '欢迎使用imall的app',
     'Topics' => '社区',
     'Wiki' => 'Wiki',
     'Jobs' => '招聘',
