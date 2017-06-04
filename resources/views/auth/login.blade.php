@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>微信商城 | 登录</title>{{ lang('welcome') }}
+    <title>{{ lang('welcome_to_login') }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to 微信商城 & 活动商城</h2>
+            <h2 class="font-bold">{{ lang('welcome_to_login') }}</h2>
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
@@ -48,20 +48,20 @@
                         <div class="i-checks">
                             <label>
                                 <input type="checkbox" name="remember" checked>
-                                &nbsp;记住我
+                                &nbsp;{{ lang('remember_me') }}
                             </label>
                             @if(count($errors))
-                                <small class="text-danger">账号或密码错误！</small>
+                                <small class="text-danger">{{ lang('wrong_account_and_password') }}</small>
                             @endif
 
                             <a href="{{ URL::route('auth.oauth', ['driver' => 'weixin']) }}" class="btn btn-success login-btn weichat-login-btn">
                             <i class="fa fa-weixin"></i>
-                            微信登录
+                            {{ lang('wechat_login') }}
                             </a>
 
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary block full-width m-b">登录</button>
+                    <button type="submit" class="btn btn-primary block full-width m-b">{{ lang('login') }}</button>
 
                     <!-- <p class="text-muted text-center">
                         <small>还没有账号？</small>
@@ -74,7 +74,7 @@
     <hr/>
     <div class="row">
         <div class="col-md-6">
-        微信商城 & 活动商城
+        {{ lang('mall_and_event_mall') }}
         </div>
         <div class="col-md-6 text-right">
             <small>© 2016-2017</small>

@@ -67,6 +67,7 @@ return [
 
     // 选择语言
     //'locale' => 'en',
+    //'locale' => env('LOCALE') ? :'en',
     'locale' => 'zh-CN',
     /*
     |--------------------------------------------------------------------------
@@ -79,6 +80,7 @@ return [
     |
     */
 
+    // 选择语言
     //'fallback_locale' => 'en',
     'fallback_locale' => 'zh-CN',
     /*
