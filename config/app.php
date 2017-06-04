@@ -66,8 +66,8 @@ return [
     */
 
     // 选择语言
-    //'locale' => 'en',
-    'locale' => 'zh-CN',
+    'locale' => 'en',
+    //'locale' => 'zh-CN',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
