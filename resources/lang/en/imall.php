@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'welcome' => 'Welcome to our application'
+    'welcome' => 'Welcome to our imall application',
     'Topics' => 'Topics',
     'Wiki' => 'Wiki',
     'Jobs' => 'Jobs',
