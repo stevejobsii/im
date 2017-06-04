@@ -15,3 +15,8 @@ function isNullOrEmpty($obj) {
         return $obj->isEmpty();
     }
 }
+
+function lang($text, $parameters = [])
+{
+    return str_replace('imall.', '', trans('imall.'.$text, $parameters));
+}
