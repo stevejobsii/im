@@ -7,4 +7,5 @@ return [
     'wechat_login'=>'微信登录',
     'login'=>'登录',
     'mall_and_event_mall'=>'微信商城 & 活动商城',
+    'enrolling_event'=>'报名中活动',
 ];
