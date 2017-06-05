@@ -196,6 +196,7 @@ Route::get('/verification/{token}', 'Auth\AuthController@getVerification')->name
 
 // Localization
 Route::get('/js/lang.js', function () {
+    return config('app.locale');
     $strings = Cache::rememberForever('lang.js', function () {
         $lang = config('app.locale');
 
