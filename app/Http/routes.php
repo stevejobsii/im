@@ -196,7 +196,7 @@ Route::get('/verification/{token}', 'Auth\AuthController@getVerification')->name
 
 // Localization
 Route::get('/js/lang.js', function () {
-    $strings = Cache::rememberForever('lang.js', function () {
+    $strings = function () {
         $lang = config('app.locale');
 
         $files   = glob(resource_path('lang/' . $lang . '/*.php'));
@@ -208,7 +208,7 @@ Route::get('/js/lang.js', function () {
         }
 
         return $strings;
-    });
+    };
 
     header('Content-Type: text/javascript');
     echo('window.i18n ='.json_encode($strings) . ';');
