@@ -10,6 +10,10 @@ Vue.use(Mint);
 Vue.use(InfiniteScroll);
 Vue.use(Router);
 
+Vue.filter('trans', (key) => {
+  return Lang.get(key);
+});
+
 /**
  * 价格转换为0.00的浮点数
  */
