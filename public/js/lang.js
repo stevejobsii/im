@@ -1,0 +1,1 @@
+window.i18n = {"imall":{'welcome_to_login':'1'}}
