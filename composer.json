@@ -12,8 +12,7 @@
         "intervention/image": "^2.3",
         "socialiteproviders/weixin": "^2.1",
         "socialiteproviders/manager": "2.1.5",
-        "laracasts/flash": "^2.0",
-        "andywer/js-localization": "dev-laravel-5" 
+        "laracasts/flash": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
