@@ -3,11 +3,11 @@
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
         <mt-tab-item v-link="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
-            {{ trans('imall.welcome_to_login') }}
+            {{ trans('imall.enrolling_event') }}
         </mt-tab-item> 
         <mt-tab-item v-link="{name:'aClose'}" id="category">
             <i slot="icon" class="nav-category"></i>
-            已结束活动
+            {{ trans('imall.end_event') }}
         </mt-tab-item>
         <mt-tab-item v-link="{name:'cart'}" id="cart">
             <i slot="icon" class="nav-cart">
