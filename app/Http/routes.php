@@ -198,7 +198,7 @@ Route::get('/verification/{token}', 'Auth\AuthController@getVerification')->name
 Route::get('/js/lang.js', function () {
     $strings = Cache::rememberForever('lang.js', function () {
         $lang = config('app.locale');
-        $lang = 'en';
+
         $files   = glob(resource_path('lang/' . $lang . '/*.php'));
         $strings = [];
 
