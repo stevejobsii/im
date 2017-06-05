@@ -211,6 +211,6 @@ Route::get('/js/lang.js', function () {
     });
 
     header('Content-Type: text/javascript');
-    echo('window.i18n = ' . json_encode($strings));
+    echo('window.i18n ='.json_encode($strings) . ';');
     exit();
 })->name('assets.lang');
