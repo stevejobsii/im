@@ -35,6 +35,7 @@
 <script src="//cdn.bootcss.com/Swiper/3.4.0/js/swiper.min.js"></script>
 <script src="{{ asset('js/mall/app.js') }}"></script>
 <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" charset="utf-8"></script>
+<script src="/js/lang.js"></script>
 <!-- <script type="text/javascript" charset="utf-8">
     wx.config(<?php echo $js->config(array('chooseWXPay'), true) ?>);
 </script> -->
