@@ -5,15 +5,15 @@ import axios from 'axios'
 import Router from 'vue-router'
 import routerMap from './router'
 import App from './App.vue'
+import lodash from 'lodash'
 
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
 Vue.use(Router);
 
-Vue.filter('trans', (key) => {
-  return Lang.get(key);
-});
-
+    //vuejs using laravel blade inside
+    //const _ = import('lodash');
+Vue.prototype.trans = string => _.get(window.i18n, string);
 /**
  * 价格转换为0.00的浮点数
  */
