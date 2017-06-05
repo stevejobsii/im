@@ -32,7 +32,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <h2 class="font-bold">{{ lang('welcome_to_login') }}{{ trans('imall.welcome_to_login') }}</h2>
+            <h2 class="font-bold">{{ trans('imall.welcome_to_login') }}</h2>
         </div>
         <div class="col-md-6">
             <div class="ibox-content">
