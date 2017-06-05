@@ -14,7 +14,9 @@ Vue.use(Router);
 
     //vuejs using laravel blade inside
     //const _ = import('lodash');
-Vue.prototype.trans = string => _.get(window.i18n, string);
+//Vue.prototype.trans = string => '123';
+//Vue.prototype.trans = string => _.get(window.i18n, string);
+
 /**
  * 价格转换为0.00的浮点数
  */
