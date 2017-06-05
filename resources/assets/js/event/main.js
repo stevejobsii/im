@@ -6,6 +6,7 @@ import Router from 'vue-router'
 import routerMap from './router'
 import App from './App.vue'
 import lodash from 'lodash'
+//import vue-prototype form 'vue-prototype'
 
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
