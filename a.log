@@ -2333,3 +2333,68 @@
   Line 6111: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
   Reason: The activate router lifecycle hook has been removed
   More info: http://vuejs.org/guide/migration-vue-router.html#activate
+
+468. Replace children.$remove(this) with var index = children.indexOf(this); children.splice(index, 1)
+  Line 9: public/js/event/eventapp.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
+
+469. Replace children.$remove(this) with var index = children.indexOf(this); children.splice(index, 1)
+  Line 9: public/js/mall/app.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
+
+470. Remove the canReuse option
+  Line 11: public/js/event/eventapp.js
+  Reason: There's no longer a use case for canReuse in the new Vue Router
+  More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
+
+471. Remove the canReuse option
+  Line 11: public/js/mall/app.js
+  Reason: There's no longer a use case for canReuse in the new Vue Router
+  More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
+
+472. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+  Line 19: public/js/mall/app.js
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+473. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+  Line 21: public/js/event/eventapp.js
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+474. Replace {{{commodity.commodity_detail_info}}} with v-html="commodity.commodity_detail_info" on a containing element
+  Line 20: public/js/mall/app.js
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+475. Replace router._children.$remove(this) with var index = router._children.indexOf(this); router._children.splice(index, 1)
+  Line 25: public/js/mall/app.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
+
+476. Replace transition attribute with either a <transition> or <transition-group> wrapper component
+  Line 26: public/js/mall/app.js
+  Reason: The new and improved transition system requires use of new <transition> and <transition-group> components
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+477. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
+  Line 22: public/js/event/eventapp.js
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+478. Replace router._children.$remove(this) with var index = router._children.indexOf(this); router._children.splice(index, 1)
+  Line 27: public/js/event/eventapp.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
+
+479. Replace transition attribute with either a <transition> or <transition-group> wrapper component
+  Line 28: public/js/event/eventapp.js
+  Reason: The new and improved transition system requires use of new <transition> and <transition-group> components
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+480. Replace activate with beforeRouteEnter in the component
+  Line 13849: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The activate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#activate
