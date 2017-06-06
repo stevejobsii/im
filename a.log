@@ -1,0 +1,2335 @@
+
+1. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 28: app/Http/Controllers/Admin/ProductCommodityController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+2. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 25: app/Http/Controllers/Admin/WechatMenuController.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+3. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 30: app/Http/Controllers/Admin/WechatMenuController.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+4. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 37: app/Http/Controllers/Admin/WechatMenuController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+5. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 43: app/Http/Controllers/Admin/WechatMenuController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+6. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 57: app/Http/Controllers/Api/ShopController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+7. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 58: app/Http/Controllers/Api/ShopController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+8. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 59: app/Http/Controllers/Api/ShopController.php
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+9. Replace '/*.php' with '/:.php+'
+  Line 203: app/Http/routes.php
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+10. Replace 'resources/assets/sass/*.scss' with 'resources/assets/sass/:.scss+'
+  Line 36: gulpfile.js
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+11. Replace "vue-loader": "^8.5.3" with "vue-loader": "^9.0.0", then run: npm install
+  Line 30: package.json
+  Reason: vue-loader 9.0 is the earliest supported version compatible with Vue 2.0
+  More info: http://vuejs.org/guide/migration.html#
+
+12. Replace "vue": "^1.0.26" with "vue": "^2.0.0", then run: npm install
+  Line 41: package.json
+  Reason: If you are using pre-2.0 Vue through NPM, you have to update it in your package.json file
+  More info: http://vuejs.org/guide/migration.html#
+
+13. Replace "vue-router": "^0.7.13" with "vue-router": "^2.0.0", then run: npm install
+  Line 43: package.json
+  Reason: If you are using pre-2.0 Vue Router through NPM, you have to update it in your package.json file
+  More info: http://vuejs.org/guide/migration-vue-router.html#
+
+14. Replace "[comment /*foobar*/]" with "[comment /:foobar*+/]"
+  Line 42: public/inspinia/js/plugins/codemirror/mode/css/scss_test.js
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+15. Replace "][variable-2 $]{[variable aaa][comment /*}?>} $aaa<?php } */]}[string ->aaa.aaa" with "][variable-2 $]{[variable aaa][comment /:}?>}+ $aaa<?php } */]}[string ->aaa.aaa"
+  Line 73: public/inspinia/js/plugins/codemirror/mode/php/test.js
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+16. Replace "][variable-2 $]{[variable aaa][comment /*}?>*/][[' with "][variable-2 $]{[variable aaa][comment /:}?>*+/][['
+  Line 74: public/inspinia/js/plugins/codemirror/mode/php/test.js
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+17. Replace "][variable-2 $]{[variable aaa][comment /*} } $aaa } */]}[string ->aaa.aaa" with "][variable-2 $]{[variable aaa][comment /:}+ } $aaa } */]}[string ->aaa.aaa"
+  Line 75: public/inspinia/js/plugins/codemirror/mode/php/test.js
+  Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
+  More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
+
+18. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 353: public/inspinia/js/plugins/codemirror/mode/sql/sql.js
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+19. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 84: public/inspinia/js/plugins/codemirror/mode/tcl/index.html
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+20. Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")
+  Line 85: public/inspinia/js/plugins/codemirror/mode/tcl/index.html
+  Reason: $key has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+21. Replace {{{preformatted}}} with v-html="preformatted" on a containing element
+  Line 43: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+22. Replace {{{>}}} with v-html=">" on a containing element
+  Line 116: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+23. Replace {{{~}}} with v-html="~" on a containing element
+  Line 117: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+24. Replace {{{~}}} with v-html="~" on a containing element
+  Line 124: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+25. Replace {{{[[tiddler name]]}}} with v-html="[[tiddler name]]" on a containing element
+  Line 125: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+26. Replace {{{|}}} with v-html="|" on a containing element
+  Line 126: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+27. Replace {{{@@CssProperty:value;CssProperty:value;...@@}}} with v-html="@@CssProperty:value;CssProperty:value;...@@" on a containing element
+  Line 129: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+28. Replace {{{<html> ... </html>}}} with v-html="<html> ... </html>" on a containing element
+  Line 131: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+29. Replace {{{<br>}}} with v-html="<br>" on a containing element
+  Line 134: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+30. Replace {{{----}}} with v-html="----" on a containing element
+  Line 135: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+31. Replace {{{<<macroName>>}}} with v-html="<<macroName>>" on a containing element
+  Line 138: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+32. Replace {{{/%}}} with v-html="/%" on a containing element
+  Line 139: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+33. Replace {{{"""WikiWord"""}}} with v-html=""""WikiWord"""" on a containing element
+  Line 140: public/inspinia/js/plugins/codemirror/mode/tiddlywiki/index.html
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+34. Replace init with beforeCreate
+  Line 344: public/inspinia/js/plugins/easypiechart/easypiechart.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+35. Replace init with beforeCreate
+  Line 326: public/inspinia/js/plugins/dropzone/dropzone.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+36. Replace init with beforeCreate
+  Line 309: public/inspinia/js/plugins/flot/curvedLines.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+37. Replace init with beforeCreate
+  Line 344: public/inspinia/js/plugins/easypiechart/jquery.easypiechart.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+38. Replace init with beforeCreate
+  Line 196: public/inspinia/js/plugins/flot/jquery.flot.spline.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+39. Replace init with beforeCreate
+  Line 54: public/inspinia/js/plugins/flot/jquery.flot.resize.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+40. Replace init with beforeCreate
+  Line 814: public/inspinia/js/plugins/flot/jquery.flot.pie.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+41. Replace init with beforeCreate
+  Line 67: public/inspinia/js/plugins/flot/jquery.flot.symbol.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+42. Replace init with beforeCreate
+  Line 419: public/inspinia/js/plugins/flot/jquery.flot.time.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+43. Replace activate with beforeRouteEnter in the component
+  Line 1948: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The activate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#activate
+
+44. Replace deactivate with beforeDestroy (or destroyed) in the component
+  Line 1949: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The deactivate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#deactivate
+
+45. Replace init with beforeCreate
+  Line 58: public/inspinia/js/plugins/nestable/jquery.nestable.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+46. Update style="color: {{color}}" to v-bind:style="'color: ' + color"
+  Line 4: public/inspinia/js/plugins/sparkline/jquery.sparkline.min.js
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+47. Update v-el:textarea to ref="textarea"
+  Line 1: public/js/event/eventapp.js
+  Reason: v-el and v-ref merged into ref attribute
+  More info: http://vuejs.org/guide/migration.html#v-el-and-v-ref
+
+48. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+  Line 2: public/js/event/eventapp.js
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+49. Replace init with beforeCreate
+  Line 3: public/js/admin/wechat/menuEdit.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+50. Replace init with beforeCreate
+  Line 25: public/js/admin/wechat/menuEdit.js
+  Reason: init lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#init
+
+51. Replace .swipe-transition with .swipe-enter-active, .swipe-leave-active
+  Line 1392: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+52. Replace .actionsheet-float-transition with .actionsheet-float-enter-active, .actionsheet-float-leave-active
+  Line 2127: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+53. Replace .actionsheet-float-leave with .actionsheet-float-leave-active (if it's left over from Vue 1.x)
+  Line 2134: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+54. Replace .v-modal-leave with .v-modal-leave-active (if it's left over from Vue 1.x)
+  Line 2138: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+55. Replace .popup-slide-top-transition with .popup-slide-top-enter-active, .popup-slide-top-leave-active
+  Line 2193: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+56. Replace .popup-slide-top-leave with .popup-slide-top-leave-active (if it's left over from Vue 1.x)
+  Line 2200: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+57. Replace .popup-slide-right-leave with .popup-slide-right-leave-active (if it's left over from Vue 1.x)
+  Line 2205: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+58. Replace .popup-slide-bottom-leave with .popup-slide-bottom-leave-active (if it's left over from Vue 1.x)
+  Line 2210: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+59. Replace .popup-slide-left-leave with .popup-slide-left-leave-active (if it's left over from Vue 1.x)
+  Line 2215: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+60. Replace .popup-fade-transition with .popup-fade-enter-active, .popup-fade-leave-active
+  Line 2220: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+61. Replace .popup-fade-leave with .popup-fade-leave-active (if it's left over from Vue 1.x)
+  Line 2225: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+62. Replace .mint-toast-pop-leave with .mint-toast-pop-leave-active (if it's left over from Vue 1.x)
+  Line 2534: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+63. Replace .mint-indicator-transition with .mint-indicator-enter-active, .mint-indicator-leave-active
+  Line 2572: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+64. Replace .mint-indicator-leave with .mint-indicator-leave-active (if it's left over from Vue 1.x)
+  Line 2577: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+65. Replace .v-modal-leave with .v-modal-leave-active (if it's left over from Vue 1.x)
+  Line 2580: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+66. Replace .pop-bounce-transition with .pop-bounce-enter-active, .pop-bounce-leave-active
+  Line 2754: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+67. Replace .pop-bounce-leave with .pop-bounce-leave-active (if it's left over from Vue 1.x)
+  Line 2765: public/js/lib/mint-ui/mint-ui.css
+  Reason: v-leave class now defines a starting state for leave transitions, rather than the ending state
+  More info: http://vuejs.org/guide/migration.html#Transitions
+
+68. Update v-el:textarea to ref="textarea"
+  Line 1: public/js/mall/app.js
+  Reason: v-el and v-ref merged into ref attribute
+  More info: http://vuejs.org/guide/migration.html#v-el-and-v-ref
+
+69. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+  Line 2: public/js/mall/app.js
+  Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
+  More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
+
+70. Replace :selected.sync="selected" with :selected="selected", then $emit an event from the child component to trigger an update to selected in the parent
+  Line 3: resources/assets/js/components/_layouts/Navbar.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+71. Replace v-link="{name:'index'}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+72. Replace v-link="{name:'category'}" with the new <router-link> component (see link below for details)
+  Line 8: resources/assets/js/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+73. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
+  Line 12: resources/assets/js/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+74. Replace v-link="{name:'usercenter'}" with the new <router-link> component (see link below for details)
+  Line 18: resources/assets/js/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+75. Delete the replace: false option and instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
+  Line 13: resources/assets/js/App.vue
+  Reason: The replace option has been removed, as it provides too little convenience
+  More info: http://vuejs.org/guide/migration.html#replace-false
+
+76. Replace :value.sync="form_data.name" with :value="form_data.name", then $emit an event from the child component to trigger an update to form_data.name in the parent
+  Line 5: resources/assets/js/components/Address/AddressAdd.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+77. Replace :value.sync="form_data.phone" with :value="form_data.phone", then $emit an event from the child component to trigger an update to form_data.phone in the parent
+  Line 6: resources/assets/js/components/Address/AddressAdd.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+78. Replace :value.sync="form_data.address" with :value="form_data.address", then $emit an event from the child component to trigger an update to form_data.address in the parent
+  Line 22: resources/assets/js/components/Address/AddressAdd.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+79. Replace :value.sync="form_data.defaulted" with :value="form_data.defaulted", then $emit an event from the child component to trigger an update to form_data.defaulted in the parent
+  Line 27: resources/assets/js/components/Address/AddressAdd.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+80. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
+  Line 59: resources/assets/js/components/Address/AddressAdd.vue
+  Reason: ready lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#ready
+
+81. Replace v-link="{name:'add-address'}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/components/Address/AddressList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+82. Replace v-link="{name:'edit-address',params:{'hashid':address.id}}" with the new <router-link> component (see link below for details)
+  Line 10: resources/assets/js/components/Address/AddressList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+83. Replace :value.sync="address.name" with :value="address.name", then $emit an event from the child component to trigger an update to address.name in the parent
+  Line 5: resources/assets/js/components/Address/AddressEdit.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+84. Replace :value.sync="address.phone" with :value="address.phone", then $emit an event from the child component to trigger an update to address.phone in the parent
+  Line 6: resources/assets/js/components/Address/AddressEdit.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+85. Replace :value.sync="address.address" with :value="address.address", then $emit an event from the child component to trigger an update to address.address in the parent
+  Line 22: resources/assets/js/components/Address/AddressEdit.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+86. Replace :value.sync="address.defaulted" with :value="address.defaulted", then $emit an event from the child component to trigger an update to address.defaulted in the parent
+  Line 27: resources/assets/js/components/Address/AddressEdit.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+87. Replace v-link="{name:'add-address'}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/components/Address/AddressChoose.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+88. Replace v-link="{name:'edit-address',params:{'hashid':address.id}}" with the new <router-link> component (see link below for details)
+  Line 18: resources/assets/js/components/Address/AddressChoose.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+89. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 47: resources/assets/js/components/Address/AddressChoose.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+90. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 52: resources/assets/js/components/Address/AddressChoose.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+91. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: resources/assets/js/components/Attribute/Plate.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+92. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: resources/assets/js/components/Attribute/Plate.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+93. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: resources/assets/js/components/Attribute/Category.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+94. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: resources/assets/js/components/Attribute/Category.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+95. Replace v-link="{name:'aCategory',params:{'hashid':sub_category.id}}" with the new <router-link> component (see link below for details)
+  Line 13: resources/assets/js/components/Category.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+96. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: resources/assets/js/components/Attribute/Topic.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+97. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: resources/assets/js/components/Attribute/Topic.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+98. Replace v-link="{name:'commodity',params:{hashid:cart.commodity.id}}" with the new <router-link> component (see link below for details)
+  Line 7: resources/assets/js/components/Cart.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+99. Update value="{{cart.commodity_num}}" to v-bind:value="cart.commodity_num"
+  Line 20: resources/assets/js/components/Cart.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+100. Replace v-link="{name:'index'}" with the new <router-link> component (see link below for details)
+  Line 50: resources/assets/js/components/Cart.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+101. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
+  Line 69: resources/assets/js/components/Cart.vue
+  Reason: ready lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#ready
+
+102. Replace router.go with router.push
+  Line 170: resources/assets/js/components/Cart.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+103. Replace {{{commodity.commodity_detail_info}}} with v-html="commodity.commodity_detail_info" on a containing element
+  Line 35: resources/assets/js/components/Commodity/CommodityDetail.vue
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+104. Replace {{{commodity.commodity_base_info | rnTransform}}} with v-html="commodity.commodity_base_info | rnTransform" on a containing element
+  Line 38: resources/assets/js/components/Commodity/CommodityDetail.vue
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+105. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
+  Line 43: resources/assets/js/components/Commodity/CommodityDetail.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+106. Replace router.go with router.push
+  Line 100: resources/assets/js/components/Commodity/CommodityDetail.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+107. Replace router.go with router.push
+  Line 142: resources/assets/js/components/Commodity/CommodityDetail.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+108. Replace v-link="{name:'commodity',params:{hashid:item.id}}" with the new <router-link> component (see link below for details)
+  Line 3: resources/assets/js/components/Commodity/CommodityList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+109. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 24: resources/assets/js/components/Commodity/CommodityList.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+110. Replace v-link="{name:'category'}" with the new <router-link> component (see link below for details)
+  Line 7: resources/assets/js/components/Commodity/CommodityEmpty.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+111. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 17: resources/assets/js/components/Commodity/CommodityEmpty.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+112. Update id="{{topic.topic_title}}" to v-bind:id="topic.topic_title"
+  Line 3: resources/assets/js/components/Index/IndexTopic.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+113. Replace v-link="{name:'aTopic',params:{'hashid':topic.id}}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/components/Index/IndexTopic.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+114. Update href="{{banner.redirect_url}}" to v-bind:href="banner.redirect_url"
+  Line 5: resources/assets/js/components/Index/IndexBanner.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+115. Replace v-link="{name:'aPlate',params:{'hashid':plate.id}}" with the new <router-link> component (see link below for details)
+  Line 3: resources/assets/js/components/Index/IndexPlate.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+116. Replace v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}" with the new <router-link> component (see link below for details)
+  Line 32: resources/assets/js/components/Order/OrderDetail.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+117. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+  Line 33: resources/assets/js/components/Order/OrderDetail.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+118. Replace v-link="{name:'add-address'}" with the new <router-link> component (see link below for details)
+  Line 16: resources/assets/js/components/Order/OrderSettle.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+119. Replace :choosed.sync="address" with :choosed="address", then $emit an event from the child component to trigger an update to address in the parent
+  Line 59: resources/assets/js/components/Order/OrderSettle.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+120. Replace :visible.sync="choosing" with :visible="choosing", then $emit an event from the child component to trigger an update to choosing in the parent
+  Line 60: resources/assets/js/components/Order/OrderSettle.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+121. Replace router.go with router.push
+  Line 104: resources/assets/js/components/Order/OrderSettle.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+122. Replace router.go with router.push
+  Line 182: resources/assets/js/components/Order/OrderSettle.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+123. Replace :selected.sync="order_type" with :selected="order_type", then $emit an event from the child component to trigger an update to order_type in the parent
+  Line 3: resources/assets/js/components/Order/OrderList.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+124. Replace v-link="{name:'order-list',params:{'type':'all'}}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+125. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
+  Line 5: resources/assets/js/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+126. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
+  Line 6: resources/assets/js/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+127. Replace v-link="{name:'order-detail',params:{'hashid':order.id}}" with the new <router-link> component (see link below for details)
+  Line 11: resources/assets/js/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+128. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+  Line 18: resources/assets/js/components/Order/OrderList.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+129. Remove the canReuse option
+  Line 60: resources/assets/js/components/Order/OrderList.vue
+  Reason: There's no longer a use case for canReuse in the new Vue Router
+  More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
+
+130. Replace :value.sync="suggestion" with :value="suggestion", then $emit an event from the child component to trigger an update to suggestion in the parent
+  Line 10: resources/assets/js/components/Suggestion/Suggestion.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+131. Replace router.go with router.push
+  Line 51: resources/assets/js/components/Suggestion/Suggestion.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+132. Replace v-link="{name:'order-list',params:{'type':'all'}}" with the new <router-link> component (see link below for details)
+  Line 8: resources/assets/js/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+133. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
+  Line 11: resources/assets/js/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+134. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
+  Line 14: resources/assets/js/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+135. Replace v-link="{name:'address'}" with the new <router-link> component (see link below for details)
+  Line 19: resources/assets/js/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+136. Replace v-link="{name:'suggestion'}" with the new <router-link> component (see link below for details)
+  Line 24: resources/assets/js/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+137. Delete the replace: false option and instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
+  Line 16: resources/assets/js/event/App.vue
+  Reason: The replace option has been removed, as it provides too little convenience
+  More info: http://vuejs.org/guide/migration.html#replace-false
+
+138. Replace :selected.sync="selected" with :selected="selected", then $emit an event from the child component to trigger an update to selected in the parent
+  Line 3: resources/assets/js/event/components/_layouts/Navbar.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+139. Replace v-link="{name:'aOpen'}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/event/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+140. Replace v-link="{name:'aClose'}" with the new <router-link> component (see link below for details)
+  Line 8: resources/assets/js/event/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+141. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
+  Line 12: resources/assets/js/event/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+142. Replace v-link="{name:'usercenter'}" with the new <router-link> component (see link below for details)
+  Line 18: resources/assets/js/event/components/_layouts/Navbar.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+143. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: resources/assets/js/event/components/Attribute/Close.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+144. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: resources/assets/js/event/components/Attribute/Close.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+145. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: resources/assets/js/event/components/Attribute/Open.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+146. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: resources/assets/js/event/components/Attribute/Open.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+147. Replace v-link="{name:'commodity',params:{hashid:cart.commodity.id}}" with the new <router-link> component (see link below for details)
+  Line 7: resources/assets/js/event/components/Cart.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+148. Update value="{{cart.commodity_num}}" to v-bind:value="cart.commodity_num"
+  Line 20: resources/assets/js/event/components/Cart.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+149. Replace v-link="{name:'index'}" with the new <router-link> component (see link below for details)
+  Line 50: resources/assets/js/event/components/Cart.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+150. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
+  Line 69: resources/assets/js/event/components/Cart.vue
+  Reason: ready lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#ready
+
+151. Replace router.go with router.push
+  Line 171: resources/assets/js/event/components/Cart.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+152. Replace v-link="{name:'commodity',params:{hashid:item.id}}" with the new <router-link> component (see link below for details)
+  Line 3: resources/assets/js/event/components/Commodity/CommodityCloseList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+153. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 23: resources/assets/js/event/components/Commodity/CommodityCloseList.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+154. Replace v-link="{name:'category'}" with the new <router-link> component (see link below for details)
+  Line 7: resources/assets/js/event/components/Commodity/CommodityEmpty.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+155. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 17: resources/assets/js/event/components/Commodity/CommodityEmpty.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+156. Replace v-link="{name:'aCategory',params:{'hashid':sub_category.id}}" with the new <router-link> component (see link below for details)
+  Line 13: resources/assets/js/event/components/Category.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+157. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
+  Line 41: resources/assets/js/event/components/Commodity/CommodityDetail.vue
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+158. Replace {{{commodity.event_base_info | rnTransform}}} with v-html="commodity.event_base_info | rnTransform" on a containing element
+  Line 44: resources/assets/js/event/components/Commodity/CommodityDetail.vue
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+159. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
+  Line 49: resources/assets/js/event/components/Commodity/CommodityDetail.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+160. Replace router.go with router.push
+  Line 108: resources/assets/js/event/components/Commodity/CommodityDetail.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+161. Replace router.go with router.push
+  Line 151: resources/assets/js/event/components/Commodity/CommodityDetail.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+162. Replace v-link="{name:'commodity',params:{hashid:item.id}}" with the new <router-link> component (see link below for details)
+  Line 3: resources/assets/js/event/components/Commodity/CommodityList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+163. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+  Line 30: resources/assets/js/event/components/Commodity/CommodityList.vue
+  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
+  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
+
+164. Replace v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}" with the new <router-link> component (see link below for details)
+  Line 33: resources/assets/js/event/components/Order/OrderDetail.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+165. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+  Line 34: resources/assets/js/event/components/Order/OrderDetail.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+166. Replace :selected.sync="order_type" with :selected="order_type", then $emit an event from the child component to trigger an update to order_type in the parent
+  Line 3: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+167. Replace v-link="{name:'order-list',params:{'type':'all'}}" with the new <router-link> component (see link below for details)
+  Line 4: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+168. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
+  Line 5: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+169. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
+  Line 6: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+170. Replace v-link="{name:'order-detail',params:{'hashid':order.id}}" with the new <router-link> component (see link below for details)
+  Line 11: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+171. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+  Line 19: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+172. Remove the canReuse option
+  Line 61: resources/assets/js/event/components/Order/OrderList.vue
+  Reason: There's no longer a use case for canReuse in the new Vue Router
+  More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
+
+173. Replace v-link="{name:'add-address'}" with the new <router-link> component (see link below for details)
+  Line 17: resources/assets/js/event/components/Order/OrderSettle.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+174. Replace :choosed.sync="address" with :choosed="address", then $emit an event from the child component to trigger an update to address in the parent
+  Line 62: resources/assets/js/event/components/Order/OrderSettle.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+175. Replace :visible.sync="choosing" with :visible="choosing", then $emit an event from the child component to trigger an update to choosing in the parent
+  Line 63: resources/assets/js/event/components/Order/OrderSettle.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+176. Replace router.go with router.push
+  Line 108: resources/assets/js/event/components/Order/OrderSettle.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+177. Replace router.go with router.push
+  Line 193: resources/assets/js/event/components/Order/OrderSettle.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+178. Replace v-link="{name:'order-list',params:{'type':'all'}}" with the new <router-link> component (see link below for details)
+  Line 8: resources/assets/js/event/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+179. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
+  Line 11: resources/assets/js/event/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+180. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
+  Line 14: resources/assets/js/event/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+181. Replace v-link="{name:'address'}" with the new <router-link> component (see link below for details)
+  Line 20: resources/assets/js/event/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+182. Replace v-link="{name:'suggestion'}" with the new <router-link> component (see link below for details)
+  Line 25: resources/assets/js/event/components/UserCenter.vue
+  Reason: The v-link directive has been replaced with the new <router-link> component
+  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+
+183. Replace :value.sync="suggestion" with :value="suggestion", then $emit an event from the child component to trigger an update to suggestion in the parent
+  Line 10: resources/assets/js/event/components/Suggestion/Suggestion.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+184. Replace router.go with router.push
+  Line 51: resources/assets/js/event/components/Suggestion/Suggestion.vue
+  Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-go
+
+185. Replace router.redirect with a redirect option in a route definition (see link below for details)
+  Line 2: resources/assets/js/event/router.js
+  Reason: Redirects have been moved to an option on route definitions to improve config organization
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-redirect
+
+186. Replace router.map with an array on the new routes option (see link below for details)
+  Line 6: resources/assets/js/event/router.js
+  Reason: Routes are now defined as an array on a routes option at router instantiation
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-map
+
+187. Replace subRoutes with children and update its routes to the new array syntax
+  Line 32: resources/assets/js/event/router.js
+  Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
+  More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
+
+188. Replace subRoutes with children and update its routes to the new array syntax
+  Line 47: resources/assets/js/event/router.js
+  Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
+  More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
+
+189. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
+  Line 41: resources/assets/js/event/main.js
+  Reason: Directives have been vastly reduced in scope and components are preferred in most use cases
+  More info: http://vuejs.org/guide/migration.html#Custom-Directives
+
+190. Replace router.start with router: router on your root Vue instance (see link below for details)
+  Line 79: resources/assets/js/event/main.js
+  Reason: Starting an app with routing no longer requires a special method - the router can simply be passed to the root Vue instance as option
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-start
+
+191. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
+  Line 34: resources/assets/js/main.js
+  Reason: Directives have been vastly reduced in scope and components are preferred in most use cases
+  More info: http://vuejs.org/guide/migration.html#Custom-Directives
+
+192. Replace router.start with router: router on your root Vue instance (see link below for details)
+  Line 72: resources/assets/js/main.js
+  Reason: Starting an app with routing no longer requires a special method - the router can simply be passed to the root Vue instance as option
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-start
+
+193. Replace router.redirect with a redirect option in a route definition (see link below for details)
+  Line 2: resources/assets/js/router.js
+  Reason: Redirects have been moved to an option on route definitions to improve config organization
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-redirect
+
+194. Replace router.map with an array on the new routes option (see link below for details)
+  Line 6: resources/assets/js/router.js
+  Reason: Routes are now defined as an array on a routes option at router instantiation
+  More info: http://vuejs.org/guide/migration-vue-router.html#router-map
+
+195. Replace subRoutes with children and update its routes to the new array syntax
+  Line 30: resources/assets/js/router.js
+  Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
+  More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
+
+196. Update action="{{url('admin/event/commodity')}}" to v-bind:action="url('admin/event/commodity')"
+  Line 24: resources/views/admin/event/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+197. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
+  Line 24: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+198. Update value="{{$commodity->event_sort}}" to v-bind:value="$commodity->event_sort"
+  Line 30: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+199. Update value="{{$commodity->event_name}}" to v-bind:value="$commodity->event_name"
+  Line 35: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+200. Update value="{{$commodity->manager}}" to v-bind:value="$commodity->manager"
+  Line 40: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+201. Update value="{{$commodity->event_place}}" to v-bind:value="$commodity->event_place"
+  Line 44: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+202. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
+  Line 49: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+203. Update value="{{$commodity->event_number}}" to v-bind:value="$commodity->event_number"
+  Line 57: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+204. Update value="{{$commodity->event_page_url}}" to v-bind:value="$commodity->event_page_url"
+  Line 62: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+205. Update value="{{$commodity->end_time}}" to v-bind:value="$commodity->end_time"
+  Line 66: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+206. Update value="{{$commodity->event_original_price}}" to v-bind:value="$commodity->event_original_price"
+  Line 78: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+207. Update value="{{$commodity->event_current_price}}" to v-bind:value="$commodity->event_current_price"
+  Line 83: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+208. Update value="{{$commodity->event_stock_number}}" to v-bind:value="$commodity->event_stock_number"
+  Line 88: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+209. Update value="{{$commodity->event_sold_number}}" to v-bind:value="$commodity->event_sold_number"
+  Line 93: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+210. Update src="{{asset('js/admin/product/commodityEdit.js')}}" to v-bind:src="asset('js/admin/product/commodityEdit.js')"
+  Line 129: resources/views/admin/event/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+211. Update href="{{url('admin/event/commodity/create')}}" to v-bind:href="url('admin/event/commodity/create')"
+  Line 24: resources/views/admin/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+212. Update href="{{url('admin/event/commodity')}}" to v-bind:href="url('admin/event/commodity')"
+  Line 27: resources/views/admin/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+213. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
+  Line 51: resources/views/admin/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+214. Update href="{{url('admin/event/commodity/'.$commodity->id.'/edit')}}" to v-bind:href="url('admin/event/commodity/'.$commodity->id.'/edit')"
+  Line 61: resources/views/admin/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+215. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
+  Line 62: resources/views/admin/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+216. Update href="{{url('admin/order?status=unpay')}}" to v-bind:href="url('admin/order?status=unpay')"
+  Line 16: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+217. Update class="btn {{ $status == 'unpay' ? 'btn-primary' : 'btn-default' }} " to v-bind:class="'btn ' + $status == 'unpay' ? 'btn-primary' : 'btn-default' + ' '"
+  Line 17: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+218. Update href="{{url('admin/order?status=unship')}}" to v-bind:href="url('admin/order?status=unship')"
+  Line 20: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+219. Update class="btn {{ $status == 'unship' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'unship' ? 'btn-primary' : 'btn-default'"
+  Line 21: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+220. Update href="{{url('admin/order?status=shiped')}}" to v-bind:href="url('admin/order?status=shiped')"
+  Line 24: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+221. Update class="btn {{ $status == 'shiped' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'shiped' ? 'btn-primary' : 'btn-default'"
+  Line 25: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+222. Update href="{{url('admin/order?status=received')}}" to v-bind:href="url('admin/order?status=received')"
+  Line 28: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+223. Update class="btn {{ $status == 'received' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'received' ? 'btn-primary' : 'btn-default'"
+  Line 29: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+224. Update href="{{url('admin/order?status=closed')}}" to v-bind:href="url('admin/order?status=closed')"
+  Line 32: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+225. Update src="{{$order->follow->headimgurl}}" to v-bind:src="$order->follow->headimgurl"
+  Line 55: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+226. Update data-order="{{$order->id}}" to v-bind:data-order="$order->id"
+  Line 65: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+227. Update data-order="{{$order->id}}" to v-bind:data-order="$order->id"
+  Line 68: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+228. Update src="{{asset('js/admin/order/orderInfo.js')}}" to v-bind:src="asset('js/admin/order/orderInfo.js')"
+  Line 107: resources/views/admin/order/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+229. Update action="{{url('admin/product/category')}}" to v-bind:action="url('admin/product/category')"
+  Line 24: resources/views/admin/product/category/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+230. Update value="{{$item->id}}" to v-bind:value="$item->id"
+  Line 54: resources/views/admin/product/category/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+231. Update src="{{asset('js/admin/product/categoryCreate.js')}}" to v-bind:src="asset('js/admin/product/categoryCreate.js')"
+  Line 66: resources/views/admin/product/category/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+232. Update action="{{url('admin/product/category/'. $category->id)}}" to v-bind:action="url('admin/product/category/'. $category->id)"
+  Line 24: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+233. Update value="{{$category->category_sort}}" to v-bind:value="$category->category_sort"
+  Line 29: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+234. Update value="{{$category->category_name}}" to v-bind:value="$category->category_name"
+  Line 34: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+235. Update src="{{$category->category_img}}" to v-bind:src="$category->category_img"
+  Line 40: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+236. Update value="{{$item->id}}" to v-bind:value="$item->id"
+  Line 62: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+237. Update src="{{asset('js/admin/product/categoryEdit.js')}}" to v-bind:src="asset('js/admin/product/categoryEdit.js')"
+  Line 76: resources/views/admin/product/category/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+238. Update href="{{url('admin/product/category/create')}}" to v-bind:href="url('admin/product/category/create')"
+  Line 24: resources/views/admin/product/category/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+239. Update src="{{$category->category_img}}" to v-bind:src="$category->category_img"
+  Line 42: resources/views/admin/product/category/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+240. Update href="{{url('admin/product/category/'.$category->id.'/edit')}}" to v-bind:href="url('admin/product/category/'.$category->id.'/edit')"
+  Line 55: resources/views/admin/product/category/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+241. Update action="{{url('admin/product/category/'.$category->id)}}" to v-bind:action="url('admin/product/category/'.$category->id)"
+  Line 56: resources/views/admin/product/category/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+242. Update src="{{asset('js/admin/product/categoryIndex.js')}}" to v-bind:src="asset('js/admin/product/categoryIndex.js')"
+  Line 76: resources/views/admin/product/category/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+243. Update action="{{url('admin/product/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/product/commodity/'.$commodity->id)"
+  Line 24: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+244. Update value="{{$commodity->commodity_sort}}" to v-bind:value="$commodity->commodity_sort"
+  Line 30: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+245. Update value="{{$commodity->commodity_name}}" to v-bind:value="$commodity->commodity_name"
+  Line 35: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+246. Update src="{{$commodity->commodity_img}}" to v-bind:src="$commodity->commodity_img"
+  Line 41: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+247. Update value="{{$commodity->commodity_number}}" to v-bind:value="$commodity->commodity_number"
+  Line 49: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+248. Update value="{{$topic->id}}" to v-bind:value="$topic->id"
+  Line 57: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+249. Update value="{{$plate->id}}" to v-bind:value="$plate->id"
+  Line 66: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+250. Update value="{{$category->id}}" to v-bind:value="$category->id"
+  Line 75: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+251. Update value="{{$commodity->commodity_original_price}}" to v-bind:value="$commodity->commodity_original_price"
+  Line 89: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+252. Update value="{{$commodity->commodity_current_price}}" to v-bind:value="$commodity->commodity_current_price"
+  Line 94: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+253. Update value="{{$commodity->commodity_stock_number}}" to v-bind:value="$commodity->commodity_stock_number"
+  Line 99: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+254. Update value="{{$commodity->commodity_sold_number}}" to v-bind:value="$commodity->commodity_sold_number"
+  Line 104: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+255. Update src="{{asset('js/admin/product/commodityEdit.js')}}" to v-bind:src="asset('js/admin/product/commodityEdit.js')"
+  Line 126: resources/views/admin/product/commodity/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+256. Update action="{{url('admin/product/commodity')}}" to v-bind:action="url('admin/product/commodity')"
+  Line 24: resources/views/admin/product/commodity/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+257. Update value="{{$topic->id}}}" to v-bind:value="$topic->id + '}'"
+  Line 47: resources/views/admin/product/commodity/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+258. Update value="{{$plate->id}}}" to v-bind:value="$plate->id + '}'"
+  Line 56: resources/views/admin/product/commodity/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+259. Update value="{{$category->id}}}" to v-bind:value="$category->id + '}'"
+  Line 65: resources/views/admin/product/commodity/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+260. Update src="{{asset('js/admin/product/commodityCreate.js')}}" to v-bind:src="asset('js/admin/product/commodityCreate.js')"
+  Line 112: resources/views/admin/product/commodity/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+261. Update href="{{url('admin/product/commodity/create')}}" to v-bind:href="url('admin/product/commodity/create')"
+  Line 24: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+262. Update href="{{url('admin/product/commodity')}}" to v-bind:href="url('admin/product/commodity')"
+  Line 27: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+263. Update src="{{$commodity->commodity_img}}" to v-bind:src="$commodity->commodity_img"
+  Line 50: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+264. Update href="{{url('admin/product/commodity/'.$commodity->id.'/edit')}}" to v-bind:href="url('admin/product/commodity/'.$commodity->id.'/edit')"
+  Line 59: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+265. Update action="{{url('admin/product/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/product/commodity/'.$commodity->id)"
+  Line 60: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+266. Update src="{{asset('js/admin/product/commodityIndex.js')}}" to v-bind:src="asset('js/admin/product/commodityIndex.js')"
+  Line 80: resources/views/admin/product/commodity/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+267. Update action="{{url('admin/product/plate/' . $plate->id)}}" to v-bind:action="url('admin/product/plate/' . $plate->id)"
+  Line 24: resources/views/admin/product/plate/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+268. Update value="{{$plate->plate_sort}}" to v-bind:value="$plate->plate_sort"
+  Line 29: resources/views/admin/product/plate/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+269. Update value="{{$plate->plate_title}}" to v-bind:value="$plate->plate_title"
+  Line 34: resources/views/admin/product/plate/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+270. Update src="{{$plate->plate_img}}" to v-bind:src="$plate->plate_img"
+  Line 40: resources/views/admin/product/plate/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+271. Update src="{{asset('js/admin/product/plateEdit.js')}}" to v-bind:src="asset('js/admin/product/plateEdit.js')"
+  Line 62: resources/views/admin/product/plate/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+272. Update href="{{url('admin/product/plate/create')}}" to v-bind:href="url('admin/product/plate/create')"
+  Line 24: resources/views/admin/product/plate/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+273. Update src="{{$plate->plate_img}}" to v-bind:src="$plate->plate_img"
+  Line 42: resources/views/admin/product/plate/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+274. Update href="{{url('admin/product/plate/'.$plate->id.'/edit')}}" to v-bind:href="url('admin/product/plate/'.$plate->id.'/edit')"
+  Line 54: resources/views/admin/product/plate/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+275. Update action="{{url('admin/product/plate/'.$plate->id)}}" to v-bind:action="url('admin/product/plate/'.$plate->id)"
+  Line 55: resources/views/admin/product/plate/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+276. Update action="{{url('admin/product/plate')}}" to v-bind:action="url('admin/product/plate')"
+  Line 24: resources/views/admin/product/plate/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+277. Update action="{{url('admin/product/topic')}}" to v-bind:action="url('admin/product/topic')"
+  Line 24: resources/views/admin/product/topic/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+278. Update href="{{url('admin/product/topic/create')}}" to v-bind:href="url('admin/product/topic/create')"
+  Line 24: resources/views/admin/product/topic/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+279. Update src="{{$topic->topic_img}}" to v-bind:src="$topic->topic_img"
+  Line 42: resources/views/admin/product/topic/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+280. Update href="{{url('admin/product/topic/'.$topic->id.'/edit')}}" to v-bind:href="url('admin/product/topic/'.$topic->id.'/edit')"
+  Line 54: resources/views/admin/product/topic/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+281. Update action="{{url('admin/product/topic/'.$topic->id)}}" to v-bind:action="url('admin/product/topic/'.$topic->id)"
+  Line 55: resources/views/admin/product/topic/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+282. Update action="{{url('admin/product/topic/' . $topic->id)}}" to v-bind:action="url('admin/product/topic/' . $topic->id)"
+  Line 24: resources/views/admin/product/topic/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+283. Update value="{{$topic->topic_sort}}" to v-bind:value="$topic->topic_sort"
+  Line 29: resources/views/admin/product/topic/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+284. Update value="{{$topic->topic_title}}" to v-bind:value="$topic->topic_title"
+  Line 34: resources/views/admin/product/topic/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+285. Update src="{{$topic->topic_img}}" to v-bind:src="$topic->topic_img"
+  Line 40: resources/views/admin/product/topic/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+286. Update src="{{asset('js/admin/product/topicEdit.js')}}" to v-bind:src="asset('js/admin/product/topicEdit.js')"
+  Line 62: resources/views/admin/product/topic/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+287. Update action="{{url('admin/shop/banner')}}" to v-bind:action="url('admin/shop/banner')"
+  Line 24: resources/views/admin/shop/banner/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+288. Update action="{{url('admin/shop/banner/'.$banner->id)}}" to v-bind:action="url('admin/shop/banner/'.$banner->id)"
+  Line 24: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+289. Update value="{{$banner->sort}}" to v-bind:value="$banner->sort"
+  Line 30: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+290. Update value="{{$banner->title}}" to v-bind:value="$banner->title"
+  Line 35: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+291. Update src="{{$banner->img_url}}" to v-bind:src="$banner->img_url"
+  Line 40: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+292. Update value="{{$banner->redirect_url}}" to v-bind:value="$banner->redirect_url"
+  Line 48: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+293. Update src="{{asset('js/admin/shop/bannerEdit.js')}}" to v-bind:src="asset('js/admin/shop/bannerEdit.js')"
+  Line 67: resources/views/admin/shop/banner/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+294. Update href="{{url('admin/shop/banner/create')}}" to v-bind:href="url('admin/shop/banner/create')"
+  Line 24: resources/views/admin/shop/banner/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+295. Update src="{{$banner->img_url}}" to v-bind:src="$banner->img_url"
+  Line 43: resources/views/admin/shop/banner/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+296. Update href="{{url('admin/shop/banner/'.$banner->id.'/edit')}}" to v-bind:href="url('admin/shop/banner/'.$banner->id.'/edit')"
+  Line 58: resources/views/admin/shop/banner/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+297. Update action="{{url('admin/shop/banner/'.$banner->id)}}" to v-bind:action="url('admin/shop/banner/'.$banner->id)"
+  Line 59: resources/views/admin/shop/banner/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+298. Update action="{{url('admin/shop/config')}}" to v-bind:action="url('admin/shop/config')"
+  Line 27: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+299. Update value="{{old('config_name')}}" to v-bind:value="old('config_name')"
+  Line 31: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+300. Update value="{{old('config_freight')}}" to v-bind:value="old('config_freight')"
+  Line 35: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+301. Update value="{{old('config_free')}}" to v-bind:value="old('config_free')"
+  Line 39: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+302. Update action="{{url('admin/shop/config/'.$configs->id)}}" to v-bind:action="url('admin/shop/config/'.$configs->id)"
+  Line 45: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+303. Update value="{{$configs->config_name}}" to v-bind:value="$configs->config_name"
+  Line 51: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+304. Update value="{{$configs->config_freight}}" to v-bind:value="$configs->config_freight"
+  Line 55: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+305. Update value="{{$configs->config_free}}" to v-bind:value="$configs->config_free"
+  Line 59: resources/views/admin/shop/config/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+306. Update alt="{{$follow->nickname}}" to v-bind:alt="$follow->nickname"
+  Line 42: resources/views/admin/wechat/follow/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+307. Update action="{{url('admin/wechat/refresh')}}" to v-bind:action="url('admin/wechat/refresh')"
+  Line 50: resources/views/admin/wechat/follow/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+308. Update value="{{$follow->openid}}" to v-bind:value="$follow->openid"
+  Line 53: resources/views/admin/wechat/follow/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+309. Update action="{{url('admin/wechat/info')}}" to v-bind:action="url('admin/wechat/info')"
+  Line 11: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+310. Update value="{{old('wechat_name')}}" to v-bind:value="old('wechat_name')"
+  Line 15: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+311. Update value="{{old('wechat_account')}}" to v-bind:value="old('wechat_account')"
+  Line 20: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+312. Update value="{{old('wechat_original_account')}}" to v-bind:value="old('wechat_original_account')"
+  Line 25: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+313. Update value="{{old('app_id')}}" to v-bind:value="old('app_id')"
+  Line 31: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+314. Update value="{{old('app_secret')}}" to v-bind:value="old('app_secret')"
+  Line 36: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+315. Update value="{{old('encodingaeskey')}}" to v-bind:value="old('encodingaeskey')"
+  Line 41: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+316. Update value="{{old('token')}}" to v-bind:value="old('token')"
+  Line 46: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+317. Update action="{{url('admin/wechat/info/'.$info->id)}}" to v-bind:action="url('admin/wechat/info/'.$info->id)"
+  Line 57: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+318. Update value="{{$info->wechat_name}}" to v-bind:value="$info->wechat_name"
+  Line 62: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+319. Update value="{{$info->wechat_account}}" to v-bind:value="$info->wechat_account"
+  Line 67: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+320. Update value="{{$info->wechat_original_account}}" to v-bind:value="$info->wechat_original_account"
+  Line 72: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+321. Update value="{{$info->app_id}}" to v-bind:value="$info->app_id"
+  Line 78: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+322. Update value="{{$info->app_secret}}" to v-bind:value="$info->app_secret"
+  Line 83: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+323. Update value="{{$info->encodingaeskey}}" to v-bind:value="$info->encodingaeskey"
+  Line 88: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+324. Update value="{{$info->token}}" to v-bind:value="$info->token"
+  Line 93: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+325. Update value="{{$info->url}}" to v-bind:value="$info->url"
+  Line 98: resources/views/admin/wechat/info/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+326. Update action="{{url('admin/wechat/menu')}}" to v-bind:action="url('admin/wechat/menu')"
+  Line 25: resources/views/admin/wechat/menu/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+327. Update value="{{$menu->id}}" to v-bind:value="$menu->id"
+  Line 37: resources/views/admin/wechat/menu/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+328. Update src="{{asset('js/admin/wechat/menuCreate.js')}}" to v-bind:src="asset('js/admin/wechat/menuCreate.js')"
+  Line 71: resources/views/admin/wechat/menu/create.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+329. Update action="{{url('admin/wechat/menu/'.$menu->id)}}" to v-bind:action="url('admin/wechat/menu/'.$menu->id)"
+  Line 25: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+330. Update value="{{$menu->sort}}" to v-bind:value="$menu->sort"
+  Line 30: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+331. Update value="{{$item->id}}" to v-bind:value="$item->id"
+  Line 39: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+332. Update value="{{$menu->name}}" to v-bind:value="$menu->name"
+  Line 47: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+333. Update value="{{$menu->url}}" to v-bind:value="$menu->url"
+  Line 60: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+334. Update value="{{$menu->key}}" to v-bind:value="$menu->key"
+  Line 64: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+335. Update src="{{asset('js/admin/wechat/menuEdit.js')}}" to v-bind:src="asset('js/admin/wechat/menuEdit.js')"
+  Line 75: resources/views/admin/wechat/menu/edit.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+336. Update href="{{url('admin/wechat/menu/create')}}" to v-bind:href="url('admin/wechat/menu/create')"
+  Line 26: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+337. Update action="{{url('admin/wechat/pushMenu')}}" to v-bind:action="url('admin/wechat/pushMenu')"
+  Line 32: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+338. Update title="{{$menu->url}}" to v-bind:title="$menu->url"
+  Line 64: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+339. Update href="{{url('admin/wechat/menu/'.$menu->id.'/edit')}}" to v-bind:href="url('admin/wechat/menu/'.$menu->id.'/edit')"
+  Line 67: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+340. Update action="{{url('admin/wechat/menu/'.$menu->id)}}" to v-bind:action="url('admin/wechat/menu/'.$menu->id)"
+  Line 68: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+341. Update src="{{asset('js/admin/wechat/menuIndex.js')}}" to v-bind:src="asset('js/admin/wechat/menuIndex.js')"
+  Line 86: resources/views/admin/wechat/menu/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+342. Update href="{{ elixir('css/app.css') }}" to v-bind:href="elixir('css/app.css')"
+  Line 24: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+343. Update href="{{ url('/') }}" to v-bind:href="url('/')"
+  Line 53: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+344. Update src="{{asset('favicon.png')}}" to v-bind:src="asset('favicon.png')"
+  Line 54: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+345. Update href="{{ url('/login') }}" to v-bind:href="url('/login')"
+  Line 63: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+346. Update href="{{ url('/register') }}" to v-bind:href="url('/register')"
+  Line 64: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+347. Update href="{{ url('/logout') }}" to v-bind:href="url('/logout')"
+  Line 72: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+348. Update action="{{ url('/password/email') }}" to v-bind:action="url('/password/email')"
+  Line 93: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+349. Update class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" to v-bind:class="'form-group' + $errors->has('email') ? ' has-error' : ''"
+  Line 96: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+350. Update value="{{ old('email') }}" to v-bind:value="old('email')"
+  Line 100: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+351. Update src="{{ elixir('js/app.js') }}" to v-bind:src="elixir('js/app.js')"
+  Line 127: resources/views/auth/passwords/email.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+352. Update href="{{asset('inspinia/css/bootstrap.min.css')}}" to v-bind:href="asset('inspinia/css/bootstrap.min.css')"
+  Line 20: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+353. Update href="{{asset('inspinia/font-awesome/css/font-awesome.css')}}" to v-bind:href="asset('inspinia/font-awesome/css/font-awesome.css')"
+  Line 21: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+354. Update href="{{asset('inspinia/css/plugins/iCheck/custom.css')}}" to v-bind:href="asset('inspinia/css/plugins/iCheck/custom.css')"
+  Line 22: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+355. Update href="{{asset('inspinia/css/animate.css')}}" to v-bind:href="asset('inspinia/css/animate.css')"
+  Line 23: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+356. Update href="{{asset('inspinia/css/style.css')}}" to v-bind:href="asset('inspinia/css/style.css')"
+  Line 24: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+357. Update href="{{asset('css/global.css')}}" to v-bind:href="asset('css/global.css')"
+  Line 26: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+358. Update action="{{ url('/login') }}" to v-bind:action="url('/login')"
+  Line 39: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+359. Update value="{{old('email')}}" to v-bind:value="old('email')"
+  Line 42: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+360. Update href="{{ URL::route('auth.oauth', ['driver' => 'weixin']) }}" to v-bind:href="URL::route('auth.oauth', ['driver' => 'weixin'])"
+  Line 57: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+361. Update href="{{ url('/register') }}" to v-bind:href="url('/register')"
+  Line 69: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+362. Update src="{{asset('inspinia/js/jquery-2.1.1.js')}}" to v-bind:src="asset('inspinia/js/jquery-2.1.1.js')"
+  Line 84: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+363. Update src="{{asset('inspinia/js/bootstrap.min.js')}}" to v-bind:src="asset('inspinia/js/bootstrap.min.js')"
+  Line 85: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+364. Update src="{{asset('inspinia/js/plugins/iCheck/icheck.min.js')}}" to v-bind:src="asset('inspinia/js/plugins/iCheck/icheck.min.js')"
+  Line 86: resources/views/auth/login.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+365. Update href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}" to v-bind:href="$link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset())"
+  Line 1: resources/views/auth/emails/password1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+366. Update action="{{ url('/password/reset') }}" to v-bind:action="url('/password/reset')"
+  Line 11: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+367. Update value="{{ $token }}" to v-bind:value="$token"
+  Line 14: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+368. Update class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" to v-bind:class="'form-group' + $errors->has('email') ? ' has-error' : ''"
+  Line 16: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+369. Update value="{{ $email or old('email') }}" to v-bind:value="$email or old('email')"
+  Line 20: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+370. Update class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" to v-bind:class="'form-group' + $errors->has('password') ? ' has-error' : ''"
+  Line 30: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+371. Update class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}" to v-bind:class="'form-group' + $errors->has('password_confirmation') ? ' has-error' : ''"
+  Line 44: resources/views/auth/passwords/reset.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+372. Update content="{{ csrf_token() }}" to v-bind:content="csrf_token()"
+  Line 9: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+373. Update href="{{asset('favicon.png')}}" to v-bind:href="asset('favicon.png')"
+  Line 11: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+374. Update href="{{asset('favicon.ico')}}" to v-bind:href="asset('favicon.ico')"
+  Line 12: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+375. Update href="{{asset('js/lib/mint-ui/mint-ui.css')}}" to v-bind:href="asset('js/lib/mint-ui/mint-ui.css')"
+  Line 21: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+376. Update href="{{asset('css/malltest.css')}}" to v-bind:href="asset('css/malltest.css')"
+  Line 23: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+377. Update src="{{ asset('js/lib/jquery/jquery-2.1.1.min.js') }}" to v-bind:src="asset('js/lib/jquery/jquery-2.1.1.min.js')"
+  Line 33: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+378. Update src="{{ asset('js/lib/distpicker/distpicker.min.js') }}" to v-bind:src="asset('js/lib/distpicker/distpicker.min.js')"
+  Line 34: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+379. Update src="{{ asset('js/event/eventapp.js') }}" to v-bind:src="asset('js/event/eventapp.js')"
+  Line 36: resources/views/event/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+380. Update href="{{asset('inspinia/css/bootstrap.min.css')}}" to v-bind:href="asset('inspinia/css/bootstrap.min.css')"
+  Line 20: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+381. Update href="{{asset('inspinia/font-awesome/css/font-awesome.css')}}" to v-bind:href="asset('inspinia/font-awesome/css/font-awesome.css')"
+  Line 21: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+382. Update href="{{asset('inspinia/css/animate.css')}}" to v-bind:href="asset('inspinia/css/animate.css')"
+  Line 22: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+383. Update href="{{asset('inspinia/css/style.css')}}" to v-bind:href="asset('inspinia/css/style.css')"
+  Line 23: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+384. Update href="{{asset('css/global.css')}}" to v-bind:href="asset('css/global.css')"
+  Line 25: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+385. Update action="{{ url('/register') }}" to v-bind:action="url('/register')"
+  Line 35: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+386. Update value="{{ old('name') }}" to v-bind:value="old('name')"
+  Line 39: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+387. Update value="{{ old('email') }}" to v-bind:value="old('email')"
+  Line 47: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+388. Update href="{{ url('/login') }}" to v-bind:href="url('/login')"
+  Line 73: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+389. Update src="{{asset('inspinia/js/jquery-2.1.1.js')}}" to v-bind:src="asset('inspinia/js/jquery-2.1.1.js')"
+  Line 79: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+390. Update src="{{asset('inspinia/js/bootstrap.min.js')}}" to v-bind:src="asset('inspinia/js/bootstrap.min.js')"
+  Line 80: resources/views/auth/register1.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+391. Update style="background:url('{{$data["event"]["title_image"]}}') no-repeat center;background-size: cover;" to v-bind:style="'background:url(\'' + $data["event"]["title_image"] + '\') no-repeat center;background-size: cover;'"
+  Line 905: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+392. Update v-on:click="qrcode({{$data["event"]["event_id"]}})" to v-bind:v-on:click="'qrcode(' + $data["event"]["event_id"] + ')'"
+  Line 934: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+393. Update style="background:url('{{$data["event"]["headimgurl"]}}') no-repeat center;background-size: cover;" to v-bind:style="'background:url(\'' + $data["event"]["headimgurl"] + '\') no-repeat center;background-size: cover;'"
+  Line 939: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+394. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 974: resources/views/event/event/eventDetail.blade.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+395. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 976: resources/views/event/event/eventDetail.blade.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+396. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 987: resources/views/event/event/eventDetail.blade.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+397. Rename $index to index and explicity declare it (e.g. v-for="(item, index) in items")
+  Line 989: resources/views/event/event/eventDetail.blade.php
+  Reason: $index has been removed to avoid implicitly defined (i.e. "magic") variables
+  More info: http://vuejs.org/guide/migration.html#index-and-key
+
+398. Update v-on:click="cancel({{$data["event"]["event_id"]}})" to v-bind:v-on:click="'cancel(' + $data["event"]["event_id"] + ')'"
+  Line 1005: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+399. Update v-on:click="gotoPay({{$data["event"]["event_id"]}})" to v-bind:v-on:click="'gotoPay(' + $data["event"]["event_id"] + ')'"
+  Line 1009: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+400. Update v-on:click="refund({{$data["event"]["event_id"]}})" to v-bind:v-on:click="'refund(' + $data["event"]["event_id"] + ')'"
+  Line 1029: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+401. Update v-on:click="join({{$data["event"]["event_id"]}})" to v-bind:v-on:click="'join(' + $data["event"]["event_id"] + ')'"
+  Line 1043: resources/views/event/event/eventDetail.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+402. Update v-on:click="eventDetail({{$item['event_id']}})" to v-bind:v-on:click="'eventDetail(' + $item['event_id'] + ')'"
+  Line 444: resources/views/event/event/eventList.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+403. Update style="background:url('{{$item["title_image"]}}') no-repeat center;background-size: cover;" to v-bind:style="'background:url(\'' + $item["title_image"] + '\') no-repeat center;background-size: cover;'"
+  Line 445: resources/views/event/event/eventList.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+404. Update v-on:click="eventDetail(@{{item.event_id}})" to v-bind:v-on:click="'eventDetail(@' + item.event_id + ')'"
+  Line 471: resources/views/event/event/eventList.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+405. Update style="background:url('@{{item.title_image}}') no-repeat center;background-size: cover;" to v-bind:style="'background:url(\'@' + item.title_image + '\') no-repeat center;background-size: cover;'"
+  Line 472: resources/views/event/event/eventList.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+406. Update content="{{ csrf_token() }}" to v-bind:content="csrf_token()"
+  Line 9: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+407. Update href="{{asset('favicon.png')}}" to v-bind:href="asset('favicon.png')"
+  Line 11: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+408. Update href="{{asset('favicon.ico')}}" to v-bind:href="asset('favicon.ico')"
+  Line 12: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+409. Update href="{{asset('js/lib/mint-ui/mint-ui.css')}}" to v-bind:href="asset('js/lib/mint-ui/mint-ui.css')"
+  Line 21: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+410. Update href="{{asset('css/malltest.css')}}" to v-bind:href="asset('css/malltest.css')"
+  Line 23: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+411. Update src="{{ asset('js/lib/jquery/jquery-2.1.1.min.js') }}" to v-bind:src="asset('js/lib/jquery/jquery-2.1.1.min.js')"
+  Line 33: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+412. Update src="{{ asset('js/lib/distpicker/distpicker.min.js') }}" to v-bind:src="asset('js/lib/distpicker/distpicker.min.js')"
+  Line 34: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+413. Update src="{{ asset('js/mall/app.js') }}" to v-bind:src="asset('js/mall/app.js')"
+  Line 36: resources/views/mall/index.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+414. Update href="{{asset('favicon.png')}}" to v-bind:href="asset('favicon.png')"
+  Line 9: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+415. Update href="{{asset('favicon.ico')}}" to v-bind:href="asset('favicon.ico')"
+  Line 10: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+416. Update href="{{asset('inspinia/css/bootstrap.min.css')}}" to v-bind:href="asset('inspinia/css/bootstrap.min.css')"
+  Line 21: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+417. Update href="{{asset('inspinia/font-awesome/css/font-awesome.css')}}" to v-bind:href="asset('inspinia/font-awesome/css/font-awesome.css')"
+  Line 22: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+418. Update href="{{asset('inspinia/css/plugins/iCheck/custom.css')}}" to v-bind:href="asset('inspinia/css/plugins/iCheck/custom.css')"
+  Line 23: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+419. Update href="{{asset('inspinia/css/animate.css')}}" to v-bind:href="asset('inspinia/css/animate.css')"
+  Line 24: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+420. Update href="{{asset('inspinia/css/style.css')}}" to v-bind:href="asset('inspinia/css/style.css')"
+  Line 25: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+421. Update href="{{asset('css/global.css')}}" to v-bind:href="asset('css/global.css')"
+  Line 27: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+422. Update src="{{asset('images/admin/profile.jpg')}}" to v-bind:src="asset('images/admin/profile.jpg')"
+  Line 43: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+423. Update src="{{asset('favicon.png')}}" to v-bind:src="asset('favicon.png')"
+  Line 54: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+424. Update class="{{ request()->is('/') ? 'active' : '' }}" to v-bind:class="request()->is('/') ? 'active' : ''"
+  Line 58: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+425. Update class="{{ request()->is('admin/order*') ? 'active' : '' }}" to v-bind:class="request()->is('admin/order*') ? 'active' : ''"
+  Line 65: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+426. Update href="{{url('admin/order')}}" to v-bind:href="url('admin/order')"
+  Line 66: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+427. Update class="{{request()->is('admin/product/*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/product/*') ? 'active' : ''"
+  Line 73: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+428. Update class="{{request()->is('admin/product/commodity*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/product/commodity*') ? 'active' : ''"
+  Line 80: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+429. Update href="{{url('admin/product/commodity')}}" to v-bind:href="url('admin/product/commodity')"
+  Line 81: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+430. Update class="{{request()->is('admin/product/topic*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/product/topic*') ? 'active' : ''"
+  Line 83: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+431. Update href="{{url('admin/product/topic')}}" to v-bind:href="url('admin/product/topic')"
+  Line 84: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+432. Update class="{{request()->is('admin/product/plate*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/product/plate*') ? 'active' : ''"
+  Line 86: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+433. Update href="{{url('admin/product/plate')}}" to v-bind:href="url('admin/product/plate')"
+  Line 87: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+434. Update class="{{request()->is('admin/product/category*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/product/category*') ? 'active' : ''"
+  Line 89: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+435. Update href="{{url('admin/product/category')}}" to v-bind:href="url('admin/product/category')"
+  Line 90: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+436. Update class="{{request()->is('admin/event/*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/event/*') ? 'active' : ''"
+  Line 96: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+437. Update class="{{request()->is('admin/event/commodity*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/event/commodity*') ? 'active' : ''"
+  Line 103: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+438. Update href="{{url('admin/event/commodity')}}" to v-bind:href="url('admin/event/commodity')"
+  Line 104: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+439. Update class="{{request()->is('admin/event/topic*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/event/topic*') ? 'active' : ''"
+  Line 106: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+440. Update href="{{url('admin/event/topic')}}" to v-bind:href="url('admin/event/topic')"
+  Line 107: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+441. Update class="{{request()->is('admin/event/category*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/event/category*') ? 'active' : ''"
+  Line 109: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+442. Update href="{{url('admin/event/category')}}" to v-bind:href="url('admin/event/category')"
+  Line 110: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+443. Update class="{{request()->is('admin/wechat/*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/wechat/*') ? 'active' : ''"
+  Line 115: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+444. Update class="{{request()->is('admin/wechat/menu*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/wechat/menu*') ? 'active' : ''"
+  Line 122: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+445. Update href="{{url('admin/wechat/menu')}}" to v-bind:href="url('admin/wechat/menu')"
+  Line 123: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+446. Update class="{{request()->is('admin/wechat/follow') ? 'active' : ''}}" to v-bind:class="request()->is('admin/wechat/follow') ? 'active' : ''"
+  Line 124: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+447. Update href="{{url('admin/wechat/follow')}}" to v-bind:href="url('admin/wechat/follow')"
+  Line 125: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+448. Update class="{{request()->is('admin/shop/*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/shop/*') ? 'active' : ''"
+  Line 129: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+449. Update class="{{request()->is('admin/shop/config') ? 'active' : ''}}" to v-bind:class="request()->is('admin/shop/config') ? 'active' : ''"
+  Line 136: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+450. Update href="{{url('admin/shop/config')}}" to v-bind:href="url('admin/shop/config')"
+  Line 137: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+451. Update class="{{request()->is('admin/shop/banner*') ? 'active' : ''}}" to v-bind:class="request()->is('admin/shop/banner*') ? 'active' : ''"
+  Line 138: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+452. Update href="{{url('admin/shop/banner')}}" to v-bind:href="url('admin/shop/banner')"
+  Line 139: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+453. Update href="{{url('/logout')}}" to v-bind:href="url('/logout')"
+  Line 161: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+454. Update src="{{asset('inspinia/js/jquery-2.1.1.js')}}" to v-bind:src="asset('inspinia/js/jquery-2.1.1.js')"
+  Line 187: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+455. Update src="{{asset('inspinia/js/bootstrap.min.js')}}" to v-bind:src="asset('inspinia/js/bootstrap.min.js')"
+  Line 188: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+456. Update src="{{asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js')}}" to v-bind:src="asset('inspinia/js/plugins/metisMenu/jquery.metisMenu.js')"
+  Line 189: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+457. Update src="{{asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js')}}" to v-bind:src="asset('inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js')"
+  Line 190: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+458. Update src="{{asset('inspinia/js/inspinia.js')}}" to v-bind:src="asset('inspinia/js/inspinia.js')"
+  Line 191: resources/views/layouts/app.blade.php
+  Reason: Interpolation within attributes has been removed
+  More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
+
+459. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
+  Line 3543: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: ready lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration.html#ready
+
+460. Replace activate with beforeRouteEnter in the component
+  Line 3569: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The activate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#activate
+
+461. Replace deactivate with beforeDestroy (or destroyed) in the component
+  Line 3572: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The deactivate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#deactivate
+
+462. Replace transition attribute with either a <transition> or <transition-group> wrapper component
+  Line 1: public/inspinia/js/plugins/switchery/switchery.js
+  Reason: The new and improved transition system requires use of new <transition> and <transition-group> components
+  More info: http://vuejs.org/guide/migration.html#transition-Attribute
+
+463. Replace {{{ message }}} with v-html="message" on a containing element
+  Line 3: public/js/event/eventapp.js
+  Reason: HTML interpolation with {{{ }}} has been removed
+  More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
+
+464. Replace t.$set(s,n) with Vue.set(t, s, n)
+  Line 8: public/js/event/eventapp.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-set
+
+465. Replace :visible.sync="visible" with :visible="visible", then $emit an event from the child component to trigger an update to visible in the parent
+  Line 3: public/js/mall/app.js
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+466. Replace t.$set(s,n) with Vue.set(t, s, n)
+  Line 8: public/js/mall/app.js
+  Reason: Array extensions for the reactivity system have been removed
+  More info: http://vuejs.org/guide/migration.html#Array-prototype-set
+
+467. Replace activate with beforeRouteEnter in the component
+  Line 6111: public/inspinia/js/plugins/jquery-ui/jquery-ui.js
+  Reason: The activate router lifecycle hook has been removed
+  More info: http://vuejs.org/guide/migration-vue-router.html#activate

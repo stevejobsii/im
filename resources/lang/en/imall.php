@@ -13,5 +13,7 @@ return [
     'enrolling_event'=>'Enrolling event',
     'end_event'=>'End event',
     'usercenter'=>'User center',
-    'cart'=>'Cart'
+    'cart'=>'Cart',
+    'suggestion'=>'suggestion',
+    
 ];

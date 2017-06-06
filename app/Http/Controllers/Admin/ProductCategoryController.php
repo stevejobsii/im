@@ -24,9 +24,9 @@ class ProductCategoryController extends Controller
             ->orderBy('category_sort', 'asc')
             ->orderBy('id', 'asc')
             ->get();
-        foreach ($praentCategories as $key => $item) {
-            $data[$key]['parent_category'] = $item;
-            $data[$key]['sub_categories'] = ProductCategory::where('parent_id', '=', $item->id)
+        foreach ($praentCategories as key => $item) {
+            $data[key]['parent_category'] = $item;
+            $data[key]['sub_categories'] = ProductCategory::where('parent_id', '=', $item->id)
                 ->orderBy('category_sort', 'asc')
                 ->orderBy('id', 'asc')
                 ->get();
