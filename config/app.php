@@ -66,9 +66,9 @@ return [
     */
 
     // 选择语言
-    //'locale' => 'en',
+    'locale' => 'en',
     //'locale' => env('LOCALE') ? :'en',
-    'locale' => 'zh-CN',
+    //'locale' => 'zh-CN',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -81,8 +81,8 @@ return [
     */
 
     // 选择语言
-    //'fallback_locale' => 'en',
-    'fallback_locale' => 'zh-CN',
+    'fallback_locale' => 'en',
+    //'fallback_locale' => 'zh-CN',
     /*
     |--------------------------------------------------------------------------
     | Encryption Key

@@ -13,11 +13,11 @@
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
             </i>
-            购物车
+            {{ trans('imall.cart') }}
         </mt-tab-item>
         <mt-tab-item v-link="{name:'usercenter'}" id="usercenter">
             <i slot="icon" class="nav-usercenter"></i>
-            账户中心
+            {{ trans('imall.usercenter') }}
         </mt-tab-item>
     </mt-tabbar>
 </template>
