@@ -1,6 +1,7 @@
 export default function (router) {
     router.redirect({
-        '*': '/usercenter'
+          path: '*',
+          redirect: '/usercenter'
     });
 
     router.map({
