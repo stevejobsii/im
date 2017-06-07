@@ -48,7 +48,7 @@
                         Toast({
                           message: '操作成功'
                         });
-                        vm.$router.go('/usercenter');
+                        vm.$router.push('/usercenter');
                     }else{
                         Toast({
                           message: '操作失败'

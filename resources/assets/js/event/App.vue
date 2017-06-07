@@ -5,15 +5,12 @@
 
 <script>
     import Navbar from './components/_layouts/Navbar.vue';
-    // vuejs using laravel blade inside
-    // const _ = import('lodash');
-    // Vue.prototype.trans = string => _.get(window.i18n, string);
 
     export default{
         components:{
             Navbar
         },
-        replace: false,
+        //replace: false,
         data(){
             return{
                 user:''

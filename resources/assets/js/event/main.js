@@ -76,4 +76,4 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-router.start(App, 'body');
+router: router(App, 'body');

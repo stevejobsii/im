@@ -1,30 +1,31 @@
 
-1. Delete the replace: false option and instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
+1. Delete the replace: false option and 
+???instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
   Line 16: /Users/zhudi/Code/php/im/resources/assets/js/event/App.vue
   Reason: The replace option has been removed, as it provides too little convenience
   More info: http://vuejs.org/guide/migration.html#replace-false
 
-2. Replace :selected.sync="selected" with :selected="selected", then $emit an event from the child component to trigger an update to selected in the parent
+x2. Replace :selected.sync="selected" with :selected="selected", then $emit an event from the child component to trigger an update to selected in the parent
   Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-3. Replace v-link="{name:'aOpen'}" with the new <router-link> component (see link below for details)
+-3. Replace v-link="{name:'aOpen'}" with the new <router-link> component (see link below for details)
   Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-4. Replace v-link="{name:'aClose'}" with the new <router-link> component (see link below for details)
+-4. Replace v-link="{name:'aClose'}" with the new <router-link> component (see link below for details)
   Line 8: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-5. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
+-5. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
   Line 12: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-6. Replace v-link="{name:'usercenter'}" with the new <router-link> component (see link below for details)
+-6. Replace v-link="{name:'usercenter'}" with the new <router-link> component (see link below for details)
   Line 18: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
@@ -44,17 +45,17 @@
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-10. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+-10. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
   Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-11. Replace v-link="{name:'commodity',params:{hashid:cart.commodity.id}}" with the new <router-link> component (see link below for details)
+-11. Replace v-link="{name:'commodity',params:{hashid:cart.commodity.id}}" with the new <router-link> component (see link below for details)
   Line 7: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-12. Update value="{{cart.commodity_num}}" to v-bind:value="cart.commodity_num"
+v12. Update value="{{cart.commodity_num}}" to v-bind:value="cart.commodity_num"
   Line 20: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
@@ -64,22 +65,22 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-14. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
+v14. Replace ready with mounted, then use Vue.nextTick if you need an in-document guarantee
   Line 69: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
   Reason: ready lifecycle hook has been removed
   More info: http://vuejs.org/guide/migration.html#ready
 
-15. Replace router.go with router.push
+v15. Replace router.go with router.push
   Line 171: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
 
-16. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
+v16. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
   Line 41: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
   Reason: HTML interpolation with {{{ }}} has been removed
   More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
 
-17. Replace {{{commodity.event_base_info | rnTransform}}} with v-html="commodity.event_base_info | rnTransform" on a containing element
+v17. Replace {{{commodity.event_base_info | rnTransform}}} with v-html="commodity.event_base_info | rnTransform" on a containing element
   Line 44: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
   Reason: HTML interpolation with {{{ }}} has been removed
   More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
@@ -89,12 +90,12 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-19. Replace router.go with router.push
+v19. Replace router.go with router.push
   Line 108: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
 
-20. Replace router.go with router.push
+v20. Replace router.go with router.push
   Line 151: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
@@ -104,7 +105,8 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-22. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+22. Delete twoWay: true, then 
+???$emit an event from the child component to trigger an update to the prop in the parent
   Line 17: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityEmpty.vue
   Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
   More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
@@ -119,7 +121,8 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-25. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+25. Delete twoWay: true, 
+???then $emit an event from the child component to trigger an update to the prop in the parent
   Line 23: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityCloseList.vue
   Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
   More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
@@ -129,7 +132,7 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-27. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+v27. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
   Line 34: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderDetail.vue
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
@@ -139,7 +142,7 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-29. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
+v29. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
   Line 30: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityList.vue
   Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
   More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
@@ -169,12 +172,12 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-35. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
+v35. Update alt="{{detail.commodity_name}}" to v-bind:alt="detail.commodity_name"
   Line 19: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-36. Remove the canReuse option
+v36. Remove the canReuse option
   Line 61: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
   Reason: There's no longer a use case for canReuse in the new Vue Router
   More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
@@ -194,12 +197,12 @@
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-40. Replace router.go with router.push
+v40. Replace router.go with router.push
   Line 108: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderSettle.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
 
-41. Replace router.go with router.push
+v41. Replace router.go with router.push
   Line 193: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderSettle.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
@@ -209,7 +212,7 @@
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-43. Replace router.go with router.push
+v43. Replace router.go with router.push
   Line 51: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Suggestion/Suggestion.vue
   Reason: For consistency with the HTML5 History API, router.go is now only used for back/forward navigation, while router.push is used to navigate to a specific page
   More info: http://vuejs.org/guide/migration-vue-router.html#router-go
@@ -239,22 +242,22 @@
   Reason: The v-link directive has been replaced with the new <router-link> component
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
-49. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
+???49. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
   Line 41: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
   Reason: Directives have been vastly reduced in scope and components are preferred in most use cases
   More info: http://vuejs.org/guide/migration.html#Custom-Directives
 
-50. Replace router.start with router: router on your root Vue instance (see link below for details)
+v50. Replace router.start with router: router on your root Vue instance (see link below for details)
   Line 79: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
   Reason: Starting an app with routing no longer requires a special method - the router can simply be passed to the root Vue instance as option
   More info: http://vuejs.org/guide/migration-vue-router.html#router-start
 
-51. Replace router.redirect with a redirect option in a route definition (see link below for details)
+v51. Replace router.redirect with a redirect option in a route definition (see link below for details)
   Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
   Reason: Redirects have been moved to an option on route definitions to improve config organization
   More info: http://vuejs.org/guide/migration-vue-router.html#router-redirect
 
-52. Replace router.map with an array on the new routes option (see link below for details)
+v52. Replace router.map with an array on the new routes option (see link below for details)
   Line 6: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
   Reason: Routes are now defined as an array on a routes option at router instantiation
   More info: http://vuejs.org/guide/migration-vue-router.html#router-map

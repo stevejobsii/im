@@ -16,7 +16,7 @@
                 <p><span class="title">总价：</span>&yen;{{order.order_amount | transformPrice}}</p>
             </div>
             <div class="order-detail" v-for="detail in order.details">
-                <img :src="detail.commodity_img" alt="{{detail.commodity_name}}"/>
+                <img :src="detail.commodity_img" v-bind:alt="detail.commodity_name"/>
                 <p>{{detail.commodity_name}}</p>
                 <p class="title">{{detail.buy_number}}件</p>
             </div>
@@ -58,7 +58,7 @@
             this.fetchOrders();
         },
         route:{
-            canReuse:false
+            //canReuse:false
         },
         methods:{
             fetchOrders:function(){

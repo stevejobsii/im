@@ -17,7 +17,7 @@
                 <div class="commodity-num">
                 <span class="minus-btn" :class=" cart.commodity_num > 1 ? 'active' : '' " @click="minusClick(cart)">
                         </span>
-                    <input class="num" type="tel" value="{{cart.commodity_num}}" disabled>
+                    <input class="num" type="tel" v-bind:value="cart.commodity_num" disabled>
                     <span class="plus-btn active" @click="plusClick(cart)">
                     </span>
                 </div>
@@ -66,8 +66,14 @@ export default {
                 totalPrice: 0
             }
         },
-        ready() {
+        // ready() {
+        //     this.fetchCart();
+        // },
+        mounted: function () {
+          //this.$nextTick(function () {
             this.fetchCart();
+            // 代码保证 this.$el 在 document 中
+        //})
         },
         methods: {
             fetchCart: function() {
@@ -168,7 +174,8 @@ export default {
                 });
                 let order = {from:'cart',commodities:commodites,cartIds:cartIds};
                 // to 'order-settle' with ? from;carIDs,commodites编号及数量
-                vm.$route.router.go({name:'order-settle',query:order});
+                // router.go-> router.push
+                vm.$route.router.push({name:'order-settle',query:order});
             }
         }
 }

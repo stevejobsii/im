@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    // 微信商城
+    // 微信商城 迁移vuejs 1.x ->vuejs 2.x 千万不要动原来的微信商城！
     // entry: './resources/assets/js/main.js',
     // output: {
     //     path: path.resolve(__dirname, './public/js/mall'),
@@ -10,7 +10,7 @@ module.exports = {
     //     filename: 'app.js'
     // },
 
-    // 活动订单
+    // 活动订单 迁移vuejs 1.x ->vuejs 2.x中
     entry: './resources/assets/js/event/main.js',
     output: {
         path: path.resolve(__dirname, './public/js/event'),

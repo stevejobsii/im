@@ -105,7 +105,8 @@
             //             vm.$set('address',response.data.message);
             //             if(vm.address == ''){
             //                 MessageBox.confirm('还未建立收货地址，马上去新建?').then(action => {
-            //                     vm.$router.go('/add-address');
+            //                     vm.$router.push('/add-address');
+            ////go
             //                 });
             //             }
             //         }
@@ -190,7 +191,7 @@
                       //   });
                     Indicator.close();
                     if(response.data.code == 0){
-                        vm.$route.router.go({name:'orderpay',params:{'hashid':response.data.message}});
+                        vm.$route.router.push({name:'orderpay',params:{'hashid':response.data.message}});
                     }else{
                         Toast({
                           message: response.data.message

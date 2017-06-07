@@ -27,7 +27,7 @@
         props:{
             list:{
                 type: Array,
-                twoWay: true,
+                //twoWay: true,
                 default:function(){
                     return {
                         data:[]

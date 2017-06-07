@@ -37,11 +37,11 @@
                 活动简介
             </li>
         </ul>
-        <div class="detail-wrap" v-show="detailVisible">
-            {{{commodity.event_detail_info}}}
+        <div class="detail-wrap" v-show="detailVisible"
+            v-html="commodity.event_detail_info">
         </div>
-        <div class="base-wrap" v-show="!detailVisible">
-            {{{commodity.event_base_info | rnTransform}}}
+        <div class="base-wrap" v-show="!detailVisible"
+            v-html="commodity.event_base_info | rnTransform">
         </div>
     </div>
     <div style="width:100%;height:60px;"></div>
@@ -105,7 +105,7 @@
                         Toast({
                           message: response.data.message
                         });
-                        vm.$router.go('/category');
+                        vm.$router.push('/category');
                     }
                 });
             },
@@ -148,7 +148,7 @@
             toPay: function(){
                 let commodity = this.commodity.id+ '-' + this.commodity_num;
                 let order = {from:'default',commodity:commodity};
-                this.$route.router.go({name:'order-settle',query:order});
+                this.$route.router.push({name:'order-settle',query:order});
             }
         }
     }

@@ -14,7 +14,7 @@ export default{
     props:{
         isShow:{
             type: Boolean,
-            twoWay: true,
+            //twoWay: true,
             default: false
         }
     }
