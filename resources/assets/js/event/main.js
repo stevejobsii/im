@@ -134,4 +134,4 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-new Vue({ router }).$mount('body')
+router.start(App, 'body');
