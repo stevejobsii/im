@@ -2,19 +2,16 @@ import Vue from 'vue'
 import Mint from 'mint-ui'
 import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
-import Router from 'vue-router'
-import routerMap from './router'
+import VueRouter from 'vue-router'
 import App from './App.vue'
 import lodash from 'lodash'
-//import vue-prototype form 'vue-prototype'
 
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
-Vue.use(Router);
+// 使用Vue－Router
+Vue.use(VueRouter);
 
-    //vuejs using laravel blade inside
-    //const _ = import('lodash');
-//Vue.prototype.trans = string => '123';
+// vuejs using laravel blade inside(双语翻译用)
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 /**
@@ -63,12 +60,75 @@ Vue.prototype.$http = axios;
 axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('#csrf-token').getAttribute('content');
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-const router = new Router({
-    history: false,
-    mode: 'abstract'
+const router = new VueRouter({
+    //history: false,
+    //mode: 'abstract',
+    routes:[
+        {
+            path: '*',
+            redirect: '/usercenter'
+        },
+        {   
+            path: '/:hashid/commodity',
+            name: 'commodity',
+            component: require('./components/Commodity/CommodityDetail.vue')
+        },
+        {
+            path: '/cart',
+            name: 'cart',
+            component: require('./components/Cart.vue')
+        },
+        {   path: '/usercenter',
+            name: 'usercenter',
+            component: require('./components/UserCenter.vue')
+        },
+        {
+            path:'/ordersettle',
+            name: 'order-settle',
+            component: require('./components/Order/OrderSettle.vue')
+        },
+        {
+            path: '/:type/orderlist',
+            name: 'order-list',
+            component: require('./components/Order/OrderList.vue')
+        },
+        {
+            path:'/:hashid/orderdetail',
+            name: 'order-detail',
+            component: require('./components/Order/OrderDetail.vue')
+        },
+        {
+            path: '/:hashid/orderpay',
+            name: 'orderpay',
+            component: require('./components/Order/OrderPay.vue')
+        },
+        {
+            path: '/suggestion',
+            name: 'suggestion',
+            component: require('./components/Suggestion/Suggestion.vue')
+        },
+        {
+            path:'/eventlist',
+            name: 'eventlist',
+            component: require('./components/Attribute/Attribute.vue'),
+            children: [                
+                {
+                    path:'/close',
+                    name: 'aClose',
+                    component: require('./components/Attribute/Close.vue')
+                },
+                {
+                    path:'/open',
+                    name: 'aOpen',
+                    component: require('./components/Attribute/Open.vue')
+                }
+            ]
+        }
+    ]
 });
 
-routerMap(router);
+// routerMap 为 router.js
+// routerMap(router);
 
 router.beforeEach((transition) => {
     document.body.scrollTop = 0;
