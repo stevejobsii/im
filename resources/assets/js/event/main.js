@@ -137,8 +137,4 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-new Vue({
-  el: 'body',
-  router: router,
-  template: '<router-view></router-view>'
-})
+const app = new Vue({ router }).$mount('body')
