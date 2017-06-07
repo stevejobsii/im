@@ -138,5 +138,5 @@ router.beforeEach((transition) => {
 new Vue({
   el: 'body',
   router: router,
-  App
+  template: App
 })
