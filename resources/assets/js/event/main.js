@@ -61,9 +61,6 @@ axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('#csrf-to
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 const router = new VueRouter({
-    history: false,
-    mode: 'abstract',
-
     routes:[
         {
             path: '*',
@@ -137,4 +134,4 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-const app = new Vue({ router }).$mount('body')
+new Vue({ router }).$mount('body')
