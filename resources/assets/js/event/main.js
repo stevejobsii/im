@@ -134,4 +134,9 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-router.start(App, 'body');
+//router.start(App, 'body');
+new Vue({
+  el: 'body',
+  router: router,
+  App
+})
