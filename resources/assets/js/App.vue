@@ -10,7 +10,7 @@
         components:{
             Navbar
         },
-        replace: false,
+        //replace: false,
         data(){
             return{
                 user:''

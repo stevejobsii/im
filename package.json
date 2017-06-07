@@ -27,7 +27,7 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^2.0.6",
     "vue-html-loader": "^1.2.3",
-    "vue-loader": "^8.5.3",
+    "vue-loader": "^9.0.0",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.2",
     "webpack-server": "^0.1.2"
@@ -38,8 +38,8 @@
     "lodash": "^4.17.4",
     "mint-ui": "^1.0.2",
     "stylus": "^0.54.5",
-    "vue": "^1.0.26",
+    "vue": "^2.0.0",
     "vue-prototype": "0.0.0",
-    "vue-router": "^0.7.13"
+    "vue-router": "^2.0.0"
   }
 }

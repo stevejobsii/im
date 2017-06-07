@@ -49,17 +49,17 @@
   Reason: The syntax for route matching has changed since Vue Router now uses path-to-regexp under the hood
   More info: http://vuejs.org/guide/migration-vue-router.html#One-or-More-Named-Parameters
 
-11. Replace "vue-loader": "^8.5.3" with "vue-loader": "^9.0.0", then run: npm install
+`11. Replace "vue-loader": "^8.5.3" with "vue-loader": "^9.0.0", then run: npm install
   Line 30: package.json
   Reason: vue-loader 9.0 is the earliest supported version compatible with Vue 2.0
   More info: http://vuejs.org/guide/migration.html#
 
-12. Replace "vue": "^1.0.26" with "vue": "^2.0.0", then run: npm install
+`12. Replace "vue": "^1.0.26" with "vue": "^2.0.0", then run: npm install
   Line 41: package.json
   Reason: If you are using pre-2.0 Vue through NPM, you have to update it in your package.json file
   More info: http://vuejs.org/guide/migration.html#
 
-13. Replace "vue-router": "^0.7.13" with "vue-router": "^2.0.0", then run: npm install
+`13. Replace "vue-router": "^0.7.13" with "vue-router": "^2.0.0", then run: npm install
   Line 43: package.json
   Reason: If you are using pre-2.0 Vue Router through NPM, you have to update it in your package.json file
   More info: http://vuejs.org/guide/migration-vue-router.html#
@@ -229,22 +229,22 @@
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-47. Update v-el:textarea to ref="textarea"
+--47. Update v-el:textarea to ref="textarea"
   Line 1: public/js/event/eventapp.js
   Reason: v-el and v-ref merged into ref attribute
   More info: http://vuejs.org/guide/migration.html#v-el-and-v-ref
 
-48. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+--48. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
   Line 2: public/js/event/eventapp.js
   Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
   More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
 
-49. Replace init with beforeCreate
+--49. Replace init with beforeCreate
   Line 3: public/js/admin/wechat/menuEdit.js
   Reason: init lifecycle hook has been removed
   More info: http://vuejs.org/guide/migration.html#init
 
-50. Replace init with beforeCreate
+--50. Replace init with beforeCreate
   Line 25: public/js/admin/wechat/menuEdit.js
   Reason: init lifecycle hook has been removed
   More info: http://vuejs.org/guide/migration.html#init
@@ -974,137 +974,137 @@
   Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
   More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
 
-196. Update action="{{url('admin/event/commodity')}}" to v-bind:action="url('admin/event/commodity')"
+--196. Update action="{{url('admin/event/commodity')}}" to v-bind:action="url('admin/event/commodity')"
   Line 24: resources/views/admin/event/create.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-197. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
+--197. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
   Line 24: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-198. Update value="{{$commodity->event_sort}}" to v-bind:value="$commodity->event_sort"
+--198. Update value="{{$commodity->event_sort}}" to v-bind:value="$commodity->event_sort"
   Line 30: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-199. Update value="{{$commodity->event_name}}" to v-bind:value="$commodity->event_name"
+--199. Update value="{{$commodity->event_name}}" to v-bind:value="$commodity->event_name"
   Line 35: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-200. Update value="{{$commodity->manager}}" to v-bind:value="$commodity->manager"
+--200. Update value="{{$commodity->manager}}" to v-bind:value="$commodity->manager"
   Line 40: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-201. Update value="{{$commodity->event_place}}" to v-bind:value="$commodity->event_place"
+--201. Update value="{{$commodity->event_place}}" to v-bind:value="$commodity->event_place"
   Line 44: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-202. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
+--202. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
   Line 49: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-203. Update value="{{$commodity->event_number}}" to v-bind:value="$commodity->event_number"
+--203. Update value="{{$commodity->event_number}}" to v-bind:value="$commodity->event_number"
   Line 57: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-204. Update value="{{$commodity->event_page_url}}" to v-bind:value="$commodity->event_page_url"
+--204. Update value="{{$commodity->event_page_url}}" to v-bind:value="$commodity->event_page_url"
   Line 62: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-205. Update value="{{$commodity->end_time}}" to v-bind:value="$commodity->end_time"
+--205. Update value="{{$commodity->end_time}}" to v-bind:value="$commodity->end_time"
   Line 66: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-206. Update value="{{$commodity->event_original_price}}" to v-bind:value="$commodity->event_original_price"
+--206. Update value="{{$commodity->event_original_price}}" to v-bind:value="$commodity->event_original_price"
   Line 78: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-207. Update value="{{$commodity->event_current_price}}" to v-bind:value="$commodity->event_current_price"
+--207. Update value="{{$commodity->event_current_price}}" to v-bind:value="$commodity->event_current_price"
   Line 83: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-208. Update value="{{$commodity->event_stock_number}}" to v-bind:value="$commodity->event_stock_number"
+--208. Update value="{{$commodity->event_stock_number}}" to v-bind:value="$commodity->event_stock_number"
   Line 88: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-209. Update value="{{$commodity->event_sold_number}}" to v-bind:value="$commodity->event_sold_number"
+--209. Update value="{{$commodity->event_sold_number}}" to v-bind:value="$commodity->event_sold_number"
   Line 93: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-210. Update src="{{asset('js/admin/product/commodityEdit.js')}}" to v-bind:src="asset('js/admin/product/commodityEdit.js')"
+--210. Update src="{{asset('js/admin/product/commodityEdit.js')}}" to v-bind:src="asset('js/admin/product/commodityEdit.js')"
   Line 129: resources/views/admin/event/edit.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-211. Update href="{{url('admin/event/commodity/create')}}" to v-bind:href="url('admin/event/commodity/create')"
+--211. Update href="{{url('admin/event/commodity/create')}}" to v-bind:href="url('admin/event/commodity/create')"
   Line 24: resources/views/admin/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-212. Update href="{{url('admin/event/commodity')}}" to v-bind:href="url('admin/event/commodity')"
+--212. Update href="{{url('admin/event/commodity')}}" to v-bind:href="url('admin/event/commodity')"
   Line 27: resources/views/admin/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-213. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
+--213. Update src="{{$commodity->event_img}}" to v-bind:src="$commodity->event_img"
   Line 51: resources/views/admin/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-214. Update href="{{url('admin/event/commodity/'.$commodity->id.'/edit')}}" to v-bind:href="url('admin/event/commodity/'.$commodity->id.'/edit')"
+--214. Update href="{{url('admin/event/commodity/'.$commodity->id.'/edit')}}" to v-bind:href="url('admin/event/commodity/'.$commodity->id.'/edit')"
   Line 61: resources/views/admin/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-215. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
+--215. Update action="{{url('admin/event/commodity/'.$commodity->id)}}" to v-bind:action="url('admin/event/commodity/'.$commodity->id)"
   Line 62: resources/views/admin/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-216. Update href="{{url('admin/order?status=unpay')}}" to v-bind:href="url('admin/order?status=unpay')"
+--216. Update href="{{url('admin/order?status=unpay')}}" to v-bind:href="url('admin/order?status=unpay')"
   Line 16: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-217. Update class="btn {{ $status == 'unpay' ? 'btn-primary' : 'btn-default' }} " to v-bind:class="'btn ' + $status == 'unpay' ? 'btn-primary' : 'btn-default' + ' '"
+--217. Update class="btn {{ $status == 'unpay' ? 'btn-primary' : 'btn-default' }} " to v-bind:class="'btn ' + $status == 'unpay' ? 'btn-primary' : 'btn-default' + ' '"
   Line 17: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-218. Update href="{{url('admin/order?status=unship')}}" to v-bind:href="url('admin/order?status=unship')"
+--218. Update href="{{url('admin/order?status=unship')}}" to v-bind:href="url('admin/order?status=unship')"
   Line 20: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-219. Update class="btn {{ $status == 'unship' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'unship' ? 'btn-primary' : 'btn-default'"
+--219. Update class="btn {{ $status == 'unship' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'unship' ? 'btn-primary' : 'btn-default'"
   Line 21: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-220. Update href="{{url('admin/order?status=shiped')}}" to v-bind:href="url('admin/order?status=shiped')"
+--220. Update href="{{url('admin/order?status=shiped')}}" to v-bind:href="url('admin/order?status=shiped')"
   Line 24: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-221. Update class="btn {{ $status == 'shiped' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'shiped' ? 'btn-primary' : 'btn-default'"
+--221. Update class="btn {{ $status == 'shiped' ? 'btn-primary' : 'btn-default' }}" to v-bind:class="'btn ' + $status == 'shiped' ? 'btn-primary' : 'btn-default'"
   Line 25: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-222. Update href="{{url('admin/order?status=received')}}" to v-bind:href="url('admin/order?status=received')"
+--222. Update href="{{url('admin/order?status=received')}}" to v-bind:href="url('admin/order?status=received')"
   Line 28: resources/views/admin/order/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
@@ -1889,7 +1889,7 @@
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
 
-379. Update src="{{ asset('js/event/eventapp.js') }}" to v-bind:src="asset('js/event/eventapp.js')"
+--379. Update src="{{ asset('js/event/eventapp.js') }}" to v-bind:src="asset('js/event/eventapp.js')"
   Line 36: resources/views/event/index.blade.php
   Reason: Interpolation within attributes has been removed
   More info: http://vuejs.org/guide/migration.html#Interpolation-within-Attributes
@@ -2334,7 +2334,7 @@
   Reason: The activate router lifecycle hook has been removed
   More info: http://vuejs.org/guide/migration-vue-router.html#activate
 
-468. Replace children.$remove(this) with var index = children.indexOf(this); children.splice(index, 1)
+--468. Replace children.$remove(this) with var index = children.indexOf(this); children.splice(index, 1)
   Line 9: public/js/event/eventapp.js
   Reason: Array extensions for the reactivity system have been removed
   More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
@@ -2344,7 +2344,7 @@
   Reason: Array extensions for the reactivity system have been removed
   More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
 
-470. Remove the canReuse option
+--470. Remove the canReuse option
   Line 11: public/js/event/eventapp.js
   Reason: There's no longer a use case for canReuse in the new Vue Router
   More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
@@ -2359,7 +2359,7 @@
   Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
   More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
 
-473. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
+--473. Replace this.$dispatch("slotValueChange",this) to use a global event bus or vuex (see link below for implementation details)
   Line 21: public/js/event/eventapp.js
   Reason: $dispatch and $broadcast have been removed because the pattern doesn't scale well
   More info: http://vuejs.org/guide/migration.html#dispatch-and-broadcast
@@ -2379,17 +2379,17 @@
   Reason: The new and improved transition system requires use of new <transition> and <transition-group> components
   More info: http://vuejs.org/guide/migration.html#transition-Attribute
 
-477. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
+--477. Replace {{{commodity.event_detail_info}}} with v-html="commodity.event_detail_info" on a containing element
   Line 22: public/js/event/eventapp.js
   Reason: HTML interpolation with {{{ }}} has been removed
   More info: http://vuejs.org/guide/migration.html#HTML-Interpolation
 
-478. Replace router._children.$remove(this) with var index = router._children.indexOf(this); router._children.splice(index, 1)
+--478. Replace router._children.$remove(this) with var index = router._children.indexOf(this); router._children.splice(index, 1)
   Line 27: public/js/event/eventapp.js
   Reason: Array extensions for the reactivity system have been removed
   More info: http://vuejs.org/guide/migration.html#Array-prototype-remove
 
-479. Replace transition attribute with either a <transition> or <transition-group> wrapper component
+--479. Replace transition attribute with either a <transition> or <transition-group> wrapper component
   Line 28: public/js/event/eventapp.js
   Reason: The new and improved transition system requires use of new <transition> and <transition-group> components
   More info: http://vuejs.org/guide/migration.html#transition-Attribute
