@@ -11,6 +11,7 @@ module.exports = {
     // },
 
     // 活动订单 迁移vuejs 1.x ->vuejs 2.x中
+    // 入口main.js，出口eventapp.js
     entry: './resources/assets/js/event/main.js',
     output: {
         path: path.resolve(__dirname, './public/js/event'),

@@ -12,10 +12,11 @@ Vue.use(InfiniteScroll);
 Vue.use(VueRouter);
 
 // vuejs using laravel blade inside(双语翻译用)
+// trans  为  查找 lang.js 的函数
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 /**
- * 价格转换为0.00的浮点数
+ * 价格转换为0.00的浮点数，Vue.filter为创建函数
  */
 Vue.filter('transformPrice', function (value) {
     if (value >= 0) {
@@ -55,8 +56,11 @@ Vue.filter('transformPhone', function (value) {
 });
 
 Vue.config.devtools = true;
+
+// $http  为  axios 的  缩写
 Vue.prototype.$http = axios;
 
+// vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios
 axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('#csrf-token').getAttribute('content');
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -125,18 +129,20 @@ const router = new VueRouter({
     ]
 });
 
-// routerMap 为 router.js
-// routerMap(router);
-
+// 导航钩子 http://router.vuejs.org/zh-cn/advanced/navigation-guards.html 
 router.beforeEach((transition) => {
     document.body.scrollTop = 0;
     Indicator.close();
     transition.next();
 });
 
-//router.start(App, 'body');
-new Vue({
-  el: 'body',
-  router: router,
-  template: App
-})
+//router.start(App, 'body')
+// const app = new Vue({
+//   router
+// }).$mount('');
+
+// const App = new Vue({
+//   el: 'body',
+//   router: router,
+//   template: App
+// })
