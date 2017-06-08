@@ -141,7 +141,7 @@ router.beforeEach((transition) => {
 //   router
 // }).$mount('');
 
-// const App = new Vue({
-//   el: 'body',
-//   router: router
-// })
+const Bpp = new Vue({
+  el: 'body',
+  router: router
+})
