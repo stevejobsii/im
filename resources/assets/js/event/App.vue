@@ -7,6 +7,9 @@
     import Navbar from './components/_layouts/Navbar.vue';
 
     export default{
+         el: 'body',
+         router: router,
+
         components:{
             Navbar
         },
