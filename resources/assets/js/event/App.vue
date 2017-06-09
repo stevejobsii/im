@@ -1,5 +1,6 @@
 <template>
     <router-view></router-view>
+    <p>123</p>
     <navbar></navbar>
 </template>
 
@@ -13,9 +14,9 @@
         },
         replace: false,
         data(){
-            return{
+            //return{
                 user:''
-            }
+            //}
         },
         created(){
             this.fetchUser();
