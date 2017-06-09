@@ -1,5 +1,4 @@
-<template id="app">
-    {{message}}
+<template>
     <router-view></router-view>
     <navbar></navbar>
 </template>
