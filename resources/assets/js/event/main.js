@@ -141,7 +141,7 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-new Vue({
+const app = new Vue({
     router: router,
   // 渲染（render）函数
   render: h => h(App), // render function
