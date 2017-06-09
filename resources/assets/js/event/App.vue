@@ -14,9 +14,9 @@
         },
         replace: false,
         data(){
-            //return{
+            return{
                 user:''
-            //}
+            }
         },
         created(){
             this.fetchUser();
@@ -26,14 +26,14 @@
                 let vm = this;
                 let userInfo = localStorage.getItem('userInfo');
                 let shopConfig = localStorage.getItem('shopConfig');
-                if(userInfo){
-                    vm.$set('user',JSON.parse(userInfo));
-                }else{
-                    vm.$http.get('/api/userinfo').then(function(response){
-                        vm.$set('user',response.data);
-                        localStorage.setItem('userInfo', JSON.stringify(response.data));
-                    });
-                }
+                // if(userInfo){
+                //     vm.$set('user',JSON.parse(userInfo));
+                // }else{
+                //     vm.$http.get('/api/userinfo').then(function(response){
+                //         vm.$set('user',response.data);
+                //         localStorage.setItem('userInfo', JSON.stringify(response.data));
+                //     });
+                // }
                 if(!shopConfig){
                     vm.$http.get('/api/shopconfig').then(function(response){
                         localStorage.setItem('shopConfig', JSON.stringify(response.data));
