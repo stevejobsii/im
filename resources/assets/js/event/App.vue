@@ -31,7 +31,7 @@
                 if(userInfo){
                     vm.$set('user',JSON.parse(userInfo));
                 }else{
-                    vm.$http.get('/api/userserinfo').then(function(response){
+                    vm.$http.get('/api/userinfo').then(function(response){
                         vm.$set('user',response.data);
                         localStorage.setItem('userInfo', JSON.stringify(response.data));
                     });
