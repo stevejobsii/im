@@ -140,7 +140,6 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-
 var app = new Vue({
     el: 'body',
     router,
