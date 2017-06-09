@@ -36,11 +36,11 @@
                         localStorage.setItem('userInfo', JSON.stringify(response.data));
                     });
                 }
-                if(!shopConfig){
-                    vm.$http.get('/api/shopconfig').then(function(response){
-                        //localStorage.setItem('shopConfig', JSON.stringify(response.data));
-                    });
-                }
+                // if(!shopConfig){
+                //     vm.$http.get('/api/shopconfig').then(function(response){
+                //         localStorage.setItem('shopConfig', JSON.stringify(response.data));
+                //     });
+                // }
             }
         }
     }
