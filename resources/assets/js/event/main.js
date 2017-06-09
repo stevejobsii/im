@@ -140,8 +140,13 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-var app = new Vue({
-    el: 'body',
-    router,
-    render: h => h(App)
-});
+new Vue({
+  router,
+  render: h => h(App), // render function
+}).$mount('body')
+
+// var app = new Vue({
+//     el: 'body',
+//     router,
+//     render: h => h(App)
+// });
