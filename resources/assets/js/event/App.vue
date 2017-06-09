@@ -1,13 +1,18 @@
 <template>
     <router-view></router-view>
     <navbar></navbar>
+    <div id="app">
+      {{ message }}
+    </div>
 </template>
-<p>
-123
-</p>
+<div id="app">
+  {{ message }}
+</div>
+
 <script>
     import Navbar from './components/_layouts/Navbar.vue';
 
+    // 为了给View中暴露需要使用的函数.
     export default{
         components:{
             Navbar
