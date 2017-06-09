@@ -151,7 +151,7 @@ router.beforeEach((transition) => {
 // }).$mount('body');
 
 new Vue({
-  el: 'body',
-  //router,
+  router,
+  el: '#app',
   render: h => h(App)
 });

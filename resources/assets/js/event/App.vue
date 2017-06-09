@@ -1,7 +1,9 @@
-<template id = "app">
+<template>
+ <div id = "app">
     <router-view></router-view>
     <p>123</p>
     <navbar></navbar>
+    </div>
 </template>
 
 <script>
