@@ -142,10 +142,7 @@ router.beforeEach((transition) => {
 
 
 //https://cn.vuejs.org/v2/guide/migration-vue-router.html#router-start-替换
-var vm = new Vue({
-  el: 'body',
-  router: router,
-  template: '123'
-});
-
+const vm = new Vue({
+  router
+}).$mount('body')
 //import App from './App.vue'
