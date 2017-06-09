@@ -148,10 +148,9 @@ router.beforeEach((transition) => {
 // }).$mount('body');
 
 new Vue({
-  el: 'body',
   router: router,
   template: '<router-view></router-view>'
-});
+}).$mount('body');
 // var app = new Vue({
 //     el: 'body',
 //     router,
