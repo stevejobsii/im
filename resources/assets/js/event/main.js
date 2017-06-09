@@ -70,10 +70,10 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 const router = new VueRouter({
     mode: 'abstract',
     routes:[
-        // {
-        //     path: '*',
-        //     redirect: '/usercenter'
-        // },
+        {
+            path: '*',
+            redirect: '/usercenter'
+        },
         {   
             path: '/:hashid/commodity',
             // 命名路由
@@ -145,7 +145,7 @@ new Vue({
   router,
   // 渲染（render）函数
   render: h => h(App), // render function
-}).$mount('body')
+}).$mount('body');
 
 // var app = new Vue({
 //     el: 'body',

@@ -1,4 +1,5 @@
 <template>
+<p>nav</p>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
         <mt-tab-item v-link="{name:'aOpen'}" id="index">

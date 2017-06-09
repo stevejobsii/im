@@ -12,7 +12,6 @@
         components:{
             Navbar
         },
-        //replace: false,
         //data:function(){}，下面是es6写法
         data(){
             return{
@@ -34,15 +33,14 @@
                 }else{
                     vm.$http.get('/api/userinfo').then(function(response){
                         //vm.$set('user',response.data);
-                        vm.user = response.data;
                         localStorage.setItem('userInfo', JSON.stringify(response.data));
                     });
                 }
-                // if(!shopConfig){
-                //     vm.$http.get('/api/shopconfig').then(function(response){
-                //         localStorage.setItem('shopConfig', JSON.stringify(response.data));
-                //     });
-                // }
+                if(!shopConfig){
+                    vm.$http.get('/api/shopconfig').then(function(response){
+                        localStorage.setItem('shopConfig', JSON.stringify(response.data));
+                    });
+                }
             }
         }
     }
