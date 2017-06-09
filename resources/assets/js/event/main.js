@@ -67,9 +67,7 @@ Vue.prototype.$http = axios;
 axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('#csrf-token').getAttribute('content');
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-const router = new VueRouter({
-    //mode: 'abstract',
-    routes:[
+const routes = [
         {
             path: '*',
             redirect: '/usercenter'
@@ -131,8 +129,13 @@ const router = new VueRouter({
         //         }
         //     ]
         // }
-    ]
+    ];
+
+const router = new VueRouter({
+    //mode: 'abstract',
+    routes
 });
+
 
 // 导航钩子 http://router.vuejs.org/zh-cn/advanced/navigation-guards.html 
 router.beforeEach((transition) => {
@@ -147,7 +150,8 @@ router.beforeEach((transition) => {
 //   //render: h => h(App), // render function
 // }).$mount('body');
 
-const app = new Vue({
-  //router,
+new Vue({
+  el: 'body',
+  router,
   render: h => h(App)
-}).$mount('body')
+});
