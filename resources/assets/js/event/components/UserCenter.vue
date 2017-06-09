@@ -2,6 +2,7 @@
     <header id="uc-head-container">
         <img class="bg-img" src="/images/common/uc-bg2.jpg">
         <img class="avatar-img" :src="user.avatar">
+        <p>usercenter</p>
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">

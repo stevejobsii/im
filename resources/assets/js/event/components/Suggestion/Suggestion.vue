@@ -1,4 +1,5 @@
 <template>
+<p>suggestion</p>
     <form id="suggest-form" @submit.prevent="submitSuggestion()">
         <div class="form-wrapper">
             <title>问题或建议</title>
