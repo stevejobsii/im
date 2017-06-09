@@ -2,7 +2,9 @@
     <router-view></router-view>
     <navbar></navbar>
 </template>
-
+<p>
+123
+</p>
 <script>
     import Navbar from './components/_layouts/Navbar.vue';
 
