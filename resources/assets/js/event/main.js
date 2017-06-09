@@ -152,6 +152,6 @@ router.beforeEach((transition) => {
 
 new Vue({
   el: 'body',
-  router,
+  //router,
   render: h => h(App)
 });
