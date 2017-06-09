@@ -138,11 +138,11 @@ const router = new VueRouter({
 
 
 // 导航钩子 http://router.vuejs.org/zh-cn/advanced/navigation-guards.html 
-router.beforeEach((transition) => {
-    document.body.scrollTop = 0;
-    Indicator.close();
-//    transition.next();
-});
+// router.beforeEach((transition) => {
+//     document.body.scrollTop = 0;
+//     Indicator.close();
+// //    transition.next();
+// });
 
 // const vm = new Vue({
 //   router,
@@ -154,4 +154,4 @@ new Vue({
   router,
 //  el: '#app',(独立构建，我门是运行时构建)
   render: h => h(App)
-}).$mount('＃test');
+}).$mount('body');
