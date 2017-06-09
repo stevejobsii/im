@@ -113,7 +113,7 @@ const router = new VueRouter({
             path: '/suggestion',
             name: 'suggestion',
             component: require('./components/Suggestion/Suggestion.vue')
-        },
+        }
         // {
         //     path:'/eventlist',
         //     name: 'eventlist',
@@ -142,7 +142,7 @@ router.beforeEach((transition) => {
 });
 
 const vm = new Vue({
-  router,
+  //router,
   // 渲染（render）函数
   render: h => h(App), // render function
 }).$mount('body');
