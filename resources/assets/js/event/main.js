@@ -152,6 +152,6 @@ router.beforeEach((transition) => {
 
 new Vue({
   router,
-  el: '#app',
+//  el: '#app',(独立构建，我门是运行时构建)
   render: h => h(App)
-});
+}).mount('#app');
