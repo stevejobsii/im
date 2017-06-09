@@ -141,11 +141,11 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-const vm = new Vue({
-  router,
+var app = new Vue({
+    router: router,
   // 渲染（render）函数
   render: h => h(App), // render function
-}).$mount('body')
+}).$mount('body');
 
 // new Vue({
 //   router: router,
