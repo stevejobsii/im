@@ -39,8 +39,5 @@
 <!-- <script type="text/javascript" charset="utf-8">
     wx.config(<?php echo $js->config(array('chooseWXPay'), true) ?>);
 </script> -->
-<div id="app">
-  {{ message }}
-</div>
 </body>
 </html>
