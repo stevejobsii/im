@@ -11,6 +11,7 @@ Vue.use(Mint);
 Vue.use(InfiniteScroll);
 // 使用Vue－Router
 Vue.use(VueRouter);
+Vue.config.debug = true;//开启错误提示
 
 // vuejs using laravel blade inside(双语翻译用)
 // 添加实例 trans  为  查找 lang.js 的函数
@@ -142,6 +143,7 @@ router.beforeEach((transition) => {
 
 new Vue({
   router,
+  // 渲染（render）函数
   render: h => h(App), // render function
 }).$mount('body')
 

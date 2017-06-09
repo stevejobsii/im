@@ -1,6 +1,6 @@
 
-1. Delete the replace: false option and instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
-  Line 13: /Users/zhudi/Code/php/im/resources/assets/js/event/App.vue
+``1. Delete the replace: false option and instead wrap your root component with an element similar to the one you're replacing, e.g. el: '#app' with template: '<div id="app"> ... </div>'
+  Line 15: /Users/zhudi/Code/php/im/resources/assets/js/event/App.vue
   Reason: The replace option has been removed, as it provides too little convenience
   More info: http://vuejs.org/guide/migration.html#replace-false
 
@@ -30,22 +30,22 @@
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
 7. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
-  Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-8. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
-  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-9. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
   Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-10. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+8. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
   Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+9. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
+
+10. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
@@ -185,9 +185,18 @@
   More info: http://vuejs.org/guide/migration-vue-router.html#v-link
 
 38. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
-  Line 41: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
+  Line 40: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
   Reason: Directives have been vastly reduced in scope and components are preferred in most use cases
   More info: http://vuejs.org/guide/migration.html#Custom-Directives
+
+
+
+
+
+
+
+
+
 
 39. Replace router.redirect with a redirect option in a route definition (see link below for details)
   Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
@@ -198,6 +207,11 @@
   Line 7: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
   Reason: Routes are now defined as an array on a routes option at router instantiation
   More info: http://vuejs.org/guide/migration-vue-router.html#router-map
+
+
+
+
+
 
 41. Replace subRoutes with children and update its routes to the new array syntax
   Line 33: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js

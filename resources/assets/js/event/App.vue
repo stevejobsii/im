@@ -12,12 +12,14 @@
         components:{
             Navbar
         },
-        replace: false,
+        //replace: false,
+        //data:function(){}，下面是es6写法
         data(){
             return{
                 user:''
             }
         },
+        // created 这个钩子在实例被创建之后被调用
         created(){
             this.fetchUser();
         },
@@ -26,14 +28,14 @@
                 let vm = this;
                 let userInfo = localStorage.getItem('userInfo');
                 let shopConfig = localStorage.getItem('shopConfig');
-                // if(userInfo){
-                //     vm.$set('user',JSON.parse(userInfo));
-                // }else{
-                //     vm.$http.get('/api/userinfo').then(function(response){
-                //         vm.$set('user',response.data);
-                //         localStorage.setItem('userInfo', JSON.stringify(response.data));
-                //     });
-                // }
+                if(userInfo){
+                    vm.$set('user',JSON.parse(userInfo));
+                }else{
+                    vm.$http.get('/api/userserinfo').then(function(response){
+                        vm.$set('user',response.data);
+                        localStorage.setItem('userInfo', JSON.stringify(response.data));
+                    });
+                }
                 if(!shopConfig){
                     vm.$http.get('/api/shopconfig').then(function(response){
                         localStorage.setItem('shopConfig', JSON.stringify(response.data));
