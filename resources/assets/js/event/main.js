@@ -141,7 +141,7 @@ const router = new VueRouter({
 router.beforeEach((transition) => {
     document.body.scrollTop = 0;
     Indicator.close();
-    transition.next();
+//    transition.next();
 });
 
 // const vm = new Vue({
