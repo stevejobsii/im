@@ -145,7 +145,7 @@ router.beforeEach((transition) => {
 var vm = new Vue({
   el: 'body',
   router: router,
-  template: App
+  template: '<router-view>123</router-view>'
 });
 
 //import App from './App.vue'
