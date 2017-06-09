@@ -3,20 +3,21 @@ import Mint from 'mint-ui'
 import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
 import VueRouter from 'vue-router'
-import App from './App.vue'
 import lodash from 'lodash'
+//import App from './App.vue'
 
+// 安装 Vue.js de Mint插件
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
 // 使用Vue－Router
 Vue.use(VueRouter);
 
 // vuejs using laravel blade inside(双语翻译用)
-// trans  为  查找 lang.js 的函数
+// 添加实例 trans  为  查找 lang.js 的函数
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 /**
- * 价格转换为0.00的浮点数，Vue.filter为创建函数
+ * 价格转换为0.00的浮点数，Vue.filter为全局过滤器
  */
 Vue.filter('transformPrice', function (value) {
     if (value >= 0) {
@@ -25,7 +26,7 @@ Vue.filter('transformPrice', function (value) {
 });
 
 /**
- * 商品详情换行
+ * 商品详情换行，Vue.filter为全局过滤器
  */
 Vue.filter('rnTransform', function (value) {
     if (value) {
@@ -34,7 +35,7 @@ Vue.filter('rnTransform', function (value) {
 });
 
 /**
- * 数据列表无限滚动监听
+ * 数据列表无限滚动监听，Vue.directive注册全局指令。
  */
 Vue.directive('data-scroll', function (value) {
     window.addEventListener('scroll', ()=> {
@@ -44,7 +45,7 @@ Vue.directive('data-scroll', function (value) {
 });
 
 /**
- * 手机号隐私处理
+ * 手机号隐私处理，Vue.filter为全局过滤器
  */
 Vue.filter('transformPhone', function (value) {
     if (value) {
@@ -55,6 +56,7 @@ Vue.filter('transformPhone', function (value) {
     }
 });
 
+// 配置是否允许 vue-devtools 检查代码。开发版本默认为 true，生产版本默认为 false。
 Vue.config.devtools = true;
 
 // $http  为  axios 的  缩写
@@ -65,13 +67,15 @@ axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('#csrf-to
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 const router = new VueRouter({
+    mode: 'abstract',
     routes:[
-        {
-            path: '*',
-            redirect: '/usercenter'
-        },
+        // {
+        //     path: '*',
+        //     redirect: '/usercenter'
+        // },
         {   
             path: '/:hashid/commodity',
+            // 命名路由
             name: 'commodity',
             component: require('./components/Commodity/CommodityDetail.vue')
         },
@@ -136,12 +140,11 @@ router.beforeEach((transition) => {
     transition.next();
 });
 
-//router.start(App, 'body')
-// const app = new Vue({
-//   router
-// }).$mount('');
 
-const Bpp = new Vue({
+//https://cn.vuejs.org/v2/guide/migration-vue-router.html#router-start-替换
+const App = new Vue({
   el: 'body',
   router: router
-})
+});
+
+//import App from './App.vue'
