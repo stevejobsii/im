@@ -23,9 +23,10 @@ module.exports = {
     },
     // 独立构建
     resolve: {
-      alias: {
-        'vue$': 'vue/dist/vue.common.js'
-      }
+        extensions: ['', '.js', '.jsx'],
+        alias: {
+            'vue$': 'vue/dist/vue.js'
+        }
     },
     watch: true,
     module: {
