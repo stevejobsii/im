@@ -38,7 +38,7 @@
                 }
                 if(!shopConfig){
                     vm.$http.get('/api/shopconfig').then(function(response){
-                        localStorage.setItem('shopConfig', JSON.stringify(response.data));
+                        //localStorage.setItem('shopConfig', JSON.stringify(response.data));
                     });
                 }
             }
