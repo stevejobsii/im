@@ -4,7 +4,7 @@ import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
 import VueRouter from 'vue-router'
 import lodash from 'lodash'
-//import App from './App.vue'
+import App from './App.vue'
 
 // 安装 Vue.js de Mint插件
 Vue.use(Mint);
@@ -142,9 +142,10 @@ router.beforeEach((transition) => {
 
 
 //https://cn.vuejs.org/v2/guide/migration-vue-router.html#router-start-替换
-const App = new Vue({
+var vm = new Vue({
   el: 'body',
-  router: router
+  router: router,
+  template: App
 });
 
 //import App from './App.vue'
