@@ -21,6 +21,12 @@ module.exports = {
     resolveLoader: {
         root: path.join(__dirname, 'node_modules'),
     },
+    // 独立构建
+    resolve: {
+      alias: {
+        'vue$': 'vue/dist/vue.common.js'
+      }
+    },
     watch: true,
     module: {
         loaders: [{
