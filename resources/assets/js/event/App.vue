@@ -1,13 +1,7 @@
 <template>
     <router-view></router-view>
     <navbar></navbar>
-    <div id="app">
-      {{ message }}
-    </div>
 </template>
-<div id="app">
-  {{ message }}
-</div>
 
 <script>
     import Navbar from './components/_layouts/Navbar.vue';
