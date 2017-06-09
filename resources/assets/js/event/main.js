@@ -114,23 +114,23 @@ const router = new VueRouter({
             name: 'suggestion',
             component: require('./components/Suggestion/Suggestion.vue')
         },
-        {
-            path:'/eventlist',
-            name: 'eventlist',
-            component: require('./components/Attribute/Attribute.vue'),
-            children: [                
-                {
-                    path:'/close',
-                    name: 'aClose',
-                    component: require('./components/Attribute/Close.vue')
-                },
-                {
-                    path:'/open',
-                    name: 'aOpen',
-                    component: require('./components/Attribute/Open.vue')
-                }
-            ]
-        }
+        // {
+        //     path:'/eventlist',
+        //     name: 'eventlist',
+        //     component: require('./components/Attribute/Attribute.vue'),
+        //     children: [                
+        //         {
+        //             path:'/close',
+        //             name: 'aClose',
+        //             component: require('./components/Attribute/Close.vue')
+        //         },
+        //         {
+        //             path:'/open',
+        //             name: 'aOpen',
+        //             component: require('./components/Attribute/Open.vue')
+        //         }
+        //     ]
+        // }
     ]
 });
 
