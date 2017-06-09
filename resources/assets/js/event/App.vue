@@ -29,10 +29,12 @@
                 let userInfo = localStorage.getItem('userInfo');
                 let shopConfig = localStorage.getItem('shopConfig');
                 if(userInfo){
-                    vm.$set('user',JSON.parse(userInfo));
+                    //vm.$set('user',JSON.parse(userInfo));
+                    vm.user = JSON.parse(userInfo);
                 }else{
                     vm.$http.get('/api/userinfo').then(function(response){
-                        vm.$set('user',response.data);
+                        //vm.$set('user',response.data);
+                        vm.user = response.data;
                         localStorage.setItem('userInfo', JSON.stringify(response.data));
                     });
                 }
