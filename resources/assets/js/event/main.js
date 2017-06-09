@@ -4,8 +4,8 @@ import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
 import VueRouter from 'vue-router'
 import lodash from 'lodash'
-import App from './App.vue'
-
+//import App from './App.vue'
+var App = require('./App.vue');
 // 安装 Vue.js de Mint插件
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
@@ -147,8 +147,7 @@ router.beforeEach((transition) => {
 //   //render: h => h(App), // render function
 // }).$mount('body');
 
-var app = new Vue({
-    el: 'body',
-    //router,
-    render: h => h(App)
-});
+const app = new Vue({
+  router,
+  render: h => h(App)
+}).$mount('body')
