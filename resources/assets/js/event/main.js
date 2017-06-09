@@ -154,4 +154,4 @@ new Vue({
   router,
 //  el: '#app',(独立构建，我门是运行时构建)
   render: h => h(App)
-}).mount('＃test');
+}).$mount('＃test');
