@@ -3,7 +3,7 @@
     <router-view></router-view>
     <p>123</p>
     <navbar></navbar>
-    </div>
+ </div>
 </template>
 
 <script>
