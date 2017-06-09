@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.common.js'
 import Mint from 'mint-ui'
 import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
@@ -154,4 +154,4 @@ new Vue({
   router,
 //  el: '#app',(独立构建，我门是运行时构建)
   render: h => h(App)
-}).mount('body');
+}).mount('＃test');
