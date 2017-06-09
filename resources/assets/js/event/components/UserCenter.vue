@@ -47,7 +47,8 @@
         methods:{
             initHeader:function(){
                 let vm = this;
-                vm.$set('user',vm.$parent.user);
+                //vm.$set('user',vm.$parent.user);
+                vm.user = vm.$parent.user;
             }
         }
     }
