@@ -1,5 +1,5 @@
-<template>
- <div id='test'>
+<template id='test'>
+ <div>
     <router-view></router-view>
     <p>123</p>
     <navbar></navbar>
