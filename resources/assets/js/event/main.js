@@ -157,7 +157,6 @@ const router = new VueRouter({
 // }).mount('#test')
 
 new Vue({
-  el: '#test',
   router: router,
-   render: h => h('router-view')
+  render: h => h(App)
 })

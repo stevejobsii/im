@@ -1,4 +1,4 @@
-<template id='test'>
+<template>
  <div>
     <router-view></router-view>
     <p>123</p>
