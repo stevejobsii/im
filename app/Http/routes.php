@@ -69,8 +69,8 @@ Route::group(['prefix' => 'mall', 'middleware' => ['web', 'wechat.oauth'], 'name
     ]);
 });
 
-// 菜单->活动订单// 'middleware' => ['web', 'wechat.oauth'],
-Route::group(['prefix' => 'event', 'namespace' => 'Event'], function () {
+// 菜单->活动订单
+Route::group(['prefix' => 'event', 'middleware' => ['web', 'wechat.oauth'], 'namespace' => 'Event'], function () {
     // Wechat OAuth2.0 (type=snsapi_userinfo)
     Route::get('/user', 'IndexController@oauth');
     // 活动首页
