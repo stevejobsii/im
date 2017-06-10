@@ -40,6 +40,6 @@
     "stylus": "^0.54.5",
     "vue": "^2.3.0",
     "vue-prototype": "0.0.0",
-    "vue-router": "^2.0.0"
+    "vue-router": "^2.0.1"
   }
 }

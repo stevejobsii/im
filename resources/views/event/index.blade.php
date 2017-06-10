@@ -29,6 +29,7 @@
     </style>
 </head>
 <body>
+<div id="app">
 <!-- JavaScripts -->
 <script src="{{ asset('js/lib/jquery/jquery-2.1.1.min.js') }}"></script>
 <script src="https://cdn.bootcss.com/vue/2.3.2/vue.js"></script>
@@ -42,5 +43,6 @@
 <!-- <script type="text/javascript" charset="utf-8">
     wx.config(<?php echo $js->config(array('chooseWXPay'), true) ?>);
 </script> -->
+</div>
 </body>
 </html>
