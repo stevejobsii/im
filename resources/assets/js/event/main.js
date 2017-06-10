@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/vue.common.js'
+//import Vue from 'vue/dist/vue.common.js'
 import Mint from 'mint-ui'
 import {InfiniteScroll,Indicator} from 'mint-ui';
 import axios from 'axios'
