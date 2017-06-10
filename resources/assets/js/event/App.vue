@@ -1,20 +1,49 @@
-<template>
-  <div class="example">{{ msg }}</div>
-  <div id="test">{{ msg }}</div>
+<template id='test'>
+ <div>
+    <router-view></router-view>
+    <p>123</p>
+    <navbar></navbar>
+ </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      msg: 'Hello world!'
-    }
-  }
-}
-</script>
+    import Navbar from './components/_layouts/Navbar.vue';
 
-<style>
-.example {
-  color: red;
-}
-</style>
+    // 为了给View中暴露需要使用的函数.
+    export default{
+        components:{
+            Navbar
+        },
+        //data:function(){}，下面是es6写法
+        data(){
+            return{
+                user:''
+            }
+        },
+        // created 这个钩子在实例被创建之后被调用
+        created(){
+            this.fetchUser();
+        },
+        methods:{
+            fetchUser:function(){
+                let vm = this;
+                let userInfo = localStorage.getItem('userInfo');
+                let shopConfig = localStorage.getItem('shopConfig');
+                if(userInfo){
+                    //vm.$set('user',JSON.parse(userInfo));
+                    vm.user = JSON.parse(userInfo);
+                }else{
+                    vm.$http.get('/api/userinfo').then(function(response){
+                        //vm.$set('user',response.data);
+                        localStorage.setItem('userInfo', JSON.stringify(response.data));
+                    });
+                }
+                if(!shopConfig){
+                    vm.$http.get('/api/shopconfig').then(function(response){
+                        localStorage.setItem('shopConfig', JSON.stringify(response.data));
+                    });
+                }
+            }
+        }
+    }
+</script>

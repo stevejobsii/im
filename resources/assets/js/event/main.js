@@ -144,18 +144,6 @@ const router = new VueRouter({
 // //    transition.next();
 // });
 
-// const vm = new Vue({
-//   router,
-//   // 渲染（render）函数
-//   //render: h => h(App), // render function
-// }).$mount('body');
-
-// new Vue({
-//   router,
-// //  el: '#app',(独立构建，我门是运行时构建)
-//   render: h => h(App)
-// }).mount('#test')
-
 new Vue({
   router: router,
   render: h => h(App)
