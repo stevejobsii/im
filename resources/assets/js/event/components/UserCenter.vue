@@ -6,9 +6,13 @@
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-            <mt-cell title="全部订单" is-link v-link="{name:'order-list',params:{'type':'all'}}">
-                <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
-            </mt-cell>
+            <router-link :to="{name:'order-list',params:{'type':'all'}}">"全部订单"
+                <mt-cell title="全部订单">
+                    <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
+                </mt-cell>
+            </router-link>
+
+
             <mt-cell title="待付款" is-link v-link="{name:'order-list',params:{'type':'unpay'}}">
                 <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
             </mt-cell>
