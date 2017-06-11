@@ -18,25 +18,21 @@ module.exports = {
         publicPath: '/js/',
         filename: 'eventapp.js'
     },
-    // resolveLoader: {
-    //     root: path.join(__dirname, 'node_modules'),
-    // },
-    //是webpack版本太高了,我暂时的解决办法是指定webpack的版本。
     resolveLoader: {
-        moduleExtensions: ['-loader'],
-        //root: path.join(__dirname, 'node_modules')
+        root: path.join(__dirname, 'node_modules'),
     },
     // 独立构建
     resolve: {
+        extensions: ['', '.js', '.jsx'],
         alias: {
-          'vue$': 'vue/dist/vue.esm.js'
+            'vue$': 'vue/dist/vue.js'
         }
-      },
-    //watch: true,
+    },
+    watch: true,
     module: {
         loaders: [{
             test: /\.vue$/,
-            loader: 'vue-loader'
+            loader: 'vue'
         }, {
             test: /\.js$/,
             loader: 'babel',
@@ -60,32 +56,34 @@ module.exports = {
         }]
     },
     devServer: {
-      historyApiFallback: true,
-      noInfo: true
+        historyApiFallback: true,
+        noInfo: true
     },
-    performance: {
-        hints: false
-    },
-    devtool: '#eval-source-map'
+    devtool: '#eval-source-map',
+    plugins: [
+        new webpack.OldWatchingPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ]
 };
 
 if (process.env.NODE_ENV === 'production') {
- module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
+    module.exports.devtool = '#source-map';
+    // http://vue-loader.vuejs.org/en/workflow/production.html
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                //NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.optimize.OccurenceOrderPlugin()
+    ])
 };
