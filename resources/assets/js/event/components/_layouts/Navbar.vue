@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="nav-hot-fix" v-show="active"></div>
-    <mt-navbar v-model="selected" :fixed="true" v-show="active">
+    <mt-tabber v-model="selected" :fixed="true" v-show="active">
       <router-link :to="{name:'aOpen'}">
         <mt-tab-item id="index">
             <i slot="icon" class="nav-index"></i>
@@ -31,12 +31,12 @@
             {{ trans('imall.usercenter') }}
         </mt-tab-item>
       </router-link>
-    </mt-navbar>
+    </mt-tabbar>
   </div>
 </template>
 
 <script>
-import {TabItem, Badge, Navbar } from 'mint-ui';
+import {Tabbar, Badge, Navbar } from 'mint-ui';
 export default{
     data(){
         return {
@@ -46,7 +46,7 @@ export default{
         }
     },
     components:{
-        Navbar, TabItem, Badge, 
+        Tabbar, TabItem, Badge, 
     },
     created(){
         this.initRoute();
