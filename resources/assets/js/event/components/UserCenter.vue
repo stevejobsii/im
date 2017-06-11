@@ -6,14 +6,14 @@
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-            <mt-cell title="全部订单" is-link to="{name:'order-list',params:{'type':'all'}}">
+            <mt-cell title="全部订单" is-link :to="{name:'order-list',params:{'type':'all'}}">
                 <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
             </mt-cell>
-            <mt-cell title="待付款" is-link to="{name:'order-list',params:{'type':'unpay'}}">
+            <mt-cell title="待付款" is-link :to="{name:'order-list',params:{'type':'unpay'}}">
                 <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
             </mt-cell>
 
-            <mt-cell title="已付款" is-link to="{name:'order-list',params:{'type':'unreceived'}}">
+            <mt-cell title="已付款" is-link :to="{name:'order-list',params:{'type':'unreceived'}}">
                 <img slot="icon" src="/images/icon/order-delivered.png" width="24" height="24">
             </mt-cell>
 
@@ -25,7 +25,7 @@
             </mt-cell>
         </div> -->
         <div class="nav-wrapper">
-            <mt-cell title="意见建议" is-link to="{name:'suggestion'}">
+            <mt-cell title="意见建议" is-link :to="{name:'suggestion'}">
                 <img slot="icon" src="/images/icon/uc-suggestion.png" width="24" height="24">
             </mt-cell>
         </div>
