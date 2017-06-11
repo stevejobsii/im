@@ -1,4 +1,5 @@
 <template>
+<div>
     <div id="sequence-container">
         <ul>
             <li :class="{'active' : sortKey === 'timeDown'}" @click="sortByTime()">新品</li>
@@ -11,6 +12,7 @@
         </ul>
     </div>
     <router-view :sort-key="sortKey"></router-view>
+</div>
 </template>
 
 <script>

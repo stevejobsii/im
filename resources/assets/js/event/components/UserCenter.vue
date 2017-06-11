@@ -1,4 +1,5 @@
 <template>
+<div>
     <header id="uc-head-container">
         <img class="bg-img" src="/images/common/uc-bg2.jpg">
         <img class="avatar-img" :src="user.avatar">
@@ -34,6 +35,7 @@
             </mt-cell>
         </div>
     </section>
+</div>
 </template>
 
 <script>

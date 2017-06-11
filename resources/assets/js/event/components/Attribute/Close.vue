@@ -1,6 +1,8 @@
 <template>
+<div>
     <empty-data :is-show.sync="empty"></empty-data>
     <commodity-list :list.sync="data"></commodity-list>
+</div>
 </template>
 
 <script>
