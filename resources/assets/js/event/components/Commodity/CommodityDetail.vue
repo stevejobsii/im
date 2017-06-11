@@ -101,7 +101,7 @@
                     Indicator.close();
                     if(response.data.code == 0){
                         let commodity = response.data.message;
-                        vm.$set('commodity',commodity);
+                        vm.commodity = commodity;
                         vm.fetchCartCount();
                     }else{
                         Toast({
@@ -116,7 +116,7 @@
                 let vm = this;
                 vm.$http.get('/api/eventcart/count').then(function(response){
                     if(response.data.code == 0){
-                        vm.$set('cartCount',response.data.message);
+                        vm.cartCount = response.data.message;
                     }
                 });
             },
