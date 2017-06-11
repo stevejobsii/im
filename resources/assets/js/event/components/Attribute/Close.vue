@@ -36,10 +36,11 @@
                     //,{category_id : vm.$route.params.hashid}
                     ,{status : "close"}
                     ).then(function(response){
-                    vm.$set('data',response.data);
+                    vm.data = response.data;
+                    //vm.$set('data',response.data);
                     vm.$nextTick(function(){
                         Indicator.close();
-                        vm.data == '' ? vm.$set('empty',true) : vm.$set('empty',false);
+                        vm.data == '' ? vm.empty = true : vm.empty = false;
                     });
                 });
             }

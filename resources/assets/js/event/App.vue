@@ -34,6 +34,7 @@
                 }else{
                     vm.$http.get('/api/userinfo').then(function(response){
                         //vm.$set('user',response.data);
+                        vm.user = response.data;
                         localStorage.setItem('userInfo', JSON.stringify(response.data));
                     });
                 }
