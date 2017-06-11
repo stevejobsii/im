@@ -6,22 +6,16 @@
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-            <router-link :to="{name:'order-list',params:{'type':'all'}}">
-            <p>全部订单</p>
-                <mt-cell title="全部订单">
+            <router-link tag='mt-cell' title="全部订单" :to="{name:'order-list',params:{'type':'all'}}">
                     <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
-                </mt-cell>
+            </router-link>
+            <router-link tag='mt-cell' title="待付款" :to="{name:'order-list',params:{'type':'unpay'}}">
+                <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
             </router-link>
 
-
-            <mt-cell title="待付款" is-link v-link="{name:'order-list',params:{'type':'unpay'}}">
-                <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
-            </mt-cell>
-
-            <mt-cell title="已付款" is-link v-link="{name:'order-list',params:{'type':'unreceived'}}">
+            <router-link tag='mt-cell' title="已付款" :to="{name:'order-list',params:{'type':'unreceived'}}">
                 <img slot="icon" src="/images/icon/order-delivered.png" width="24" height="24">
-            </mt-cell>
-
+            </router-link>
         </div>
         <!-- event项目不需要邮寄地址 -->
         <!-- <div class="nav-wrapper">
@@ -30,9 +24,9 @@
             </mt-cell>
         </div> -->
         <div class="nav-wrapper">
-            <mt-cell title="意见建议" is-link v-link="{name:'suggestion'}">
+            <router-link tag='mt-cell' title="意见建议" :to="{name:'suggestion'}">
                 <img slot="icon" src="/images/icon/uc-suggestion.png" width="24" height="24">
-            </mt-cell>
+            </router-link>
         </div>
     </section>
   </div>
