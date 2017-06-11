@@ -1,11 +1,13 @@
 <template>
   <div>
     <div id="nav-hot-fix" v-show="active"></div>
-    <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
-        <mt-tab-item :to="{name:'aOpen'}" id="index">
+    <mt-navbar v-model="selected" :fixed="true" v-show="active">
+      <router-link :to="{name:'aOpen'}">
+        <mt-tab-item id="index">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}
         </mt-tab-item> 
+      </router-link>
         <mt-tab-item :to="{name:'aClose'}" id="category">
             <i slot="icon" class="nav-category"></i>
             {{ trans('imall.end_event') }}
@@ -20,12 +22,12 @@
             <i slot="icon" class="nav-usercenter"></i>
             {{ trans('imall.usercenter') }}
         </mt-tab-item>
-    </mt-tabbar>
+    </mt-navbar>
   </div>
 </template>
 
 <script>
-import { Tabbar, TabItem, Badge } from 'mint-ui';
+import {TabItem, Badge, Navbar } from 'mint-ui';
 export default{
     data(){
         return {
@@ -35,7 +37,7 @@ export default{
         }
     },
     components:{
-        Tabbar, TabItem, Badge
+        navbar, TabItem, Badge, 
     },
     created(){
         this.initRoute();
