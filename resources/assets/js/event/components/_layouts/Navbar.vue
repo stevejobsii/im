@@ -1,7 +1,7 @@
 <template>
   <div>
    <div id="nav-hot-fix" v-show="active"></div>
-    <mt-tabber v-model="selected" fixed v-show="active">
+    <mt-tabbar v-model="selected" fixed v-show="active">
       
               <router-link :to="{name:'aOpen'}">  
         <mt-tab-item id="index">
@@ -32,7 +32,7 @@
             <i slot="icon" class="nav-usercenter"></i>
             {{ trans('imall.usercenter') }}
         </mt-tab-item> </router-link>
-    </mt-tabber>
+    </mt-tabbar>
   </div>
 </template>
 
