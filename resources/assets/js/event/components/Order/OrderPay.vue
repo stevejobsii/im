@@ -32,7 +32,7 @@
                 vm.$http.get('/api/eventorder/'+itemId).then(response=>{
                     Indicator.close();
                     if(response.data.code == 0){
-                        vm.$set('order',response.data.message);
+                        vm.order = response.data.message;
                         Indicator.open('发起支付中...');
                         vm.wechatPay();
                         Indicator.close();

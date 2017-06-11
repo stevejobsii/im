@@ -97,7 +97,7 @@
                         });
                     }
                     if(response.data.code == 0){
-                        vm.$set('order',response.data.message);
+                        vm.order = response.data.message;
                     }
                 });
             },

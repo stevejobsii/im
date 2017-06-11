@@ -73,8 +73,8 @@
                               message: '没有符合的订单数据'
                         });
                     }else{
-                        vm.$set('paginate',response.data.message);
-                        vm.$set('orders',response.data.message.data);
+                        vm.paginate = response.data.message;
+                        vm.orders = response.data.message.data;
                     }
                 });
             },
@@ -84,15 +84,15 @@
                 let triggerDistance = 100;
                 let distance = document.querySelector("#order-list-part").getBoundingClientRect().bottom - window.innerHeight;
                 if(!vm.isLoading && !vm.isEnd && vm.paginate.data.length && distance < triggerDistance){
-                    vm.$set('isLoading',true);
+                    vm.isLoading = true;
                     vm.$http.get('/api/eventorderlist/'+vm.order_type+'?page='+page).then(response=>{
                         if(response.data.message.data.length === 0){
-                            vm.$set('isLoading',false);
-                            vm.$set('isEnd',true);
+                            vm.isLoading = false;
+                            vm.isEnd = true;
                         }else{
-                            vm.$set('paginate',response.data.message);
+                            vm.paginate = response.data.message;
                             vm.orders = vm.orders.concat(response.data.message.data);
-                            vm.$set('isLoading',false);
+                            vm.isLoading = false;
                         }
                     });
                 }
