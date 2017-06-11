@@ -1,8 +1,6 @@
 <template>
-<p>suggestion</p>
-<form id="suggest-form">
-<p>suggestion</p>
-    <!-- <form id="suggest-form" @submit.prevent="submitSuggestion()"> -->
+<div>
+    <form id="suggest-form" @submit.prevent="submitSuggestion()">
         <div class="form-wrapper">
             <title>问题或建议</title>
             <mt-field
@@ -10,13 +8,14 @@
                     slot="suggestion"
                     type="textarea"
                     rows="6"
-                    :value.sync="suggestion">
+                    :value="suggestion">
             </mt-field>
         </div>
         <div class="form-wrapper">
             <mt-button :disabled="form_disabled" type="primary" size="large">提交</mt-button>
         </div>
     </form>
+</div>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-<p>nav</p>
-    <div id="nav-hot-fix"></div> <!-- v-show="active" -->
-    <mt-tabbar :selected.sync="selected" :fixed="true"> <!-- v-show="active" -->
+<div>
+    <div id="nav-hot-fix" v-show="active"></div>
+    <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
         <mt-tab-item v-link="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}
@@ -21,6 +21,7 @@
             {{ trans('imall.usercenter') }}
         </mt-tab-item>
     </mt-tabbar>
+</div>
 </template>
 
 <script>

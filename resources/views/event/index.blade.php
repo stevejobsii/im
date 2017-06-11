@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
     <!-- <link href="//cdn.bootcss.com/Swiper/3.4.0/css/swiper.min.css" rel="stylesheet"> -->
     <link href="{{asset('css/malltest.css')}}" rel="stylesheet">
     <style>

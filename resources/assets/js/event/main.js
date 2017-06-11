@@ -72,41 +72,41 @@ const routes = [
             path: '*',
             redirect: '/usercenter'
         },
-        {   
-            path: '/:hashid/commodity',
-            // 命名路由
-            name: 'commodity',
-            component: require('./components/Commodity/CommodityDetail.vue')
-        },
-        {
-            path: '/cart',
-            name: 'cart',
-            component: require('./components/Cart.vue')
-        },
-        {   path: '/usercenter',
-            name: 'usercenter',
-            component: require('./components/UserCenter.vue')
-        },
-        {
-            path:'/ordersettle',
-            name: 'order-settle',
-            component: require('./components/Order/OrderSettle.vue')
-        },
-        {
-            path: '/:type/orderlist',
-            name: 'order-list',
-            component: require('./components/Order/OrderList.vue')
-        },
-        {
-            path:'/:hashid/orderdetail',
-            name: 'order-detail',
-            component: require('./components/Order/OrderDetail.vue')
-        },
-        {
-            path: '/:hashid/orderpay',
-            name: 'orderpay',
-            component: require('./components/Order/OrderPay.vue')
-        },
+        // {   
+        //     path: '/:hashid/commodity',
+        //     // 命名路由
+        //     name: 'commodity',
+        //     component: require('./components/Commodity/CommodityDetail.vue')
+        // },
+        // {
+        //     path: '/cart',
+        //     name: 'cart',
+        //     component: require('./components/Cart.vue')
+        // },
+        // {   path: '/usercenter',
+        //     name: 'usercenter',
+        //     component: require('./components/UserCenter.vue')
+        // },
+        // {
+        //     path:'/ordersettle',
+        //     name: 'order-settle',
+        //     component: require('./components/Order/OrderSettle.vue')
+        // },
+        // {
+        //     path: '/:type/orderlist',
+        //     name: 'order-list',
+        //     component: require('./components/Order/OrderList.vue')
+        // },
+        // {
+        //     path:'/:hashid/orderdetail',
+        //     name: 'order-detail',
+        //     component: require('./components/Order/OrderDetail.vue')
+        // },
+        // {
+        //     path: '/:hashid/orderpay',
+        //     name: 'orderpay',
+        //     component: require('./components/Order/OrderPay.vue')
+        // },
         {
             path: '/suggestion',
             name: 'suggestion',
