@@ -20,20 +20,15 @@
 </template>
 
 <script>
-    import { Field } from 'mint-ui';
-    import { Button } from 'mint-ui';
-    import { Indicator } from 'mint-ui';
-    import { Toast } from 'mint-ui';
-    Vue.use(Button);
-    Vue.use(Field);
-    Vue.use(Indicator);
-    Vue.use(Toast);
     export default{
         data(){
             return{
                 suggestion:'',
                 form_disabled:true
             }
+        },
+        components:{
+            Field, Button, Indicator, Toast
         },
         watch:{
             'suggestion':{

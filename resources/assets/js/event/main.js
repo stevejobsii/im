@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.common.js'
 import Mint from 'mint-ui'
-import {InfiniteScroll,Indicator} from 'mint-ui';
+import {InfiniteScroll,Indicator,Field,Button,Toast} from 'mint-ui';
 import axios from 'axios'
 import VueRouter from 'vue-router'
 import lodash from 'lodash'
@@ -9,6 +9,11 @@ import App from './App.vue'
 // 安装 Vue.js de Mint插件
 Vue.use(Mint);
 Vue.use(InfiniteScroll);
+Vue.use(Indicator);
+Vue.use(Field);
+Vue.use(Button);
+Vue.use(Toast);
+
 // 使用Vue－Router
 Vue.use(VueRouter);
 Vue.config.debug = true;//开启错误提示
