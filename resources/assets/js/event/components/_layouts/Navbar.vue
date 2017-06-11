@@ -17,7 +17,7 @@
           </router-link>
         </mt-tab-item>
 
-        <mt-tab-item :to="{name:'cart'}" id="cart">
+        <mt-tab-item id="cart">
           <router-link :to="{name:'cart'}">
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
@@ -26,7 +26,7 @@
           </router-link>
         </mt-tab-item>
 
-        <mt-tab-item :to="{name:'usercenter'}" id="usercenter">
+        <mt-tab-item id="usercenter">
           <router-link :to="{name:'usercenter'}">
             <i slot="icon" class="nav-usercenter"></i>
             {{ trans('imall.usercenter') }}
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import {Tabbar, Badge, TabItem } from 'mint-ui';
+import { Tabbar, TabItem, Badge } from 'mint-ui';
 export default{
     data(){
         return {
@@ -47,7 +47,7 @@ export default{
         }
     },
     components:{
-        Tabbar, TabItem, Badge, 
+        Tabbar, TabItem, Badge
     },
     created(){
         this.initRoute();
