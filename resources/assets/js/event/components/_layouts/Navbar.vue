@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import {Tabbar, Badge, Navbar } from 'mint-ui';
+import {Tabbar, Badge, TabItem } from 'mint-ui';
 export default{
     data(){
         return {
