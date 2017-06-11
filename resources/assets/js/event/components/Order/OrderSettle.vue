@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div id="to-pay-container" v-show="!choosing">
         <!-- event项目不需要邮寄地址 -->
         <!-- <div class="address-wrap">
@@ -62,6 +63,7 @@
             :choosed.sync="address"
             :visible.sync="choosing">
     </address-choose> -->
+  </div>
 </template>
 
 <script>

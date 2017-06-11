@@ -1,5 +1,5 @@
 <template>
-
+  <div>
     <div id="cart-container" v-show="!emptyVisible">
         <section class="cart-wrap" v-for="cart in carts">
             <i class="select-one-btn" :class="cart.selected ? 'selected' : '' " @click="toggleSelect(cart)">
@@ -50,7 +50,7 @@
             <!-- <a v-link="{name:'index'}">去逛逛</a> -->
         </div>
     </div>
-
+  </div>
 </template>
 
 <script>

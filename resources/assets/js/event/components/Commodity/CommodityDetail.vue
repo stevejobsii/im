@@ -1,4 +1,5 @@
 <template>
+  <div>
     <img class="commodity-img"  :src="commodity.event_img"/>
     <div id="commodity-container">
         <p class="name">{{commodity.event_name}}</p>
@@ -57,6 +58,7 @@
         <div  v-show="commodity.status === '报名中'" class="add-cart-btn" @click="addCart">加入购物车</div>
         <div  v-show="commodity.status === '报名中'" class="to-pay-btn" @click="toPay">立即购买</div>
     </div>
+  </div>
 </template>
 
 <style scoped>

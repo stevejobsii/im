@@ -1,4 +1,5 @@
 <template>
+  <div>
     <section id="empty-data-container" v-show="isShow">
         <div class="empty-data-wrapper">
             <img src="/images/common/empty.png"/>
@@ -7,6 +8,7 @@
             <!-- <a v-link="{name:'category'}">去逛逛</a> -->
         </div>
     </section>
+  </div>
 </template>
 
 <script>

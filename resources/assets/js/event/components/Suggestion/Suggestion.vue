@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <form id="suggest-form" @submit.prevent="submitSuggestion()">
         <div class="form-wrapper">
             <title>问题或建议</title>
@@ -15,7 +15,7 @@
             <mt-button :disabled="form_disabled" type="primary" size="large">提交</mt-button>
         </div>
     </form>
-</div>
+  </div>
 </template>
 
 <script>

@@ -1,13 +1,11 @@
 <template>
-<div>
+  <div>
     <header id="uc-head-container">
         <img class="bg-img" src="/images/common/uc-bg2.jpg">
         <img class="avatar-img" :src="user.avatar">
-        <p>usercenter</p>
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-        <p>usercenterwrap</p>
             <router-link :to="{name:'order-list',params:{'type':'all'}}">
             <p>全部订单</p>
                 <mt-cell title="全部订单">
@@ -19,9 +17,11 @@
             <mt-cell title="待付款" is-link v-link="{name:'order-list',params:{'type':'unpay'}}">
                 <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
             </mt-cell>
+
             <mt-cell title="已付款" is-link v-link="{name:'order-list',params:{'type':'unreceived'}}">
                 <img slot="icon" src="/images/icon/order-delivered.png" width="24" height="24">
             </mt-cell>
+
         </div>
         <!-- event项目不需要邮寄地址 -->
         <!-- <div class="nav-wrapper">
@@ -35,7 +35,7 @@
             </mt-cell>
         </div>
     </section>
-</div>
+  </div>
 </template>
 
 <script>

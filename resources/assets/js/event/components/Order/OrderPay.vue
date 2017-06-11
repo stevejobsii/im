@@ -1,4 +1,3 @@
-
 <template>
     <div id="pay-order-container">
         <div class="order-title">

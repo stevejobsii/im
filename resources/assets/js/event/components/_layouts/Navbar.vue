@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
         <mt-tab-item v-link="{name:'aOpen'}" id="index">
@@ -21,7 +21,7 @@
             {{ trans('imall.usercenter') }}
         </mt-tab-item>
     </mt-tabbar>
-</div>
+  </div>
 </template>
 
 <script>

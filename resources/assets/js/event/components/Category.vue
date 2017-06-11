@@ -1,4 +1,5 @@
 <template>
+  <div>  
     <div id="categories-content-left">
         <ul>
             <li v-for="category in categories"
@@ -16,6 +17,7 @@
             </li>
         </ul>
     </div>
+  </div>
 </template>
 <script>
     export default{

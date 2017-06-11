@@ -1,6 +1,8 @@
 <template>
-  <div class="example">{{ msg }}</div>
-  <div id="test">{{ msg }}</div>
+  <div>
+	  <div class="example">{{ msg }}</div>
+	  <div id="test">{{ msg }}</div>'
+  </div>
 </template>
 
 <script>

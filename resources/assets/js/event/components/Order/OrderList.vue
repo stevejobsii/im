@@ -1,5 +1,5 @@
-
 <template>
+  <div>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
         <mt-tab-item id="all" v-link="{name:'order-list',params:{'type':'all'}}">全部订单</mt-tab-item>
         <mt-tab-item id="unpay" v-link="{name:'order-list',params:{'type':'unpay'}}">待付款</mt-tab-item>
@@ -28,6 +28,7 @@
     <div id="data-scroll-end" v-show="isEnd">
         没有更多订单了:)
     </div>
+  </div>
 </template>
 <style scoped>
 .order-list-nav > .mint-tab-item.is-selected{
