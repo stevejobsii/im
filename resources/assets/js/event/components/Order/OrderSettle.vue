@@ -15,7 +15,7 @@
                     </li>
                 </ul>
                 <ul v-show="address == ''"
-                    v-link="{name:'add-address'}">
+                    :to="{name:'add-address'}">
                     <li>
                         送至...
                     </li>

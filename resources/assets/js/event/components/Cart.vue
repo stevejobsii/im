@@ -4,10 +4,10 @@
         <section class="cart-wrap" v-for="cart in carts">
             <i class="select-one-btn" :class="cart.selected ? 'selected' : '' " @click="toggleSelect(cart)">
             </i>
-            <a class="img-wrap" v-link="{name:'commodity',params:{hashid:cart.commodity.id}}">
+            <router-link tag='a' class="img-wrap" :to='{name:'commodity',params:{hashid:cart.commodity.id}}'>
                 <img :src="cart.commodity.event_img"/>
                 <p class="name">{{cart.commodity.event_name}}</p>
-            </a>
+            </router-link>
             <div class="price-wrap">
             <span class="commodity-result">
                     <span>&yen;{{cart.commodity.event_current_price | transformPrice}}</span> *
@@ -47,7 +47,7 @@
             <img src="/images/common/cart.png"/>
             <h4>购物车快饿扁了T.T</h4>
             <p>主人快给我挑点宝贝吧</p>
-            <!-- <a v-link="{name:'index'}">去逛逛</a> -->
+            <!-- <router-link tag='a' :to="{name:'index'}">去逛逛</a> -->
         </div>
     </div>
   </div>

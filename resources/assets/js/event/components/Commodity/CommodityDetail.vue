@@ -47,14 +47,14 @@
     </div>
     <div style="width:100%;height:60px;"></div>
     <div id="btn-groups-container">
-        <div class="cart-wrap" v-link="{name:'cart'}">
+        <router-link tag='div' class="cart-wrap" :to="{name:'cart'}">
             <mt-badge
                     type="error"
                     size="small"
                     v-show="cartCount > 0">
                 {{cartCount}}
             </mt-badge>
-        </div>
+        </router-link>
         <div  v-show="commodity.status === '报名中'" class="add-cart-btn" @click="addCart">加入购物车</div>
         <div  v-show="commodity.status === '报名中'" class="to-pay-btn" @click="toPay">立即购买</div>
     </div>

@@ -2,21 +2,21 @@
   <div>
     <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
-        <mt-tab-item v-link="{name:'aOpen'}" id="index">
+        <mt-tab-item :to="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}
         </mt-tab-item> 
-        <mt-tab-item v-link="{name:'aClose'}" id="category">
+        <mt-tab-item :to="{name:'aClose'}" id="category">
             <i slot="icon" class="nav-category"></i>
             {{ trans('imall.end_event') }}
         </mt-tab-item>
-        <mt-tab-item v-link="{name:'cart'}" id="cart">
+        <mt-tab-item :to="{name:'cart'}" id="cart">
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
             </i>
             {{ trans('imall.cart') }}
         </mt-tab-item>
-        <mt-tab-item v-link="{name:'usercenter'}" id="usercenter">
+        <mt-tab-item :to="{name:'usercenter'}" id="usercenter">
             <i slot="icon" class="nav-usercenter"></i>
             {{ trans('imall.usercenter') }}
         </mt-tab-item>

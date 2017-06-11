@@ -1,3 +1,4 @@
+
 <template>
     <div id="order-detail-part">
         <div class="order-detail-wrapper">
@@ -28,9 +29,9 @@
         </div> -->
         <div class="order-detail-wrapper">
             <div class="detail-container">
-                <div class="commodity-list"
+                <router-link tag='div' class="commodity-list"
                      v-for="detail in order.details"
-                     v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}">
+                     :to="{name:'commodity',params:{'hashid':detail.commodity_id}}">
                     <img :src="detail.commodity_img" v-bind:alt="detail.commodity_name"/>
                     <div class="commodity-name">
                         <p>{{detail.commodity_name}}</p>
@@ -39,7 +40,7 @@
                             <li class="number">{{detail.buy_number}}件</li>
                         </ul>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 <template>
     <div id="list-data-container">
-        <div v-for="item in list" class="list-data-wrapper" v-link="{name:'commodity',params:{hashid:item.id}}">
+        <router-link tag='div' v-for="item in list" class="list-data-wrapper" :to="{name:'commodity',params:{hashid:item.id}}">
             <img :src="item.event_img" alt="item.event_name"/>
             <div class="data-info-wrapper">
                 <p class="title">
@@ -17,7 +17,7 @@
                     <span>剩余：{{item.event_stock_number}}件</span>
                 </p>
             </div>
-        </div>
+        </router-link>
     </div>
 </template>
 

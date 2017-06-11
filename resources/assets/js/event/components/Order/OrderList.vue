@@ -1,14 +1,14 @@
 <template>
   <div>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
-        <mt-tab-item id="all" v-link="{name:'order-list',params:{'type':'all'}}">全部订单</mt-tab-item>
-        <mt-tab-item id="unpay" v-link="{name:'order-list',params:{'type':'unpay'}}">待付款</mt-tab-item>
-        <mt-tab-item id="unreceived" v-link="{name:'order-list',params:{'type':'unreceived'}}">已付款</mt-tab-item>
+        <mt-tab-item id="all" :to="{name:'order-list',params:{'type':'all'}}">全部订单</mt-tab-item>
+        <mt-tab-item id="unpay" :to="{name:'order-list',params:{'type':'unpay'}}">待付款</mt-tab-item>
+        <mt-tab-item id="unreceived" :to="{name:'order-list',params:{'type':'unreceived'}}">已付款</mt-tab-item>
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
-        <div class="order-list-container"
+        <router-link tag='div' class="order-list-container"
              v-for="order in orders"
-             v-link="{name:'order-detail',params:{'hashid':order.id}}">
+             :to="{name:'order-detail',params:{'hashid':order.id}}">
             <div class="order-info">
                 <!-- <p v-show="order.pay_status === '未支付'"> --><p><span class="title">状态：</span>{{order.pay_status}}</p>
                 <!-- <p v-show="order.pay_status === '已支付'">
@@ -20,7 +20,7 @@
                 <p>{{detail.commodity_name}}</p>
                 <p class="title">{{detail.buy_number}}件</p>
             </div>
-        </div>
+        </router-link>
     </div>
     <div id="data-scroll-loading" v-show="isLoading">
         <mt-spinner type="snake" color="#09bb07" :size="15"></mt-spinner>
