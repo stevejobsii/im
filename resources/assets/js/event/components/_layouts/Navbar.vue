@@ -1,7 +1,7 @@
 <template>
 <p>nav</p>
-    <div id="nav-hot-fix" v-show="active"></div>
-    <mt-tabbar :selected.sync="selected" :fixed="true" v-show="active">
+    <div id="nav-hot-fix"></div> <!-- v-show="active" -->
+    <mt-tabbar :selected.sync="selected" :fixed="true"> <!-- v-show="active" -->
         <mt-tab-item v-link="{name:'aOpen'}" id="index">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}
@@ -57,6 +57,7 @@ export default{
                 this.$set('cartCount',count);
             }
         },
+        // 是否显示nav
         routeHandler:function(val){
             let activeRouteNames = ['usercenter'];//['index','category','usercenter']
             if(activeRouteNames.indexOf(val) >= 0){

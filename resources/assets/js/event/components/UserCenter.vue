@@ -6,7 +6,9 @@
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-            <router-link :to="{name:'order-list',params:{'type':'all'}}">"全部订单"
+        <p>usercenterwrap</p>
+            <router-link :to="{name:'order-list',params:{'type':'all'}}">
+            <p>全部订单</p>
                 <mt-cell title="全部订单">
                     <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
                 </mt-cell>
