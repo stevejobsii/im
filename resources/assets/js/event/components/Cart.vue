@@ -4,10 +4,10 @@
         <section class="cart-wrap" v-for="cart in carts">
             <i class="select-one-btn" :class="cart.selected ? 'selected' : '' " @click="toggleSelect(cart)">
             </i>
-            <router-link tag='a' class="img-wrap" :to='{name:'commodity',params:{hashid:cart.commodity.id}}'>
+            <a class="img-wrap" :to='{name:'commodity',params:{hashid:cart.commodity.id}}'>
                 <img :src="cart.commodity.event_img"/>
                 <p class="name">{{cart.commodity.event_name}}</p>
-            </router-link>
+            </a>
             <div class="price-wrap">
             <span class="commodity-result">
                     <span>&yen;{{cart.commodity.event_current_price | transformPrice}}</span> *

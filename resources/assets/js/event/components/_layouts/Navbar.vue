@@ -3,10 +3,10 @@
    <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar v-model="selected" fixed v-show="active">
                      
-        <mt-tab-item id="index"><router-link :to="{name:'aOpen'}">
+        <mt-tab-item id="index" :to="{name:'aOpen'}">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}        
-        </router-link></mt-tab-item>
+        </mt-tab-item>
                    
         <mt-tab-item  id="category"><router-link :to="{name:'aClose'}">
             <i slot="icon" class="nav-category"></i>
