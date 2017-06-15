@@ -1,9 +1,9 @@
 <template>
   <div>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
-        <mt-tab-item id="all" :to="{name:'order-list',params:{'type':'all'}}">全部订单</mt-tab-item>
-        <mt-tab-item id="unpay" :to="{name:'order-list',params:{'type':'unpay'}}">待付款</mt-tab-item>
-        <mt-tab-item id="unreceived" :to="{name:'order-list',params:{'type':'unreceived'}}">已付款</mt-tab-item>
+        <mt-tab-item id="all"><router-link :to="{name:'order-list',params:{'type':'all'}}">全部订单</router-link></mt-tab-item>
+        <mt-tab-item id="unpay"><router-link :to="{name:'order-list',params:{'type':'unpay'}}">待付款</router-link></mt-tab-item>
+        <mt-tab-item id="unreceived"><router-link :to="{name:'order-list',params:{'type':'unreceived'}}">已付款</router-link></mt-tab-item>
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
         <router-link tag='div' class="order-list-container"

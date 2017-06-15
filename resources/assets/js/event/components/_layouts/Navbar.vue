@@ -8,22 +8,22 @@
             {{ trans('imall.enrolling_event') }}        
         </mt-tab-item>
                    
-        <mt-tab-item  id="category"><router-link :to="{name:'aClose'}">
+        <mt-tab-item  id="category" @click.native="goTo('aclose')">
             <i slot="icon" class="nav-category"></i>
             {{ trans('imall.end_event') }}
-        </router-link></mt-tab-item>            
+        </mt-tab-item>            
 
-        <mt-tab-item id="cart"><router-link :to="{name:'cart'}">
+        <mt-tab-item id="cart" @click.native="goTo('cart')">
             <i slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
             </i>
             {{ trans('imall.cart') }}
-        </router-link></mt-tab-item>
+        </mt-tab-item>
         
-        <mt-tab-item id="usercenter"><router-link :to="{name:'usercenter'}"> 
+        <mt-tab-item id="usercenter" @click.native="goTo('usercenter')"> 
             <i slot="icon" class="nav-usercenter"></i>
             {{ trans('imall.usercenter') }}
-        </router-link></mt-tab-item> 
+        </mt-tab-item> 
     </mt-tabbar>
   </div>
 </template>
