@@ -4,7 +4,7 @@
         <section class="cart-wrap" v-for="cart in carts">
             <i class="select-one-btn" :class="cart.selected ? 'selected' : '' " @click="toggleSelect(cart)">
             </i>
-            <router-link class="img-wrap" :to='{name:'commodity',params:{hashid:cart.commodity.id}}'>
+            <router-link tag='a' class="img-wrap" :to="{name:'commodity',params:{hashid:cart.commodity.id}}">
                 <img :src="cart.commodity.event_img"/>
                 <p class="name">{{cart.commodity.event_name}}</p>
             </router-link>

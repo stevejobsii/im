@@ -3,27 +3,27 @@
    <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar selected fixed >
                      
-        <mt-tab-item id="enrolling_event"><router-link :to="{name:'aOpen'}">
+        <router-link :to="{name:'aOpen'}"><mt-tab-item id="enrolling_event">
             <img slot="icon" class="nav-index"></img>
             {{ trans('imall.enrolling_event') }}        
-        </router-link></mt-tab-item>
+        </mt-tab-item></router-link>
                    
-        <mt-tab-item  id="end_event"><router-link :to="{name:'aClose'}">
+        <router-link :to="{name:'aClose'}"><mt-tab-item  id="end_event">
             <img slot="icon" class="nav-category"></img>
             {{ trans('imall.end_event') }}
-        </router-link></mt-tab-item>            
+        </mt-tab-item></router-link>          
 
-        <mt-tab-item id="cart"><router-link :to="{name:'cart'}">
+        <router-link :to="{name:'cart'}"><mt-tab-item id="cart">
             <img slot="icon" class="nav-cart">
                 <mt-badge type="error" size="small" v-show="cartCount > 0">{{cartCount}}</mt-badge>
             </img>
             {{ trans('imall.cart') }}
-        </router-link></mt-tab-item>
+        </mt-tab-item></router-link>
         
-        <mt-tab-item id="usercenter"><router-link :to="{name:'usercenter'}"> 
+        <router-link :to="{name:'usercenter'}"><mt-tab-item id="usercenter">
             <img slot="icon" class="nav-usercenter"></img>
             {{ trans('imall.usercenter') }}
-        </router-link></mt-tab-item> 
+        </mt-tab-item></router-link>
     </mt-tabbar>
   </div>
 </template>
