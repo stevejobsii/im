@@ -3,10 +3,10 @@
    <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar v-model="selected" fixed v-show="active">
                      
-        <router-link tag='mt-tab-item':to="{name:'aOpen'}" id="index">
+        <mt-tab-item id="index"><router-link :to="{name:'aOpen'}">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}        
-        </router-link> 
+        </router-link></mt-tab-item>
                    
         <mt-tab-item  id="category"><router-link :to="{name:'aClose'}">
             <i slot="icon" class="nav-category"></i>
@@ -56,7 +56,7 @@ export default{
         initRoute:function(){
             this.routeHandler(this.$route.name);
         },
-        // 显示购物车数量
+        // 显示购物车
         initCartCount:function(){
             let count = localStorage.getItem('cartCount');
             if(count){

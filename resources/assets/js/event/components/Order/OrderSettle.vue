@@ -95,7 +95,7 @@
                 let vm  = this;
                 let query = vm.$route.query;
                 //vm.fetchDefaultAddress();
-                vm.$set('from',query.from);
+                vm.from = query.from;
                 query.from == 'cart' ? vm.fetchGoodsFromCart(query.cartIds,query.commodities)
                                      : vm.fetchGoods(query.commodity);
                 Indicator.close();
@@ -139,7 +139,7 @@
                 let vm = this;
                 vm.$http.get('/api/eventcommodities/'+commodities).then(response=>{
                     if(response.data.code == 0){
-                        vm.$set('goods',response.data.message);
+                         vm.goods = response.data.message;
                         vm.$nextTick(function(){
                             vm.calculatePrice();
                         });
