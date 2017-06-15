@@ -8,7 +8,7 @@
             {{ trans('imall.enrolling_event') }}        
         </mt-tab-item>
                    
-        <mt-tab-item  id="category" @click.native="goTo('aclose')">
+        <mt-tab-item  id="category" @click.native="goTo('aClose')">
             <i slot="icon" class="nav-category"></i>
             {{ trans('imall.end_event') }}
         </mt-tab-item>            

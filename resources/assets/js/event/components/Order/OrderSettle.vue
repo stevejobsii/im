@@ -193,7 +193,7 @@
                       //   });
                     Indicator.close();
                     if(response.data.code == 0){
-                        vm.$route.router.push({name:'orderpay',params:{'hashid':response.data.message}});
+                        vm.router.push({name:'orderpay',params:{'hashid':response.data.message}});
                     }else{
                         Toast({
                           message: response.data.message
