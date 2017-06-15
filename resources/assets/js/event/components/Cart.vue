@@ -144,7 +144,7 @@ export default {
                         price += value.commodity.event_current_price * value.commodity_num;
                     }
                 });
-                this.$set('totalPrice', price);
+                this.totalPrice = price;
             },
             removeCarts: function(){
                 let vm = this;
@@ -152,9 +152,9 @@ export default {
                 vm.$http.post('/api/eventcart/empty').then(function(response){
                     Indicator.close();
                     if(response.data.code == 0){
-                        vm.$set('carts','');
+                        vm.carts = '';
                         vm.$nextTick(function(){
-                            vm.$set('emptyVisible',true);
+                            vm.emptyVisible = true;
                         });
                     }
                     Toast({

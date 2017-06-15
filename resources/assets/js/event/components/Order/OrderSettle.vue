@@ -158,12 +158,12 @@
                 this.goods.forEach(function(value){
                     price += value.event_current_price * value.cart_num;
                 });
-                this.$set('totalPrice', price);
+                this.totalPrice = price;
                 let shopCacheConfig = localStorage.getItem('shopConfig');
                 let shopConfig = JSON.parse(shopCacheConfig);
-                this.$set('shopConfig',shopConfig);
-                price < shopConfig.config_free ? this.$set('freight_amount',shopConfig.config_freight)
-                                                : this.$set('freight_amount',false);
+                this.shopConfig = shopConfig;
+                price < shopConfig.config_free ? this.freight_amount = shopConfig.config_freight
+                                                : this.freight_amount = false;
             },
             // 创建订单order
             payOrder: function(){
