@@ -132,7 +132,6 @@ const routes = [
     ];
 
 const router = new VueRouter({
-    mode: 'abstract',
     routes
 });
 
