@@ -25,16 +25,16 @@
         },
         methods:{
             sortByTime:function(){
-                this.$set('sortKey','timeDown');
+                this.sortKey = timeDown;
             },
             sortBySold:function(){
-                this.$set('sortKey','soldDown');
+                this.sortKey = soldDown;
             },
             sortByPrice:function(){
                 if(this.sortKey !== 'priceUp'){
-                    this.$set('sortKey','priceUp');
+                    this.sortKey = priceUp;
                 }else{
-                    this.$set('sortKey','priceDown');
+                    this.sortKey = priceDown;
                 }
             }
         }
