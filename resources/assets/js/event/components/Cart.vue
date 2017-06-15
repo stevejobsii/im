@@ -86,13 +86,13 @@ export default {
                         for (var i in data) {
                             data[i].selected = true;
                         }
-                        vm.$set('carts', data);
-                        vm.$set('emptyVisible', false);
+                        vm.carts = data;
+                        vm.emptyVisible = false;
                         vm.$nextTick(function() {
                             vm.calculatePrice();
                         });
                     } else {
-                        vm.$set('emptyVisible', true);
+                        vm.emptyVisible = true;
                     }
                 });
             },
