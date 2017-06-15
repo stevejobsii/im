@@ -3,7 +3,7 @@
    <div id="nav-hot-fix" v-show="active"></div>
     <mt-tabbar v-model="selected" fixed v-show="active">
                      
-        <mt-tab-item id="index" @click.native="goTo('aOpen')">
+        <mt-tab-item id="index" @click.native="goTo({name:'Close'})">
             <i slot="icon" class="nav-index"></i>
             {{ trans('imall.enrolling_event') }}        
         </mt-tab-item>
