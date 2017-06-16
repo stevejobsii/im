@@ -94,9 +94,6 @@
                 Indicator.open();
                 let vm  = this;
                 let query = vm.$route.query;
-                Indicator.open({
-                  text: query
-                });
                 //vm.fetchDefaultAddress();
                 vm.from = query.from;
                 query.from == 'cart' ? vm.fetchGoodsFromCart(query.cartIds,query.commodities)
@@ -118,6 +115,7 @@
             //         Indicator.close();
             //     });
             // },
+            // fetch form commoditydetail 立即购买
             fetchGoods: function(commodity){
                 let vm = this;
                 let data = commodity.split('-');
@@ -137,7 +135,9 @@
                         });
                     }
                 });
+                Indicator.close();
             },
+            // fetch form cart
             fetchGoodsFromCart: function(cartIds,commodities){
                 let vm = this;
                 vm.$http.get('/api/eventcommodities/'+commodities).then(response=>{
@@ -152,6 +152,7 @@
                         });
                     }
                 });
+                Indicator.close();
             },
             // chooseAddress: function(){
             //     this.choosing = !this.choosing;
