@@ -19,7 +19,6 @@
         props:{
             list:{
                 type: Array,
-                twoWay: true,
                 default:function(){
                     return {
                         data:[]

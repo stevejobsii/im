@@ -58,9 +58,6 @@
         created(){
             this.fetchOrders();
         },
-        route:{
-            //canReuse:false
-        },
         methods:{
             fetchOrders:function(){
                 let vm = this;

@@ -175,7 +175,7 @@ export default {
                 let order = {from:'cart',commodities:commodites,cartIds:cartIds};
                 // to 'order-settle' with ? from;carIDs,commodites编号及数量
                 // router.go-> router.push
-                vm.$route.router.push({name:'order-settle',query:order});
+                vm.$router.push({name:'order-settle',query:order});
             }
         }
 }

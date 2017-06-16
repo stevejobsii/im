@@ -60,8 +60,8 @@
         </div>
     </div>
     <!-- <address-choose
-            :choosed.sync="address"
-            :visible.sync="choosing">
+            :choosed.//sync="address"
+            :visible.//sync="choosing">
     </address-choose> -->
   </div>
 </template>
@@ -193,7 +193,7 @@
                       //   });
                     Indicator.close();
                     if(response.data.code == 0){
-                        vm.router.push({name:'orderpay',params:{'hashid':response.data.message}});
+                        vm.$router.push({name:'orderpay',params:{'hashid':response.data.message}});
                     }else{
                         Toast({
                           message: response.data.message

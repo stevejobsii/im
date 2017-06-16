@@ -1,199 +1,35 @@
-1. Replace :selected.sync="selected" with :selected="selected", then $emit an event from the child component to trigger an update to selected in the parent
-  Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-2. Replace v-link="{name:'aOpen'}" with the new <router-link> component (see link below for details)
-  Line 5: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-3. Replace v-link="{name:'aClose'}" with the new <router-link> component (see link below for details)
-  Line 9: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-4. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
-  Line 13: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-5. Replace v-link="{name:'usercenter'}" with the new <router-link> component (see link below for details)
-  Line 19: /Users/zhudi/Code/php/im/resources/assets/js/event/components/_layouts/Navbar.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-6. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
-  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-7. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
-  Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-8. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+1. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
   Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-9. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+2. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
   Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Open.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-10. Replace v-link="{name:'aCategory',params:{'hashid':sub_category.id}}" with the new <router-link> component (see link below for details)
-  Line 14: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Category.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+3. Replace :is-show.sync="empty" with :is-show="empty", then $emit an event from the child component to trigger an update to empty in the parent
+  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-11. Replace v-link="{name:'commodity',params:{hashid:item.id}}" with the new <router-link> component (see link below for details)
-  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityCloseList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
+4. Replace :list.sync="data" with :list="data", then $emit an event from the child component to trigger an update to data in the parent
+  Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Attribute/Close.vue
+  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
+  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-12. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
-  Line 22: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityCloseList.vue
-  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
-  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
-
-13. Replace v-link="{name:'commodity',params:{hashid:cart.commodity.id}}" with the new <router-link> component (see link below for details)
-  Line 7: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-14. Replace v-link="{name:'index'}" with the new <router-link> component (see link below for details)
-  Line 50: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Cart.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-15. Replace filtered value in v-html="commodity.event_base_info | rnTransform" with a method or computed property
+5. Replace filtered value in v-html="commodity.event_base_info | rnTransform" with a method or computed property
   Line 45: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
   Reason: Filters can now only be used inside text interpolations, e.g. {{ date | formatDate('YY-MM-DD') }}
   More info: http://vuejs.org/guide/migration.html#Filters-Outside-Text-Interpolations
 
-16. Replace v-link="{name:'cart'}" with the new <router-link> component (see link below for details)
-  Line 50: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityDetail.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-17. Replace v-link="{name:'category'}" with the new <router-link> component (see link below for details)
-  Line 8: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityEmpty.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-18. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
-  Line 19: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityEmpty.vue
-  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
-  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
-
-19. Replace v-link="{name:'commodity',params:{hashid:item.id}}" with the new <router-link> component (see link below for details)
-  Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-20. Delete twoWay: true, then $emit an event from the child component to trigger an update to the prop in the parent
-  Line 29: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Commodity/CommodityList.vue
-  Reason: Two-way prop binding has been removed in favor of more explicit event-driven communication between parent and child
-  More info: http://vuejs.org/guide/migration.html#twoWay-Prop-Option
-
-21. Replace v-link="{name:'commodity',params:{'hashid':detail.commodity_id}}" with the new <router-link> component (see link below for details)
-  Line 33: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderDetail.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-22. Replace :selected.sync="order_type" with :selected="order_type", then $emit an event from the child component to trigger an update to order_type in the parent
+6. Replace :selected.sync="order_type" with :selected="order_type", then $emit an event from the child component to trigger an update to order_type in the parent
   Line 3: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
   Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
   More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
 
-23. Replace v-link="{name:'order-list',params:{'type':'all'}}" with the new <router-link> component (see link below for details)
-  Line 4: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-24. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
-  Line 5: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-25. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
-  Line 6: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-26. Replace v-link="{name:'order-detail',params:{'hashid':order.id}}" with the new <router-link> component (see link below for details)
-  Line 11: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-27. Remove the canReuse option
-  Line 62: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderList.vue
-  Reason: There's no longer a use case for canReuse in the new Vue Router
-  More info: http://vuejs.org/guide/migration-vue-router.html#canReuse-false
-
-28. Replace v-link="{name:'add-address'}" with the new <router-link> component (see link below for details)
-  Line 18: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderSettle.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-29. Replace :choosed.sync="address" with :choosed="address", then $emit an event from the child component to trigger an update to address in the parent
-  Line 63: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderSettle.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-30. Replace :visible.sync="choosing" with :visible="choosing", then $emit an event from the child component to trigger an update to choosing in the parent
-  Line 64: /Users/zhudi/Code/php/im/resources/assets/js/event/components/Order/OrderSettle.vue
-  Reason: v-bind.sync and v-bind.once have removed to enforce one-way down props, leaving side effects to more explicit component events
-  More info: http://vuejs.org/guide/migration.html#v-bind-with-once-and-sync-Modifiers
-
-31. Delete references to Vue.config.debug
-  Line 14: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
-  Reason: Warnings come with stack traces by default now, making this option redundant
-  More info: http://vuejs.org/guide/migration.html#Vue-config-debug
-
-32. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
-  Line 41: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
+7. Check Vue.directive('data-scroll') to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component
+  Line 40: /Users/zhudi/Code/php/im/resources/assets/js/event/main.js
   Reason: Directives have been vastly reduced in scope and components are preferred in most use cases
   More info: http://vuejs.org/guide/migration.html#Custom-Directives
-
-33. Replace v-link="{name:'order-list',params:{'type':'unpay'}}" with the new <router-link> component (see link below for details)
-  Line 17: /Users/zhudi/Code/php/im/resources/assets/js/event/components/UserCenter.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-34. Replace v-link="{name:'order-list',params:{'type':'unreceived'}}" with the new <router-link> component (see link below for details)
-  Line 21: /Users/zhudi/Code/php/im/resources/assets/js/event/components/UserCenter.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-35. Replace v-link="{name:'address'}" with the new <router-link> component (see link below for details)
-  Line 28: /Users/zhudi/Code/php/im/resources/assets/js/event/components/UserCenter.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-36. Replace v-link="{name:'suggestion'}" with the new <router-link> component (see link below for details)
-  Line 33: /Users/zhudi/Code/php/im/resources/assets/js/event/components/UserCenter.vue
-  Reason: The v-link directive has been replaced with the new <router-link> component
-  More info: http://vuejs.org/guide/migration-vue-router.html#v-link
-
-37. Replace router.redirect with a redirect option in a route definition (see link below for details)
-  Line 2: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
-  Reason: Redirects have been moved to an option on route definitions to improve config organization
-  More info: http://vuejs.org/guide/migration-vue-router.html#router-redirect
-
-38. Replace router.map with an array on the new routes option (see link below for details)
-  Line 7: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
-  Reason: Routes are now defined as an array on a routes option at router instantiation
-  More info: http://vuejs.org/guide/migration-vue-router.html#router-map
-
-39. Replace subRoutes with children and update its routes to the new array syntax
-  Line 33: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
-  Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
-  More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
-
-40. Replace subRoutes with children and update its routes to the new array syntax
-  Line 48: /Users/zhudi/Code/php/im/resources/assets/js/event/router.js
-  Reason: subRoutes has been renamed to children for consistency within Vue and with other routing libraries
-  More info: http://vuejs.org/guide/migration-vue-router.html#subRoutes
