@@ -15,5 +15,7 @@ return [
     'usercenter'=>'User center',
     'cart'=>'Cart',
     'suggestion'=>'suggestion',
-    
+    'all_order'=>'All Order',
+    'unpay_order'=>'Unpay Order',
+    'paid_order'=>'Paid Order'  
 ];

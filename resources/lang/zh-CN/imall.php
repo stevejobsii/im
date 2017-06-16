@@ -10,5 +10,8 @@ return [
     'enrolling_event'=>'报名中活动',
     'end_event'=>'已结束活动',
     'usercenter'=>'用户中心',
-    'cart'=>'购物车'
+    'cart'=>'购物车',
+    'all_order'=>'全部订单',
+    'unpay_order'=>'未付款',
+    'paid_order'=>'已付款'
 ];
