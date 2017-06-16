@@ -2,8 +2,8 @@
   <div>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
         <mt-tab-item id="all" @click.native="goTo({name:'order-list',params:{'type':'all'}})">{{ trans('imall.all_order') }}</mt-tab-item>
-        <mt-tab-item id="unpay"><router-link :to="{name:'order-list',params:{'type':'unpay'}}">{{ trans('imall.unpay_order') }}</router-link></mt-tab-item>
-        <mt-tab-item id="unreceived"><router-link :to="{name:'order-list',params:{'type':'unreceived'}}">{{ trans('imall.paid_order') }}</router-link></mt-tab-item>
+        <mt-tab-item id="unpay" @click.native="goTo({name:'order-list',params:{'type':'unpay'}})">{{ trans('imall.unpay_order') }}</mt-tab-item>
+        <mt-tab-item id="unreceived" @click.native="goTo({name:'order-list',params:{'type':'unreceived'}})">{{ trans('imall.paid_order') }}</router-link></mt-tab-item>
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
         <router-link tag='div' class="order-list-container"
@@ -60,6 +60,7 @@
         },
         methods:{
             goTo: function(path){
+                alert(path);
                 this.$router.push(path)
             },
             fetchOrders:function(){
