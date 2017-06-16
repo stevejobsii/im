@@ -35,7 +35,6 @@
                         vm.order = response.data.message;
                         Indicator.open('发起支付中...');
                         vm.wechatPay();
-                        Indicator.close();
                     }else{
                         Toast({
                             message: response.data.message
@@ -46,6 +45,7 @@
             wechatPay: function(){
                 let vm = this;
                 let itemId = vm.$route.params.hashid;
+                Indicator.close();
                 vm.$http.get('/api/eventSetAttributes/'+itemId).then(response=>{
                     let json = response.data;
                     WeixinJSBridge.invoke(
