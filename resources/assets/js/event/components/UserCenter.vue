@@ -6,14 +6,14 @@
     </header>
     <section id="uc-nav-container">
         <div class="nav-wrapper">
-            <mt-cell title={{ trans('imall.all_order') }} is-link :to="{name:'order-list',params:{'type':'all'}}">
+            <mt-cell title="{{ trans('imall.all_order') }}" is-link :to="{name:'order-list',params:{'type':'all'}}">
                 <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
             </mt-cell>
-            <mt-cell title={{ trans('imall.unpay_order') }} is-link :to="{name:'order-list',params:{'type':'unpay'}}">
+            <mt-cell title="{{ trans('imall.unpay_order') }}" is-link :to="{name:'order-list',params:{'type':'unpay'}}">
                 <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
             </mt-cell>
 
-            <mt-cell title={{ trans('imall.paid_order') }} is-link :to="{name:'order-list',params:{'type':'unreceived'}}">
+            <mt-cell title="{{ trans('imall.paid_order') }}" is-link :to="{name:'order-list',params:{'type':'unreceived'}}">
                 <img slot="icon" src="/images/icon/order-delivered.png" width="24" height="24">
             </mt-cell>
 
