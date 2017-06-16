@@ -150,7 +150,7 @@
             toPay: function(){
                 let commodity = this.commodity.id+ '-' + this.commodity_num;
                 let order = {from:'default',commodity:commodity};
-                this.$route.router.push({name:'order-settle',query:order});
+                this.$router.push({name:'order-settle',query:order});
             }
         }
     }

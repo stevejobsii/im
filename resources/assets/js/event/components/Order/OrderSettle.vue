@@ -94,6 +94,9 @@
                 Indicator.open();
                 let vm  = this;
                 let query = vm.$route.query;
+                Indicator.open({
+                  text: query
+                });
                 //vm.fetchDefaultAddress();
                 vm.from = query.from;
                 query.from == 'cart' ? vm.fetchGoodsFromCart(query.cartIds,query.commodities)
