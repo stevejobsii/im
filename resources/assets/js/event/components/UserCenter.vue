@@ -8,16 +8,16 @@
         <div class="nav-wrapper">
             <mt-cell  is-link :to="{name:'order-list',params:{'type':'all'}}">
                 <img slot="icon" src="/images/icon/order-finish.png" width="24" height="24">
-                <p slot="title">{{ trans('imall.all_order') }}</p>
+                {{ trans('imall.all_order') }}
             </mt-cell>
             <mt-cell is-link :to="{name:'order-list',params:{'type':'unpay'}}">
                 <img slot="icon" src="/images/icon/order-unpay.png" width="24" height="24">
-                <p slot="title">{{ trans('imall.unpay_order') }}</p>
+                {{ trans('imall.unpay_order') }}
             </mt-cell>
 
             <mt-cell is-link :to="{name:'order-list',params:{'type':'unreceived'}}">       
                 <img slot="icon" src="/images/icon/order-delivered.png" width="24" height="24">
-                <p slot="title">{{ trans('imall.paid_order') }}</p>
+                {{ trans('imall.paid_order') }}
             </mt-cell>
 
         </div>
