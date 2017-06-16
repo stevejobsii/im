@@ -1,6 +1,6 @@
 <template>
     <div id="list-data-container">
-        <router-link tag='div' v-for="item in list" class="list-data-wrapper" :to="{name:'commodity',params:{hashid:item.id}}">
+        <router-link tag='div' v-for="item in list" class="list-data-wrapper" :to="{name:'commodity',params:{hashid:item.id}}" :key="item.id">
             <img :src="item.event_img" alt="item.event_name"/>
             <div class="data-info-wrapper">
                 <p class="title">

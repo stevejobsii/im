@@ -30,6 +30,7 @@
         <div class="order-detail-wrapper">
             <div class="detail-container">
                 <router-link tag='div' class="commodity-list"
+                     :key="detail.id"
                      v-for="detail in order.details"
                      :to="{name:'commodity',params:{'hashid':detail.commodity_id}}">
                     <img :src="detail.commodity_img" v-bind:alt="detail.commodity_name"/>

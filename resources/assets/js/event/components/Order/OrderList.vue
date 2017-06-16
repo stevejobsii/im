@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-navbar class="order-list-nav" v-model="selected" fixed >
+    <mt-navbar class="order-list-nav" :selected.sync="order_type" fixed >
 
         <mt-tab-item id="all" @click.native="goTo('all')">{{ trans('imall.all_order') }}</mt-tab-item>
         <mt-tab-item id="unpay" @click.native="goTo('unpay')">{{ trans('imall.unpay_order') }}</mt-tab-item>
@@ -9,7 +9,7 @@
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
         <router-link tag='div' class="order-list-container"
-             v-for="order in orders"
+             v-for="order in orders" :key="order.id"
              :to="{name:'order-detail',params:{'hashid':order.id}}">
             <div class="order-info">
                 <!-- <p v-show="order.pay_status === '未支付'"> --><p><span class="title">状态：</span>{{order.pay_status}}</p>
@@ -17,7 +17,7 @@
                 <span class="title">状态：</span>{{order.ship_status}}</p> -->
                 <p><span class="title">总价：</span>&yen;{{order.order_amount | transformPrice}}</p>
             </div>
-            <div class="order-detail" v-for="detail in order.details">
+            <div class="order-detail" v-for="detail in order.details" :key="detail.id">
                 <img :src="detail.commodity_img" v-bind:alt="detail.commodity_name"/>
                 <p>{{detail.commodity_name}}</p>
                 <p class="title">{{detail.buy_number}}件</p>
