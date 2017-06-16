@@ -68,6 +68,9 @@
             fetchOrders:function(){
                 let vm = this;
                 let order_type = vm.$route.params.type;
+                Toast({
+                              message: order_type
+                        });
                 Indicator.open();
                 vm.$http.get('/api/eventorderlist/'+order_type).then(response=>{
                     Indicator.close();
