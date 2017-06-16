@@ -135,7 +135,6 @@
                         });
                     }
                 });
-                Indicator.close();
             },
             // fetch form cart
             fetchGoodsFromCart: function(cartIds,commodities){
@@ -152,7 +151,6 @@
                         });
                     }
                 });
-                Indicator.close();
             },
             // chooseAddress: function(){
             //     this.choosing = !this.choosing;
@@ -168,6 +166,7 @@
                 this.shopConfig = shopConfig;
                 price < shopConfig.config_free ? this.freight_amount = shopConfig.config_freight
                                                 : this.freight_amount = false;
+                Indicator.close();
             },
             // 创建订单order
             payOrder: function(){
