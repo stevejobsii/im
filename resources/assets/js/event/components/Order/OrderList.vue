@@ -1,9 +1,9 @@
 <template>
   <div>
     <mt-navbar class="order-list-nav" :selected.sync="order_type" :fixed="true">
-        <mt-tab-item id="all"><router-link :to="{name:'order-list',params:{'type':'all'}}">全部订单</router-link></mt-tab-item>
-        <mt-tab-item id="unpay"><router-link :to="{name:'order-list',params:{'type':'unpay'}}">待付款</router-link></mt-tab-item>
-        <mt-tab-item id="unreceived"><router-link :to="{name:'order-list',params:{'type':'unreceived'}}">已付款</router-link></mt-tab-item>
+        <mt-tab-item id="all" @click.native="goTo({name:'order-list',params:{'type':'all'}})">{{ trans('imall.all_order') }}</mt-tab-item>
+        <mt-tab-item id="unpay"><router-link :to="{name:'order-list',params:{'type':'unpay'}}">{{ trans('imall.unpay_order') }}</router-link></mt-tab-item>
+        <mt-tab-item id="unreceived"><router-link :to="{name:'order-list',params:{'type':'unreceived'}}">{{ trans('imall.paid_order') }}</router-link></mt-tab-item>
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
         <router-link tag='div' class="order-list-container"
@@ -59,6 +59,9 @@
             this.fetchOrders();
         },
         methods:{
+            goTo: function(path){
+                this.$router.push(path)
+            },
             fetchOrders:function(){
                 let vm = this;
                 let order_type = vm.$route.params.type;
@@ -75,6 +78,7 @@
                     }
                 });
             },
+            // 数据列表5页一张，满则下一张
             loadPageData:function(){
                 let vm = this;
                 let page = vm.paginate.current_page + 1;
