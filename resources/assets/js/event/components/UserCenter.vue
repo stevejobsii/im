@@ -28,8 +28,9 @@
             </mt-cell>
         </div> -->
         <div class="nav-wrapper">
-            <mt-cell title='{{ trans('imall.suggestion') }}' is-link :to="{name:'suggestion'}">
+            <mt-cell  is-link :to="{name:'suggestion'}">
                 <img slot="icon" src="/images/icon/uc-suggestion.png" width="24" height="24">
+                {{ trans('imall.suggestion') }}
             </mt-cell>
         </div>
     </section>
