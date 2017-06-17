@@ -1,10 +1,10 @@
 <template>
   <div>
-    <mt-navbar class="order-list-nav" value="order_type" fixed >
+    <mt-navbar class="order-list-nav" v-model="order_type" fixed >
 
-        <mt-tab-item id="all" @click.native="goTo('all')">{{ trans('imall.all_order') }}</mt-tab-item>
-        <mt-tab-item id="unpay" @click.native="goTo('unpay')">{{ trans('imall.unpay_order') }}</mt-tab-item>
-        <mt-tab-item id="unreceived" @click.native="goTo('unreceived')">{{ trans('imall.paid_order') }}</mt-tab-item>
+        <mt-tab-item id="all" @click.prevent="goTo('all')">{{ trans('imall.all_order') }}</mt-tab-item>
+        <mt-tab-item id="unpay" @click.prevent="goTo('unpay')">{{ trans('imall.unpay_order') }}</mt-tab-item>
+        <mt-tab-item id="unreceived" @click.prevent="goTo('unreceived')">{{ trans('imall.paid_order') }}</mt-tab-item>
 
     </mt-navbar>
     <div id="order-list-part" v-data-scroll="loadPageData">
