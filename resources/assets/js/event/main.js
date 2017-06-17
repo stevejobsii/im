@@ -135,11 +135,11 @@ const router = new VueRouter({
 });
 
 
-// 导航钩子 http://router.vuejs.org/zh-cn/advanced/navigation-guards.html 
+//导航钩子 http://router.vuejs.org/zh-cn/advanced/navigation-guards.html 
 // router.beforeEach((transition) => {
 //     document.body.scrollTop = 0;
 //     Indicator.close();
-// //    transition.next();
+//     transition.next();
 // });
 
 new Vue({

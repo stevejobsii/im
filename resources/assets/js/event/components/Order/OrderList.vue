@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-navbar class="order-list-nav" v-model="selected" fixed >
+    <mt-navbar class="order-list-nav" :selected.sync="order_type" fixed >
 
         <mt-tab-item id="all" @click.native="goTo('all')">{{ trans('imall.all_order') }}</mt-tab-item>
         <mt-tab-item id="unpay" @click.native="goTo('unpay')">{{ trans('imall.unpay_order') }}</mt-tab-item>
@@ -68,7 +68,8 @@
             },
             fetchOrders:function(){
                 let vm = this;
-                let order_type = vm.$route.params.type;//all\unpay\unreceived
+                let order_type = vm.$route.params.type;
+                vm.selected = order_type;//all\unpay\unreceived
                 Indicator.open();
                 vm.$http.get('/api/eventorderlist/'+order_type).then(response=>{
                     Indicator.close();
