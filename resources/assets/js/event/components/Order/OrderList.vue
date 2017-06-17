@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-navbar class="order-list-nav" :selected.sync="order_type" fixed >
+    <mt-navbar class="order-list-nav" value="order_type" fixed >
 
         <mt-tab-item id="all" @click.native="goTo('all')">{{ trans('imall.all_order') }}</mt-tab-item>
         <mt-tab-item id="unpay" @click.native="goTo('unpay')">{{ trans('imall.unpay_order') }}</mt-tab-item>
@@ -52,7 +52,6 @@
                 orders:[],
                 isLoading:false,
                 isEnd:false,
-                selected:''
             }
         },
         components:{
