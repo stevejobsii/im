@@ -79,13 +79,14 @@
                         });
                     }else{
                         vm.paginate = response.data.message;
-                        alert(vm.paginate);
+                        //alert(vm.paginate);
                         vm.orders = response.data.message.data;
                     }
                 });
             },
             // 数据列表5页一张，满则下一张
             loadPageData:function(){
+                alert('loadPageData');
                 let vm = this;
                 let page = vm.paginate.current_page + 1;
                 let triggerDistance = 100;
@@ -93,6 +94,7 @@
                 if(!vm.isLoading && !vm.isEnd && vm.paginate.data.length && distance < triggerDistance){
                     vm.isLoading = true;
                     vm.$http.get('/api/eventorderlist/'+vm.order_type+'?page='+page).then(response=>{
+                        alert('page');
                         if(response.data.message.data.length === 0){
                             vm.isLoading = false;
                             vm.isEnd = true;

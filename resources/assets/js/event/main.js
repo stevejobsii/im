@@ -35,7 +35,7 @@ Vue.filter('rnTransform', function (value) {
 });
 
 /**
- * 数据列表无限滚动监听，Vue.directive注册全局指令。
+ * 数据列表无限滚动监听，Vue.directive注册函数，loadPageData中使用
  */
 Vue.directive('data-scroll', function (value) {
     window.addEventListener('scroll', ()=> {
@@ -141,6 +141,10 @@ const router = new VueRouter({
 //     Indicator.close();
 //     transition.next();
 // });
+router.beforeEach((to, from, next) => {
+document.body.scrollTop = 0;
+next()
+});
 
 new Vue({
   router,
