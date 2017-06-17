@@ -63,7 +63,8 @@
         methods:{
             goTo: function(path){
                 //alert(path);
-                this.$router.replace({name:'order-list',params:{'type': path}})
+                this.$router.replace({name:'order-list',params:{'type': path}});
+                this.fetchOrders()
             },
             fetchOrders:function(){
                 let vm = this;
@@ -80,7 +81,6 @@
                         vm.paginate = response.data.message;
                         alert(vm.paginate);
                         vm.orders = response.data.message.data;
-                        alert(vm.orders);
                     }
                 });
             },
