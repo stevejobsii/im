@@ -86,11 +86,12 @@
             },
             // 数据列表5页一张，满则下一张
             loadPageData:function(){
-                alert('loadPageData');
+                //alert('loadPageData');
                 let vm = this;
                 let page = vm.paginate.current_page + 1;
                 let triggerDistance = 100;
                 let distance = document.querySelector("#order-list-part").getBoundingClientRect().bottom - window.innerHeight;
+                console.log(distance);
                 if(!vm.isLoading && !vm.isEnd && vm.paginate.data.length && distance < triggerDistance){
                     vm.isLoading = true;
                     vm.$http.get('/api/eventorderlist/'+vm.order_type+'?page='+page).then(response=>{
