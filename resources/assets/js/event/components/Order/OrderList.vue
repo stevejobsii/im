@@ -59,12 +59,14 @@
         },
         created(){
             this.fetchOrders();
+            window.addEventListener('scroll', this.loadPageData)
         },
         methods:{
             goTo: function(path){
                 //alert(path);
                 this.$router.replace({name:'order-list',params:{'type': path}});
-                this.fetchOrders()
+                this.fetchOrders();
+                window.addEventListener('scroll', this.loadPageData)
             },
             fetchOrders:function(){
                 let vm = this;
@@ -83,7 +85,6 @@
                         vm.orders = response.data.message.data;
                     }
                 });
-                window.addEventListener('scroll', this.loadPageData)
             },
             // 数据列表5页一张，满则下一张
             loadPageData:function(){
