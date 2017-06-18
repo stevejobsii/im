@@ -59,6 +59,7 @@
         },
         created(){
             this.fetchOrders();
+            window.addEventListener('scroll', this.loadPageData)
         },
         methods:{
             goTo: function(path){

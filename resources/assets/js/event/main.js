@@ -41,8 +41,10 @@ Vue.directive('data-scroll', {update: function (value) {
     //console.log(binding.value);
     window.addEventListener('scroll', ()=> {   
         let fnc = value;
+        //启动loadPageData的函数
         fnc();
     });
+    
     }
 });
 
