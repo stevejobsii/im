@@ -37,16 +37,16 @@ Vue.filter('rnTransform', function (value) {
 /**
  * 数据列表无限滚动监听，Vue.directive注册函数，loadPageData中使用
  */
-Vue.directive('data-scroll', {update: function (value) {
-    //console.log(binding.value);
-    window.addEventListener('scroll', ()=> {   
-        let fnc = value;
-        //启动loadPageData的函数
-        fnc();
-    });
+// Vue.directive('data-scroll', {update: function (value) {
+//     //console.log(binding.value);
+//     window.addEventListener('scroll', ()=> {   
+//         let fnc = value;
+//         //启动loadPageData的函数
+//         fnc();
+//     });
     
-    }
-});
+//     }
+// });
 
 /**
  * 手机号隐私处理，Vue.filter为全局过滤器
