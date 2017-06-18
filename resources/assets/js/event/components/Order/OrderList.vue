@@ -95,7 +95,7 @@
                 if(!vm.isLoading && !vm.isEnd && vm.paginate.data.length && distance < triggerDistance){
                     vm.isLoading = true;
                     vm.$http.get('/api/eventorderlist/'+vm.order_type+'?page='+page).then(response=>{
-                        alert('page');
+                        //alert('page');
                         if(response.data.message.data.length === 0){
                             vm.isLoading = false;
                             vm.isEnd = true;

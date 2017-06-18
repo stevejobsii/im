@@ -37,10 +37,10 @@ Vue.filter('rnTransform', function (value) {
 /**
  * 数据列表无限滚动监听，Vue.directive注册函数，loadPageData中使用
  */
-Vue.directive('data-scroll', function (value) {
-    console.log(value);
+Vue.directive('data-scroll', function (binding) {
+    console.log(binding.value);
     window.addEventListener('scroll', ()=> {   
-        let fnc = value;
+        let fnc = binding.value;
         fnc();
     });
 });

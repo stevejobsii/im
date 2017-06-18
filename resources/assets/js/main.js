@@ -64,6 +64,7 @@ const router = new Router({
 routerMap(router);
 
 router.beforeEach((transition) => {
+    //console:document.body.scrollTop
     document.body.scrollTop = 0;
     Indicator.close();
     transition.next();
