@@ -65,6 +65,8 @@
             goTo: function(path){
                 //alert(path);
                 this.$router.replace({name:'order-list',params:{'type': path}});
+                vm.isLoading = true;
+                vm.isEnd = false;
                 this.fetchOrders();
                 window.addEventListener('scroll', this.loadPageData)
             },
